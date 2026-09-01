@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Hamster : Brand New Day</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        * {
+            box-sizing: border-box;
+            touch-action: manipulation; /* Mencegah zoom ganda saat ditekan cepat */
+        }
+
+        body {
+            margin: 0;
+            padding: 10px;
+            background-color: #f0f9ff;
+            color: #1e293b;
+            font-family: 'Press Start 2P', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            color: #0284c7;
+            font-size: 14px;
+            text-shadow: 2px 2px 0px #bae6fd;
+            text-align: center;
+        }
+
+        #game-container {
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 4px solid #38bdf8;
+            max-width: 100%;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: -webkit-crisp-edges;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+
+        /* DOK KONTROL MOBILE (TOUCH BUTTONS) */
+        .mobile-controls {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 800px;
+            margin-top: 10px;
+            gap: 10px;
+        }
+
+        .touch-btn {
+            flex: 1;
+            padding: 15px 0;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 12px;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+            active: transform 0.1s;
+        }
+
+        .touch-btn:active {
+            transform: translateY(4px);
+            box-shadow: none;
+        }
+
+        #btn-jump {
+            background-color: #0284c7;
+        }
+
+        #btn-duck {
+            background-color: #e11d48;
+        }
+
+        .dashboard-panel {
+            margin-top: 10px;
+            background: #ffffff;
+            padding: 12px;
+            border-radius: 8px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            border: 2px solid #bae6fd;
+            font-size: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            flex-wrap: wrap;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        label {
+            color: #0369a1;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        select {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 8px;
+            padding: 6px;
+            border: 2px solid #38bdf8;
+            border-radius: 4px;
+            background: #f0f9ff;
+            color: #0369a1;
+            cursor: pointer;
+            outline: none;
+            width: 100%;
+        }
+
+        .physics-hud {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 6px 8px;
+            border-radius: 6px;
+            font-size: 7px;
+            line-height: 1.6;
+            pointer-events: none;
+            border: 2px solid #38bdf8;
+            color: #0f172a;
+        }
+
+        .val-display {
+            color: #0284c7;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>✨ Hamster : Brand New Day 🌊🕷️</h1>
+
+    <div id="game-container">
+        <canvas id="gameCanvas" width="800" height="320"></canvas>
+        <div class="physics-hud">
+            📊 PHYSICS CALCULATION<br>
+            Percepatan Gravitasi (g) : <span id="hud-g" class="val-display">12.0</span> m/s²<br>
+            Kecepatan Awal  (v₀) : <span id="hud-v" class="val-display">13.0</span> m/s<br>
+            Ketinggian Maks (hₘₐₓ): <span id="hud-h" class="val-display">0.00</span> m
+        </div>
+    </div>
+
+    <!-- TAMPILAN TOMBOL KHUSUS HP/MOBILE -->
+    <div class="mobile-controls">
+        <button id="btn-duck" class="touch-btn">👇 NUNDUK</button>
+        <button id="btn-jump" class="touch-btn">🚀 LOMPAT</button>
+    </div>
+
+    <div class="dashboard-panel">
+        <div class="control-group">
+            <label for="gravityRange">Gravitasi: <span id="lbl-g">12</span></label>
+            <input type="range" id="gravityRange" min="4" max="28" value="12" step="0.5">
+        </div>
+        <div class="control-group">
+            <label for="jumpForceRange">Kecepatan: <span id="lbl-v">13</span></label>
+            <input type="range" id="jumpForceRange" min="8" max="20" value="13" step="0.5">
+        </div>
+        <div class="control-group">
+            <label for="bgSelect">🌄 BACKGROUND:</label>
+            <select id="bgSelect">
+                <option value="sunny">☀️ Orchards </option>
+                <option value="ocean">🌊 Deep Ocean </option>
+                <option value="night">🌙 Starry Night </option>
+                <option value="cyber">🌆 Cyberpunk Pink</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label for="costumeSelect">👔 KOSTUM / ANIMAL:</label>
+            <select id="costumeSelect">
+                <option value="default">🐹 Default (Hamster)</option>
+                <option value="spiderman">🕷️ Spider-Man</option>
+                <option value="axolotl">🦎 Axolotl Pink</option>
+                <option value="dino">🦖 T-Rex</option>
+                <option value="cat">🐱 Fox </option>
+                <option value="frog">🐸 Frog </option>
+                <option value="lion">🦁 Lion </option>
+                <option value="penabur">🏫 SMAK BPK Penabur</option>
+                <option value="police">👮 Polisi Patroli</option>
+                <option value="astronaut">🚀 Astronaut Angkasa</option>
+                <option value="doctor">👨‍⚕️ Dokter & Stetoskop</option>
+            </select>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop></audio>
+
+<script>
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+
+ctx.imageSmoothingEnabled = false;
+
+const bgAudioPlayer = document.getElementById('bgMusic');
+const audioSources = {
+    sunny: "https://vt.tiktok.com/ZSVwBeRKy/",
+    ocean: "https://vt.tiktok.com/ZSVwkv1Ae/",
+    night: "https://vt.tiktok.com/ZSVwkT4a4/",
+    cyber: "https://vt.tiktok.com/ZSVwBLspa/"
+};
+
+function playBgMusic(bgType) {
+    if (audioSources[bgType]) {
+        bgAudioPlayer.src = audioSources[bgType];
+        bgAudioPlayer.play().catch(() => {});
+    }
+}
+
+let g = 12; 
+let initialJumpVelocity = 13; 
+const PIXEL_TO_METER = 0.05; 
+
+let score = 0;
+let gameOver = false;
+let gameSpeed = 4.5;
+let frameCount = 0;
+let currentCostume = 'default';
+let currentBg = 'sunny';
+
+playBgMusic(currentBg);
+
+document.getElementById('gravityRange').addEventListener('input', (e) => {
+    g = parseFloat(e.target.value);
+    document.getElementById('lbl-g').textContent = g;
+});
+document.getElementById('jumpForceRange').addEventListener('input', (e) => {
+    initialJumpVelocity = parseFloat(e.target.value);
+    document.getElementById('lbl-v').textContent = initialJumpVelocity;
+});
+document.getElementById('costumeSelect').addEventListener('change', (e) => {
+    currentCostume = e.target.value;
+});
+document.getElementById('bgSelect').addEventListener('change', (e) => {
+    currentBg = e.target.value;
+    playBgMusic(currentBg);
+});
+
+const keys = { ArrowDown: false };
+
+// --- KEYBOARD CONTROLS (DESKTOP) ---
+window.addEventListener('keydown', (e) => {
+    if (bgAudioPlayer.paused) bgAudioPlayer.play().catch(() => {});
+    if (e.code === 'Space' || e.key === ' ') {
+        e.preventDefault();
+        if (gameOver) resetGame();
+        else hamster.jump();
+    }
+    if (e.code === 'ArrowDown' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        keys.ArrowDown = true;
+    }
+});
+
+window.addEventListener('keyup', (e) => {
+    if (e.code === 'ArrowDown' || e.key === 'ArrowDown') {
+        keys.ArrowDown = false;
+    }
+});
+
+// --- TOUCH CONTROLS (MOBILE) ---
+const btnJump = document.getElementById('btn-jump');
+const btnDuck = document.getElementById('btn-duck');
+
+btnJump.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    if (bgAudioPlayer.paused) bgAudioPlayer.play().catch(() => {});
+    if (gameOver) resetGame();
+    else hamster.jump();
+});
+
+btnDuck.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    keys.ArrowDown = true;
+});
+
+btnDuck.addEventListener('touchend', (e) => {
+    e.preventDefault();
+    keys.ArrowDown = false;
+});
+
+// Klik layar langsung juga bisa lompat/restart
+canvas.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    if (bgAudioPlayer.paused) bgAudioPlayer.play().catch(() => {});
+    if (gameOver) resetGame();
+    else hamster.jump();
+});
+
+// --- HAMSTER & COSTUMES ---
+const hamster = {
+    x: 80,
+    y: 226,
+    width: 36,
+    height: 36,
+    vy: 0,
+    isJumping: false,
+    isDucking: false,
+    maxHeight: 0,
+    chewing: false,
+    chewTimer: 0,
+    
+    getHitbox() {
+        if (this.isDucking && !this.isJumping) {
+            return { x: this.x + 4, y: this.y + 16, width: this.width - 4, height: 20 };
+        }
+        return { x: this.x + 4, y: this.y + 4, width: this.width - 8, height: this.height - 8 };
+    },
+
+    update() {
+        this.isDucking = keys.ArrowDown;
+
+        if (this.isJumping) {
+            this.y -= this.vy;
+            let currentG = this.isDucking ? g * 2.2 : g;
+            this.vy -= currentG * 0.075;
+
+            let currentHeight = (226 - this.y) * PIXEL_TO_METER;
+            if (currentHeight > this.maxHeight) this.maxHeight = currentHeight;
+
+            if (this.y >= 226) {
+                this.y = 226;
+                this.isJumping = false;
+                this.vy = 0;
+            }
+        }
+
+        if (this.chewing) {
+            this.chewTimer--;
+            if (this.chewTimer <= 0) this.chewing = false;
+        }
+    },
+
+    draw() {
+        ctx.save();
+        const p = 3;
+
+        if (this.isDucking && !this.isJumping) {
+            ctx.fillStyle = (currentCostume === 'spiderman') ? "#dc2626" :
+                            (currentCostume === 'axolotl') ? "#f472b6" :
+                            (currentCostume === 'dino' || currentCostume === 'frog') ? "#16a34a" : 
+                            (currentCostume === 'cat') ? "#f97316" : 
+                            (currentCostume === 'lion') ? "#d97706" : "#E5C158";
+            ctx.fillRect(this.x, this.y + 6*p, 12*p, 5*p);
+            
+            if (currentCostume === 'spiderman') {
+                ctx.fillStyle = "#2563eb"; ctx.fillRect(this.x + 2*p, this.y + 8*p, 6*p, 3*p);
+                ctx.fillStyle = "#ffffff"; ctx.fillRect(this.x + 8*p, this.y + 7*p, 3*p, 2*p);
+            } else if (currentCostume === 'axolotl') {
+                ctx.fillStyle = "#e11d48"; ctx.fillRect(this.x - 1*p, this.y + 5*p, 2*p, 3*p); ctx.fillRect(this.x - 1*p, this.y + 9*p, 2*p, 2*p);
+            } else if (currentCostume === 'penabur') {
+                ctx.fillStyle = "#64748b"; ctx.fillRect(this.x + 2*p, this.y + 7*p, 5*p, 3*p);
+                ctx.fillStyle = "#DC2626"; ctx.fillRect(this.x + 4*p, this.y + 7*p, 1*p, 2*p);
+                ctx.fillStyle = "#94a3b8"; ctx.fillRect(this.x + 7*p, this.y + 7*p, 3*p, 3*p);
+            } else if (currentCostume === 'police') {
+                ctx.fillStyle = "#1e3a8a"; ctx.fillRect(this.x + 2*p, this.y + 7*p, 7*p, 4*p);
+            } else if (currentCostume === 'dino') {
+                ctx.fillStyle = "#15803d"; ctx.fillRect(this.x + 1*p, this.y + 5*p, 2*p, 2*p); ctx.fillRect(this.x + 4*p, this.y + 5*p, 2*p, 2*p);
+            } else if (currentCostume === 'lion') {
+                ctx.fillStyle = "#78350f"; ctx.fillRect(this.x + 7*p, this.y + 5*p, 3*p, 5*p);
+            }
+
+            if (currentCostume !== 'spiderman') {
+                ctx.fillStyle = "#000"; ctx.fillRect(this.x + 9*p, this.y + 7*p, 2*p, 1*p);
+                ctx.fillStyle = "#FF80AB"; ctx.fillRect(this.x + 8*p, this.y + 8*p, 2*p, 1*p);
+            }
+
+        } else {
+            let baseColor = "#E5C158";
+            if (currentCostume === 'spiderman') baseColor = "#dc2626";
+            if (currentCostume === 'axolotl') baseColor = "#f472b6";
+            if (currentCostume === 'dino' || currentCostume === 'frog') baseColor = "#22c55e";
+            if (currentCostume === 'cat') baseColor = "#f97316";
+            if (currentCostume === 'lion') baseColor = "#fbbf24";
+
+            ctx.fillStyle = baseColor;
+            ctx.fillRect(this.x + 2*p, this.y + 2*p, 8*p, 9*p);
+            ctx.fillRect(this.x + 1*p, this.y + 4*p, 10*p, 6*p);
+
+            if (currentCostume === 'spiderman') {
+                ctx.fillStyle = "#2563eb"; ctx.fillRect(this.x + 3*p, this.y + 6*p, 6*p, 5*p);
+                ctx.fillStyle = "#000000"; ctx.fillRect(this.x + 5*p, this.y + 5*p, 2*p, 3*p); ctx.fillRect(this.x + 4*p, this.y + 6*p, 4*p, 1*p);
+                ctx.fillStyle = "#ffffff"; ctx.fillRect(this.x + 7*p, this.y + 3*p, 3*p, 3*p);
+                ctx.fillStyle = "#000000"; ctx.fillRect(this.x + 6*p, this.y + 3*p, 1*p, 3*p); ctx.fillRect(this.x + 7*p, this.y + 2*p, 3*p, 1*p);
+            }
+            else if (currentCostume === 'axolotl') {
+                ctx.fillStyle = "#e11d48";
+                ctx.fillRect(this.x - 1*p, this.y + 2*p, 3*p, 2*p); ctx.fillRect(this.x - 2*p, this.y + 4*p, 3*p, 2*p); ctx.fillRect(this.x - 1*p, this.y + 6*p, 3*p, 2*p);
+                ctx.fillRect(this.x + 10*p, this.y + 2*p, 3*p, 2*p); ctx.fillRect(this.x + 11*p, this.y + 4*p, 3*p, 2*p); ctx.fillRect(this.x + 10*p, this.y + 6*p, 3*p, 2*p);
+                ctx.fillStyle = "#fbcfe8"; ctx.fillRect(this.x + 4*p, this.y + 6*p, 5*p, 4*p);
+                ctx.fillStyle = "#fb7185"; ctx.fillRect(this.x - 1*p, this.y + 7*p, 2*p, 3*p);
+            }
+            else if (currentCostume === 'dino') {
+                ctx.fillStyle = "#15803d"; ctx.fillRect(this.x + 1*p, this.y + 2*p, 2*p, 2*p); ctx.fillRect(this.x + 0*p, this.y + 5*p, 2*p, 2*p); ctx.fillRect(this.x + 0*p, this.y + 8*p, 2*p, 2*p);
+                ctx.fillStyle = "#86efac"; ctx.fillRect(this.x + 4*p, this.y + 6*p, 5*p, 4*p);
+            } 
+            else if (currentCostume === 'cat') {
+                ctx.fillStyle = "#ea580c"; ctx.fillRect(this.x + 2*p, this.y, 2*p, 2*p); ctx.fillRect(this.x + 7*p, this.y, 2*p, 2*p); ctx.fillRect(this.x - 1*p, this.y + 6*p, 2*p, 4*p);
+                ctx.fillStyle = "#000000"; ctx.fillRect(this.x + 9*p, this.y + 5*p, 3*p, 1*p);
+            }
+            else if (currentCostume === 'frog') {
+                ctx.fillStyle = "#22c55e"; ctx.fillRect(this.x + 2*p, this.y, 3*p, 3*p); ctx.fillRect(this.x + 7*p, this.y, 3*p, 3*p);
+                ctx.fillStyle = "#ffffff"; ctx.fillRect(this.x + 3*p, this.y + 1*p, 2*p, 2*p); ctx.fillRect(this.x + 8*p, this.y + 1*p, 2*p, 2*p);
+                ctx.fillStyle = "#000000"; ctx.fillRect(this.x + 4*p, this.y + 1*p, 1*p, 1*p); ctx.fillRect(this.x + 9*p, this.y + 1*p, 1*p, 1*p);
+                ctx.fillStyle = "#fef08a"; ctx.fillRect(this.x + 4*p, this.y + 6*p, 6*p, 4*p);
+            }
+            else if (currentCostume === 'lion') {
+                ctx.fillStyle = "#78350f"; ctx.fillRect(this.x + 1*p, this.y + 1*p, 10*p, 3*p); ctx.fillRect(this.x + 1*p, this.y + 4*p, 3*p, 6*p); ctx.fillRect(this.x + 8*p, this.y + 4*p, 3*p, 6*p);
+                ctx.fillStyle = "#facc15"; ctx.fillRect(this.x + 5*p, this.y - 1*p, 3*p, 2*p);
+            }
+            else if (currentCostume === 'penabur') {
+                ctx.fillStyle = "#FFFFFF"; ctx.fillRect(this.x + 3*p, this.y + 5*p, 7*p, 4*p);
+                ctx.fillStyle = "#64748b"; ctx.fillRect(this.x + 4*p, this.y + 6*p, 5*p, 4*p);
+                ctx.fillStyle = "#334155"; ctx.fillRect(this.x + 4*p, this.y + 7*p, 5*p, 1*p); ctx.fillRect(this.x + 6*p, this.y + 6*p, 1*p, 4*p);
+                ctx.fillStyle = "#DC2626"; ctx.fillRect(this.x + 6*p, this.y + 5*p, 1*p, 3*p);
+                ctx.fillStyle = "#94a3b8"; ctx.fillRect(this.x + 3*p, this.y + 10*p, 7*p, 2*p);
+                ctx.fillStyle = "#64748b"; ctx.fillRect(this.x + 2*p, this.y, 8*p, 2*p); ctx.fillRect(this.x + 6*p, this.y + 1*p, 5*p, 1*p);
+            } 
+            else if (currentCostume === 'police') {
+                ctx.fillStyle = "#1e3a8a"; ctx.fillRect(this.x + 3*p, this.y + 6*p, 7*p, 5*p);
+                ctx.fillStyle = "#facc15"; ctx.fillRect(this.x + 4*p, this.y + 7*p, 2*p, 2*p);
+                ctx.fillStyle = "#1e3a8a"; ctx.fillRect(this.x + 2*p, this.y - 1*p, 8*p, 3*p);
+                ctx.fillStyle = "#0f172a"; ctx.fillRect(this.x + 7*p, this.y + 1*p, 4*p, 1*p);
+            } 
+            else if (currentCostume === 'astronaut') {
+                ctx.fillStyle = "#f8fafc"; ctx.fillRect(this.x + 2*p, this.y + 5*p, 8*p, 6*p);
+                ctx.fillStyle = "rgba(56, 189, 248, 0.6)"; ctx.fillRect(this.x + 5*p, this.y + 2*p, 6*p, 4*p);
+            }
+            else if (currentCostume === 'doctor') {
+                ctx.fillStyle = "#ffffff"; ctx.fillRect(this.x + 3*p, this.y + 5*p, 7*p, 6*p);
+                ctx.fillStyle = "#0f172a"; ctx.fillRect(this.x + 4*p, this.y + 5*p, 1*p, 3*p); ctx.fillRect(this.x + 7*p, this.y + 5*p, 1*p, 3*p);
+            }
+            else {
+                ctx.fillStyle = "#FF8A80"; ctx.fillRect(this.x + 2*p, this.y + 1*p, 2*p, 2*p); ctx.fillRect(this.x + 7*p, this.y + 1*p, 2*p, 2*p);
+                ctx.fillStyle = "#FFFFFF"; ctx.fillRect(this.x + 4*p, this.y + 6*p, 6*p, 5*p);
+            }
+
+            if (currentCostume !== 'frog' && currentCostume !== 'spiderman') {
+                ctx.fillStyle = "#000000"; ctx.fillRect(this.x + 8*p, this.y + 4*p, 2*p, 2*p);
+                ctx.fillStyle = "#FFFFFF"; ctx.fillRect(this.x + 8*p, this.y + 4*p, 1*p, 1*p);
+            }
+
+            if (currentCostume !== 'spiderman') {
+                ctx.fillStyle = "#FF80AB"; ctx.fillRect(this.x + 7*p, this.y + 6*p, 2*p, 1*p);
+            }
+
+            if (this.chewing) {
+                ctx.fillStyle = "#8D6E63";
+                let chewShift = (Math.floor(frameCount / 4) % 2) * p;
+                ctx.fillRect(this.x + 9*p + chewShift, this.y + 5*p, 2*p, 2*p);
+            }
+
+            ctx.fillStyle = (currentCostume === 'spiderman') ? "#dc2626" : (currentCostume === 'axolotl') ? "#f43f5e" : "#D7CCC8";
+            let legFrame = Math.floor(frameCount / 5) % 2;
+            if (this.isJumping) {
+                ctx.fillRect(this.x + 2*p, this.y + 10*p, 2*p, 2*p);
+                ctx.fillRect(this.x + 8*p, this.y + 10*p, 2*p, 2*p);
+            } else if (legFrame === 0) {
+                ctx.fillRect(this.x + 1*p, this.y + 11*p, 2*p, 2*p);
+                ctx.fillRect(this.x + 8*p, this.y + 11*p, 2*p, 2*p);
+            } else {
+                ctx.fillRect(this.x + 3*p, this.y + 11*p, 2*p, 2*p);
+                ctx.fillRect(this.x + 6*p, this.y + 11*p, 2*p, 2*p);
+            }
+        }
+
+        ctx.restore();
+    },
+
+    jump() {
+        if (!this.isJumping) {
+            this.isJumping = true;
+            this.vy = initialJumpVelocity;
+            this.maxHeight = 0;
+        }
+    }
+};
+
+function drawBackground() {
+    if (currentBg === 'sunny') {
+        ctx.fillStyle = "#7dd3fc"; ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "#ffffff";
+        let cloudOffset = (frameCount * 0.4) % 900;
+        let cx1 = 100 - cloudOffset; if(cx1 < -100) cx1 += 900;
+        ctx.fillRect(cx1, 30, 60, 20); ctx.fillRect(cx1 + 10, 20, 40, 30);
+        let cx2 = 450 - cloudOffset; if(cx2 < -100) cx2 += 900;
+        ctx.fillRect(cx2, 50, 80, 20); ctx.fillRect(cx2 + 20, 40, 40, 30);
+
+        ctx.fillStyle = "#4ade80";
+        let bgOffset = (frameCount * 1.5) % 100;
+        for(let i = -100; i < canvas.width + 100; i += 50) {
+            ctx.fillRect(i - bgOffset, 160, 45, 110);
+        }
+
+        for(let i = -100; i < canvas.width + 100; i += 70) {
+            let flowerSway = Math.sin(frameCount * 0.08 + i) * 3;
+            ctx.fillStyle = "#f472b6"; ctx.fillRect(i - bgOffset + 10, 210 + flowerSway, 8, 8);
+            ctx.fillStyle = "#fb923c"; ctx.fillRect(i - bgOffset + 35, 225 - flowerSway, 8, 8);
+        }
+    } 
+    else if (currentBg === 'ocean') {
+        ctx.fillStyle = "#0284c7"; ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "rgba(255, 255, 255, 0.4)";
+        for(let i = 0; i < 15; i++) {
+            let bx = (i * 60 + frameCount) % canvas.width;
+            let by = (canvas.height - ((frameCount * 1.5 + i * 40) % canvas.height));
+            ctx.fillRect(bx, by, 4, 4);
+        }
+
+        for(let i = 0; i < 5; i++) {
+            let fx = (canvas.width - ((frameCount * (1 + i * 0.3) + i * 150) % (canvas.width + 100)));
+            let fy = 50 + (i * 40) + Math.sin(frameCount * 0.05 + i) * 10;
+            ctx.fillStyle = (i % 2 === 0) ? "#f97316" : "#facc15"; ctx.fillRect(fx, fy, 16, 8); ctx.fillRect(fx + 16, fy - 2, 4, 12);
+            ctx.fillStyle = "#ffffff"; ctx.fillRect(fx + 3, fy + 2, 3, 3);
+            ctx.fillStyle = "#000000"; ctx.fillRect(fx + 3, fy + 3, 1, 1);
+        }
+
+        ctx.fillStyle = "#0369a1";
+        for(let i = 0; i < canvas.width; i += 80) {
+            ctx.fillRect(i, 200, 25, 62); ctx.fillRect(i + 5, 180, 15, 20);
+        }
+    }
+    else if (currentBg === 'night') {
+        ctx.fillStyle = "#0f172a"; ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "#fef08a"; ctx.fillRect(680, 30, 40, 40);
+        ctx.fillStyle = "#0f172a"; ctx.fillRect(670, 25, 30, 30);
+        ctx.fillStyle = "#ffffff";
+        for(let i = 0; i < 30; i++) {
+            let starX = (i * 37) % canvas.width;
+            let starY = (i * 19) % 150;
+            if ((frameCount + i * 10) % 40 < 20) ctx.fillRect(starX, starY, 3, 3);
+        }
+        ctx.fillStyle = "#1e293b";
+        let bgOffset = (frameCount * 0.5) % 200;
+        for(let i = -200; i < canvas.width + 200; i += 150) {
+            ctx.beginPath(); ctx.moveTo(i - bgOffset, 262); ctx.lineTo(i - bgOffset + 75, 120); ctx.lineTo(i - bgOffset + 150, 262); ctx.fill();
+        }
+    }
+    else if (currentBg === 'cyber') {
+        ctx.fillStyle = "#2e1065"; ctx.fillRect(0, 0, canvas.width, canvas.height);
+        let sunGrad = ctx.createLinearGradient(0, 40, 0, 160);
+        sunGrad.addColorStop(0, "#f43f5e"); sunGrad.addColorStop(1, "#facc15");
+        ctx.fillStyle = sunGrad; ctx.beginPath(); ctx.arc(400, 140, 60, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "#3b0764";
+        let bgOffset = (frameCount * 1.2) % 120;
+        for(let i = -120; i < canvas.width + 120; i += 60) {
+            let h = 80 + (i % 50);
+            ctx.fillRect(i - bgOffset, 262 - h, 45, h);
+            ctx.fillStyle = "#ec4899"; ctx.fillRect(i - bgOffset + 10, 262 - h + 15, 6, 6); ctx.fillRect(i - bgOffset + 25, 262 - h + 30, 6, 6);
+            ctx.fillStyle = "#3b0764";
+        }
+    }
+}
+
+const obstacles = [];
+const treats = [];
+
+function createObstacle() {
+    const type = Math.random() > 0.4 ? 'low' : 'high';
+    if (type === 'low') {
+        const height = (Math.floor(Math.random() * 2) + 3) * 10;
+        obstacles.push({ type: 'low', x: canvas.width, y: 262 - height, width: 20, height: height });
+    } else {
+        obstacles.push({ type: 'high', x: canvas.width, y: 175, width: 35, height: 50 });
+    }
+}
+
+function createTreat() {
+    const heights = [130, 175, 215];
+    treats.push({ x: canvas.width, y: heights[Math.floor(Math.random() * heights.length)], width: 24, height: 28, floatOffset: 0, collected: false });
+}
+
+function checkCollision(r1, r2) {
+    return r1.x < r2.x + r2.width && r1.x + r1.width > r2.x && r1.y < r2.y + r2.height && r1.y + r1.height > r2.y;
+}
+
+function resetGame() {
+    obstacles.length = 0;
+    treats.length = 0;
+    score = 0;
+    gameSpeed = 4.5;
+    gameOver = false;
+    hamster.y = 226;
+    hamster.isJumping = false;
+    loop();
+}
+
+function loop() {
+    if (gameOver) return;
+
+    frameCount++;
+    drawBackground();
+
+    document.getElementById('hud-g').textContent = g.toFixed(1);
+    document.getElementById('hud-v').textContent = initialJumpVelocity.toFixed(1);
+    document.getElementById('hud-h').textContent = hamster.maxHeight.toFixed(2);
+
+    ctx.fillStyle = (currentBg === 'ocean') ? "#075985" : (currentBg === 'cyber') ? "#581c87" : (currentBg === 'night') ? "#0284c7" : "#78350f";
+    ctx.fillRect(0, 262, canvas.width, 58);
+    ctx.fillStyle = (currentBg === 'ocean') ? "#fde047" : (currentBg === 'cyber') ? "#f43f5e" : (currentBg === 'night') ? "#38bdf8" : "#16a34a"; 
+    ctx.fillRect(0, 262, canvas.width, 8); 
+
+    hamster.update();
+    hamster.draw();
+
+    if (frameCount % 110 === 0) createObstacle();
+    if (frameCount % 130 === 0) createTreat();
+
+    for (let i = treats.length - 1; i >= 0; i--) {
+        let t = treats[i];
+        t.x -= gameSpeed;
+        t.floatOffset = Math.sin(frameCount * 0.1) * 4;
+
+        if (!t.collected) {
+            let py = t.y + t.floatOffset;
+            ctx.fillStyle = "#ea580c"; ctx.fillRect(t.x, py, 24, 28);
+            ctx.fillStyle = "#fef08a"; ctx.fillRect(t.x + 4, py + 6, 16, 16);
+
+            if (checkCollision(hamster.getHitbox(), {x: t.x, y: py, width: t.width, height: t.height})) {
+                t.collected = true;
+                score += 100;
+                hamster.chewing = true;
+                hamster.chewTimer = 40; 
+            }
+        }
+
+        if (t.x + t.width < 0) treats.splice(i, 1);
+    }
+
+    for (let i = obstacles.length - 1; i >= 0; i--) {
+        let obs = obstacles[i];
+        obs.x -= gameSpeed;
+
+        ctx.fillStyle = (currentBg === 'ocean') ? "#1e3a8a" : (currentBg === 'cyber') ? "#e11d48" : "#15803d";
+        ctx.fillRect(obs.x, obs.y, obs.width, obs.height);
+
+        if (checkCollision(hamster.getHitbox(), obs)) {
+            gameOver = true;
+            drawGameOver();
+        }
+
+        if (obs.x + obs.width < 0) obstacles.splice(i, 1);
+    }
+
+    if (!gameOver) {
+        ctx.fillStyle = (currentBg === 'night' || currentBg === 'cyber' || currentBg === 'ocean') ? "#facc15" : "#0284c7";
+        ctx.font = '12px "Press Start 2P", cursive';
+        ctx.fillText(`SNACKS: ${score}`, canvas.width - 220, 35);
+
+        gameSpeed += 0.0005;
+        requestAnimationFrame(loop);
+    }
+}
+
+function drawGameOver() {
+    ctx.save();
+    ctx.fillStyle = "rgba(15, 23, 42, 0.95)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#f43f5e";
+    ctx.font = '16px "Press Start 2P", cursive';
+    ctx.textAlign = "center";
+    ctx.fillText("GAME OVER!", canvas.width / 2, canvas.height / 2 - 20);
+
+    ctx.fillStyle = "#38bdf8";
+    ctx.font = '10px "Press Start 2P", cursive';
+    ctx.fillText(`TOTAL SNACK: ${score}`, canvas.width / 2, canvas.height / 2 + 15);
+    
+    ctx.fillStyle = "#ffffff";
+    ctx.fillText("KETUK / TEKAN UNTUK MAIN LAGI", canvas.width / 2, canvas.height / 2 + 45);
+    ctx.restore();
+}
+
+loop();
+</script>
+</body>
+</html>
