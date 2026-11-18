@@ -1,0 +1,3771 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Pixel Scrapbook Laptop ✨</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Retro & Pixel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Gaegu:wght@400;700&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pixelDark: '#231f20',
+                        pigmentPink: '#ff8fab',
+                        pigmentPinkShadow: '#fb6f92',
+                        pigmentYellow: '#ffd166',
+                        pigmentYellowShadow: '#f4a261',
+                        pigmentMint: '#95d5b2',
+                        pigmentMintShadow: '#52b788',
+                        pigmentBlue: '#8ecae6',
+                        pigmentBlueShadow: '#3a86ff',
+                        pigmentPurple: '#cdb4db',
+                        pigmentPurpleShadow: '#9d4edd',
+                        smiskiLight: '#e3f39d',
+                        smiskiFolder: '#aab982',
+                        smiskiShadow: '#70785a'
+                    },
+                    fontFamily: {
+                        pixel: ['"Press Start 2P"', 'monospace'],
+                        vt: ['VT323', 'monospace'],
+                        hand: ['Gaegu', 'cursive'],
+                        cute: ['Fredoka', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* =====================================================================
+           1. CUSTOM PIXEL BUNNY ARROW, PIXEL HAND & PIXEL RING CURSORS
+        ===================================================================== */
+        :root {
+            --cursor-bunny-arrow: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' shape-rendering='crispEdges'><path d='M1 1h1v11h-1zM2 2h1v1h-1zM3 3h1v1h-1zM4 4h1v1h-1zM5 5h1v1h-1zM6 6h1v1h-1zM7 7h1v1h-1zM8 8h2v1h-2zM2 11h2v1h-2zM4 10h2v1h-2zM6 10h2v2h-2z' fill='%234f4e68'/><path d='M2 3h1v8h-1zM3 4h1v6h-1zM4 5h1v5h-1zM5 6h1v4h-1zM6 7h1v3h-1zM7 8h1v2h-1z' fill='%23ffffff'/><path d='M2 10h2v1h-2zM4 9h2v1h-2zM6 9h2v1h-2z' fill='%23b8c4dc'/><path d='M12 7h4v1h-4zM11 8h1v2h-1zM16 8h2v1h-2zM18 9h2v2h-2zM17 11h2v1h-2zM15 12h2v2h-2zM10 10h1v4h-1zM9 11h1v3h-1zM11 14h4v1h-4zM10 15h1v3h-1zM15 15h1v3h-1zM11 18h1v2h-1zM14 18h1v2h-1zM12 19h2v1h-2zM16 17h2v2h-2z' fill='%234f4e68'/><path d='M12 8h4v1h-4zM12 9h6v2h-6zM11 10h6v4h-6zM11 15h4v3h-4zM12 18h2v1h-2zM16 17h1v1h-1z' fill='%23ffffff'/><path d='M10 11h1v3h-1zM11 16h4v2h-4z' fill='%23c6d0e6'/><rect x='13' y='11' width='1' height='1' fill='%234f4e68'/><rect x='10' y='10' width='2' height='2' fill='%237c7d99'/></svg>") 2 2, auto;
+            --cursor-pixel-hand: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' shape-rendering='crispEdges'><path d='M9 2h2v1h-2zM8 3h1v8h-1zM11 3h1v6h-1zM12 8h2v1h-2zM14 9h3v1h-3zM17 10h2v1h-2zM19 11h1v6h-1zM18 17h1v3h-1zM17 20h1v1h-1zM9 21h8v1h-8zM8 20h1v1h-1zM7 18h1v2h-1zM6 16h1v2h-1zM5 14h1v2h-1zM3 13h2v1h-2zM2 12h1v1h-1zM3 11h3v1h-3zM6 12h2v1h-2z' fill='%234f4e68'/><path d='M9 3h2v8h-2zM8 11h4v1h-4zM6 12h8v1h-8zM3 12h3v1h-3zM5 13h12v1h-12zM6 14h13v3h-13zM7 17h11v3h-11zM9 20h8v1h-8z' fill='%23ffffff'/><path d='M12 9h2v3h-2zM15 10h2v3h-2zM18 11h1v6h-1zM7 18h10v2h-10z' fill='%23c6d0e6'/><rect x='12' y='9' width='1' height='3' fill='%234f4e68'/><rect x='15' y='10' width='1' height='3' fill='%234f4e68'/></svg>") 10 2, pointer;
+            --cursor-pixel-ring: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' shape-rendering='crispEdges'><path d='M9 3h6v1h-6zM7 4h2v1h-2zM15 4h2v1h-2zM5 5h2v2h-2zM17 5h2v2h-2zM4 7h1v2h-1zM19 7h1v2h-1zM3 9h1v6h-1zM20 9h1v6h-1zM4 15h1v2h-1zM19 15h1v2h-1zM5 17h2v2h-2zM17 17h2v2h-2zM7 19h2v1h-2zM15 19h2v1h-2zM9 20h6v1h-6zM9 7h6v1h-6zM8 8h1v1h-1zM15 8h1v1h-1zM7 9h1v6h-1zM16 9h1v6h-1zM8 15h1v1h-1zM15 15h1v1h-1zM9 16h6v1h-6z' fill='%234f4e68'/><path d='M9 4h6v3h-6zM7 5h2v3h-2zM15 5h2v3h-2zM5 7h3v2h-3zM16 7h3v2h-3zM4 9h3v6h-3zM17 9h3v6h-3zM5 15h3v2h-3zM16 15h3v2h-3zM7 16h2v3h-2zM15 16h2v3h-2zM9 17h6v3h-6z' fill='%23ffffff'/><path d='M13 4h2v3h-2zM15 5h2v3h-2zM17 7h2v3h-2zM17 14h2v2h-2zM15 16h2v2h-2zM9 18h6v2h-6zM5 15h2v2h-2z' fill='%23c6d2ea'/></svg>") 12 12, wait;
+        }
+
+        * {
+            cursor: var(--cursor-bunny-arrow);
+        }
+
+        body:active, .cursor-ring-wait, .cursor-ring-wait * {
+            cursor: var(--cursor-pixel-ring) !important;
+        }
+
+        button, a, [onclick], .cursor-pointer, label[for], input[type="range"] {
+            cursor: var(--cursor-pixel-hand) !important;
+        }
+
+        button:active, a:active, [onclick]:active {
+            cursor: var(--cursor-pixel-ring) !important;
+        }
+
+        [contenteditable="true"] {
+            cursor: text !important;
+            user-select: text !important;
+        }
+
+        canvas {
+            cursor: crosshair !important;
+        }
+
+        /* 2. SMISKI DREAMY PASTEL SKY WALLPAPER */
+        body {
+            background: linear-gradient(
+                180deg,
+                #ffffff 0%,
+                #f8fcff 22%,
+                #e4f2fb 52%,
+                #cde6f7 82%,
+                #dceefa 100%
+            );
+            color: #231f20;
+            user-select: none;
+            overflow: hidden;
+            perspective: 1000px;
+        }
+
+        @keyframes smiskiGentleBob {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .smiski-float {
+            animation: smiskiGentleBob 4s ease-in-out infinite;
+        }
+
+        /* 3. Desktop Smiski Folder & Blue Trash Icon Styling (DIAM DI TEMPAT SAAT DIKLIK) */
+        .desktop-file-icon {
+            transition: background-color 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .desktop-file-icon:hover {
+            background-color: rgba(255, 255, 255, 0.72);
+            box-shadow: 0 0 0 2.5px #231f20, 4px 4px 0px rgba(142, 202, 230, 0.8);
+        }
+
+        .desktop-file-icon.selected {
+            background-color: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 0 0 2.5px #231f20, 5px 5px 0px #8ecae6;
+        }
+
+        .smiski-folder-svg {
+            filter: drop-shadow(0px 4px 5px rgba(82, 102, 68, 0.28));
+        }
+
+        .icon-pigment-blue {
+            background: linear-gradient(145deg, #e4f2fb, #cde6f7);
+            box-shadow: 4px 4px 0px #8ecae6, 6px 6px 0px #231f20;
+        }
+
+        /* 4. 3D Window Card Styling */
+        .window-3d {
+            background: #fffdf9;
+            border: 4px solid #231f20;
+            transform-style: preserve-3d;
+            transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+            pointer-events: auto;
+        }
+
+        .win-shadow-yellow { box-shadow: 8px 8px 0px #f4a261, 13px 13px 0px #231f20; }
+        .win-shadow-pink   { box-shadow: 8px 8px 0px #fb6f92, 13px 13px 0px #231f20; }
+        .win-shadow-blue   { box-shadow: 8px 8px 0px #3a86ff, 13px 13px 0px #231f20; }
+        .win-shadow-mint   { box-shadow: 8px 8px 0px #52b788, 13px 13px 0px #231f20; }
+        .win-shadow-purple { box-shadow: 8px 8px 0px #9d4edd, 13px 13px 0px #231f20; }
+
+        .window-3d.maximized {
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 56px !important;
+            width: 100vw !important;
+            height: calc(100vh - 56px) !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            transform: none !important;
+            z-index: 9000 !important;
+        }
+
+        /* 5. Decorative Scrapbook Washi Tape & Pins */
+        .washi-tape-smiski {
+            background: repeating-linear-gradient(
+                45deg,
+                #8ecae6,
+                #8ecae6 12px,
+                #e3f39d 12px,
+                #e3f39d 24px
+            );
+            border: 2px solid #231f20;
+        }
+
+        .pin-head {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px solid #231f20;
+            box-shadow: 2px 2px 0px #231f20;
+        }
+
+        /* 6. Draggable Elements (HANYA BERGERAK SAAT BENAR-BENAR DIGESER) */
+        .draggable-item {
+            position: absolute;
+            touch-action: none;
+            cursor: var(--cursor-pixel-hand) !important;
+        }
+
+        .draggable-item.is-dragging {
+            cursor: var(--cursor-pixel-ring) !important;
+            filter: drop-shadow(0 10px 14px rgba(35, 31, 32, 0.2));
+        }
+
+        /* =====================================================================
+           7. STOP-MOTION / PAPER CUTOUT SWING ANIMATION
+        ===================================================================== */
+        @keyframes paperCutoutSwing {
+            0%, 49.9% {
+                transform: rotate(-8deg) translateY(0px);
+            }
+            50%, 99.9% {
+                transform: rotate(8deg) translateY(-2px);
+            }
+            100% {
+                transform: rotate(-8deg) translateY(0px);
+            }
+        }
+
+        .paper-cutout-character {
+            animation: paperCutoutSwing 2.2s steps(1, end) infinite;
+            transform-origin: bottom center;
+            display: inline-block;
+            filter:
+                drop-shadow(2px 0 0 #ffffff)
+                drop-shadow(-2px 0 0 #ffffff)
+                drop-shadow(0 2px 0 #ffffff)
+                drop-shadow(0 -2px 0 #ffffff)
+                drop-shadow(3px 5px 4px rgba(35, 31, 32, 0.22));
+        }
+
+        /* =====================================================================
+           8. SMOOTH CURSOR TRAIL & FLOATING SPARKLE PARTICLES
+        ===================================================================== */
+        @keyframes smoothCursorTrailFade {
+            0% {
+                opacity: 0.95;
+                transform: translateY(0px) scale(1) rotate(-6deg);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(18px) scale(0.65) rotate(12deg);
+            }
+        }
+
+        .cursor-trail {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            width: 28px;
+            height: 28px;
+            animation: smoothCursorTrailFade 0.85s ease-out forwards;
+            filter:
+                drop-shadow(1.5px 0 0 #ffffff)
+                drop-shadow(-1.5px 0 0 #ffffff)
+                drop-shadow(0 1.5px 0 #ffffff)
+                drop-shadow(0 -1.5px 0 #ffffff)
+                drop-shadow(2px 3px 2px rgba(35, 31, 32, 0.18));
+        }
+
+        @keyframes smoothFloatUp {
+            0% {
+                opacity: 1;
+                transform: translateY(0px) scale(0.85) rotate(-5deg);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-30px) scale(1.05) rotate(6deg);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-60px) scale(0.85) rotate(-4deg);
+            }
+        }
+
+        .floating-particle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
+            animation: smoothFloatUp 1.5s ease-out forwards;
+        }
+
+        .paper-sticker-badge {
+            filter:
+                drop-shadow(2px 0 0 #ffffff)
+                drop-shadow(-2px 0 0 #ffffff)
+                drop-shadow(0 2px 0 #ffffff)
+                drop-shadow(0 -2px 0 #ffffff)
+                drop-shadow(2px 4px 3px rgba(35, 31, 32, 0.2));
+        }
+
+        /* 9. Equalizer & Spinning Disc */
+        @keyframes eqDance {
+            0%, 100% { height: 6px; }
+            50% { height: 18px; }
+        }
+        .eq-bar.playing {
+            animation: eqDance 0.5s ease-in-out infinite;
+        }
+
+        @keyframes spinDisc {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .disc-spinning {
+            animation: spinDisc 3s linear infinite;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body class="h-screen w-screen relative font-cute text-pixelDark flex flex-col justify-between">
+
+    <!-- AUDIO ENGINE UNTUK LAGU "SEASONS" (seasons.mp4) -->
+    <audio id="seasons-audio" src="seasons.mp4" loop preload="auto"></audio>
+
+    <!-- ==================== DESKTOP SCREEN AREA ==================== -->
+    <main id="desktop-workspace" onclick="handleWorkspaceClick(event)" class="relative w-full h-[calc(100vh-56px)] p-4 overflow-hidden">
+
+        <!-- =========================================================================
+             CUSTOM SMISKI & PASTEL SHELVES WALLPAPER LAYER
+        ========================================================================== -->
+        <div id="smiski-wallpaper-layer" class="fixed inset-0 bottom-14 pointer-events-none z-0 overflow-hidden">
+
+            <!-- 1. POLA BINTANG ASCII / PIXEL PUTIH SAMAR -->
+            <pre class="absolute top-[11%] left-[14%] font-mono text-[8px] sm:text-[10px] leading-[9px] text-white/85 select-none drop-shadow-[0_1px_2px_rgba(148,187,219,0.45)]">
+            .:.
+           .:::.
+          .:::::.
+   . . . .:::::::. . . .
+    .:::::::::::::::::.
+      .:::::::::::::.
+       .:::::::::::.
+      .::::::.::::::.
+     .::::.     .::::.
+    .::.           .::.
+            </pre>
+
+            <pre class="absolute top-[25%] left-[56%] rotate-[-14deg] font-mono text-[8px] sm:text-[9px] leading-[8px] text-white/85 select-none drop-shadow-[0_1px_2px_rgba(148,187,219,0.45)]">
+         .::.
+        .::::.
+   . . .::::::. . .
+    .::::::::::::.
+      .::::::::.
+     .::::..::::.
+    .:.        .:.
+            </pre>
+
+            <pre class="absolute bottom-[8%] left-[28%] font-mono text-[8px] sm:text-[10px] leading-[9px] text-white/85 select-none drop-shadow-[0_1px_2px_rgba(148,187,219,0.45)]">
+           .:.
+          .:::.
+   . . . .:::::. . . .
+     .:::::::::::::.
+       .:::::::::.
+      .:::::.:::::.
+     .:::.     .:::.
+            </pre>
+
+            <!-- 2. KUTIPAN INSPIRATIF + BINTANG BIRU DENIM -->
+            <div class="absolute top-6 left-[275px] max-w-md z-0">
+                <p class="font-sans italic text-[15px] sm:text-[18px] leading-snug text-[#1c2530] tracking-tight font-normal">
+                    Success is not final, failure is not fatal.<br>
+                    It is the courage to continue that counts.
+                </p>
+                <svg class="w-12 h-12 mt-1.5 drop-shadow-[0_3px_4px_rgba(52,84,117,0.28)]" viewBox="0 0 100 100">
+                    <defs>
+                        <linearGradient id="denimStarGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#5d83a8"/>
+                            <stop offset="55%" stop-color="#43678a"/>
+                            <stop offset="100%" stop-color="#2f4d6b"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M50 8 L61 36 L91 38 L68 57 L75 87 L50 71 L25 87 L32 57 L9 38 L39 36 Z"
+                          fill="url(#denimStarGrad)" stroke="#335270" stroke-width="3" stroke-linejoin="round"/>
+                    <path d="M50 15 L59 38 L83 40 L64 55 L70 79 L50 66 L30 79 L36 55 L17 40 L41 38 Z"
+                          fill="none" stroke="#8ab0d4" stroke-width="1.5" stroke-dasharray="3 3"/>
+                </svg>
+            </div>
+
+            <!-- 3. SMISKI #1 (SEBELAH QUOTES) -->
+            <div class="absolute top-5 left-[580px] smiski-float" style="animation-delay: 0.4s;">
+                <svg class="w-24 h-28 drop-shadow-[0_8px_12px_rgba(110,145,120,0.24)]" viewBox="0 0 140 165">
+                    <defs>
+                        <radialGradient id="smiskiPeekArm" cx="35%" cy="25%" r="75%">
+                            <stop offset="0%" stop-color="#f6fde2"/>
+                            <stop offset="55%" stop-color="#e3f4b0"/>
+                            <stop offset="100%" stop-color="#cbe28a"/>
+                        </radialGradient>
+                        <radialGradient id="smiskiPeekBody" cx="38%" cy="30%" r="75%">
+                            <stop offset="0%" stop-color="#f7fee4"/>
+                            <stop offset="58%" stop-color="#e5f5b4"/>
+                            <stop offset="100%" stop-color="#c9e08a"/>
+                        </radialGradient>
+                        <radialGradient id="smiskiPeekHead" cx="40%" cy="32%" r="70%">
+                            <stop offset="0%" stop-color="#f8fee7"/>
+                            <stop offset="60%" stop-color="#e6f6b6"/>
+                            <stop offset="100%" stop-color="#cce28e"/>
+                        </radialGradient>
+                    </defs>
+
+                    <path d="M 55 106
+                             C 45 113, 39 124, 41 135
+                             C 42 141, 35 147, 41 151
+                             C 47 154, 59 149, 63 142
+                             C 65 135, 62 124, 66 112 Z"
+                          fill="url(#smiskiPeekBody)" />
+
+                    <path d="M 48 24
+                             C 41 21, 31 24, 31 34
+                             C 31 44, 38 62, 42 78
+                             C 44 92, 49 105, 58 111
+                             L 62 128
+                             C 63 136, 64 146, 66 153
+                             C 68 159, 75 159, 81 153
+                             C 86 148, 91 142, 87 137
+                             C 83 132, 79 128, 79 116
+                             C 88 113, 96 105, 95 93
+                             C 94 82, 86 73, 76 68
+                             L 56 36
+                             C 54 29, 52 25, 48 24 Z"
+                          fill="url(#smiskiPeekArm)" />
+
+                    <path d="M 53 33 Q 50 52 54 70" stroke="#c3da84" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.65" />
+                    <ellipse cx="75" cy="51" rx="28" ry="27" transform="rotate(8 75 51)" fill="url(#smiskiPeekHead)" />
+                    <circle cx="62" cy="51" r="2.7" fill="#4f6d31" />
+                    <circle cx="81" cy="58" r="2.8" fill="#4f6d31" />
+                    <path d="M 62 62 L 69 65" stroke="#456129" stroke-width="2.7" stroke-linecap="round" />
+                </svg>
+            </div>
+
+            <!-- 4. TIGA AWAN BIRU GANTUNG DARI ATAS KANAN -->
+            <svg class="absolute top-0 right-[21%] w-48 h-24 drop-shadow-[0_4px_6px_rgba(120,162,194,0.25)]" viewBox="0 0 220 110">
+                <defs>
+                    <linearGradient id="cloudGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#c4dfee"/>
+                        <stop offset="100%" stop-color="#8cb7d4"/>
+                    </linearGradient>
+                </defs>
+                <line x1="42" y1="0" x2="42" y2="55" stroke="#b6d2e6" stroke-width="2"/>
+                <line x1="112" y1="0" x2="112" y2="42" stroke="#b6d2e6" stroke-width="2"/>
+                <line x1="180" y1="0" x2="180" y2="56" stroke="#b6d2e6" stroke-width="2"/>
+                <path d="M18 76 C12 76 8 71 10 65 C11 60 16 58 21 59 C24 51 34 48 42 52 C49 48 60 51 63 59 C68 58 73 61 74 66 C75 72 70 76 64 76 Z" fill="url(#cloudGrad)"/>
+                <path d="M88 62 C82 62 78 57 80 51 C81 46 86 44 91 45 C94 37 104 34 112 38 C119 34 130 37 133 45 C138 44 143 47 144 52 C145 58 140 62 134 62 Z" fill="url(#cloudGrad)"/>
+                <path d="M156 76 C150 76 146 71 148 65 C149 60 154 58 159 59 C162 51 172 48 180 52 C187 48 198 51 201 59 C206 58 211 61 212 66 C213 72 208 76 202 76 Z" fill="url(#cloudGrad)"/>
+            </svg>
+
+            <!-- 5. TIGA RAK DINDING BIRU 3D + SMISKI LAPTOP + SPIRAL AWAN -->
+            <div class="absolute top-[13%] right-[6%] w-[290px] h-[360px]">
+                <svg class="w-full h-full overflow-visible drop-shadow-[0_10px_14px_rgba(105,148,179,0.22)]" viewBox="0 0 320 400">
+                    <defs>
+                        <linearGradient id="shelfBackGrad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#b8d8eb"/>
+                            <stop offset="100%" stop-color="#9bc4de"/>
+                        </linearGradient>
+                        <linearGradient id="shelfLipGrad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#cbe4f3"/>
+                            <stop offset="100%" stop-color="#8bb8d4"/>
+                        </linearGradient>
+                        <radialGradient id="smiskiLaptopHead3D" cx="38%" cy="24%" r="75%">
+                            <stop offset="0%" stop-color="#f9fee9"/>
+                            <stop offset="56%" stop-color="#e5f4a8"/>
+                            <stop offset="100%" stop-color="#c4db76"/>
+                        </radialGradient>
+                        <radialGradient id="smiskiLaptopBody3D" cx="35%" cy="35%" r="78%">
+                            <stop offset="0%" stop-color="#f2fbd6"/>
+                            <stop offset="55%" stop-color="#d8ed92"/>
+                            <stop offset="100%" stop-color="#b6d164"/>
+                        </radialGradient>
+                        <linearGradient id="laptopShellGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#94c961"/>
+                            <stop offset="100%" stop-color="#76ad44"/>
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Rak 1 -->
+                    <rect x="28" y="34" width="264" height="58" rx="6" fill="url(#shelfBackGrad)"/>
+                    <rect x="22" y="86" width="276" height="12" rx="5" fill="url(#shelfLipGrad)"/>
+
+                    <!-- SMISKI DUDUK DENGAN LAPTOP HIJAU -->
+                    <g transform="translate(154, -44)">
+                        <path d="M 62 104 L 43 121 C 36 126, 37 134, 46 136 C 53 137, 60 132, 65 126 L 78 112 Z" fill="url(#smiskiLaptopBody3D)" />
+                        <path d="M 66 64 C 58 74, 58 92, 63 106 L 55 123 C 49 130, 52 138, 61 140 C 69 141, 75 135, 80 126 L 96 116 C 103 111, 104 94, 98 76 C 94 64, 86 58, 76 60 Z" fill="url(#smiskiLaptopBody3D)" />
+                        <path d="M 66 105 L 78 114" stroke="#b3ce62" stroke-width="2" fill="none" stroke-linecap="round" />
+
+                        <polygon points="48,104 98,104 102,108 51,108" fill="#6da13e" />
+                        <polygon points="48,104 98,104 94,101 46,101" fill="#82b850" />
+
+                        <polygon points="21,69 65,69 72,104 28,104" fill="url(#laptopShellGrad)" stroke="#6c9e3e" stroke-width="1.2" stroke-linejoin="round" />
+                        <polygon points="19,69 21,69 28,104 26,104" fill="#a5d674" />
+                        <line x1="20" y1="68.5" x2="65" y2="68.5" stroke="#b2e082" stroke-width="1.5" stroke-linecap="round" />
+
+                        <ellipse cx="46" cy="87" rx="7.5" ry="8.5" transform="rotate(-8 46 87)" fill="#e7f5b8" />
+                        <circle cx="43" cy="86" r="0.9" fill="#4f6d31" />
+                        <circle cx="49" cy="86.5" r="0.9" fill="#4f6d31" />
+                        <path d="M 44 90 Q 46 89 48 90.5" stroke="#4f6d31" stroke-width="0.9" fill="none" stroke-linecap="round" />
+
+                        <path d="M 66 74 L 58 92 C 56 97, 61 100, 66 99 L 74 98" fill="#d9ee98" />
+                        <path d="M 85 72 C 91 81, 93 93, 87 98 C 81 102, 70 101, 64 100 C 60 99, 60 93, 65 92 L 79 91 L 76 76 Z" fill="url(#smiskiLaptopHead3D)" />
+
+                        <ellipse cx="75" cy="34" rx="31" ry="30" transform="rotate(-10 75 34)" fill="url(#smiskiLaptopHead3D)" />
+                        <ellipse cx="73" cy="61" rx="15" ry="4.5" fill="#bfd66e" opacity="0.55" />
+                        <circle cx="55" cy="44" r="2.5" fill="#3b5422" />
+                        <circle cx="71" cy="46" r="2.8" fill="#3b5422" />
+                        <path d="M 59 54 L 68 55" stroke="#3b5422" stroke-width="2.1" stroke-linecap="round" />
+                    </g>
+
+                    <!-- Rak 2 -->
+                    <rect x="28" y="162" width="264" height="58" rx="6" fill="url(#shelfBackGrad)"/>
+                    <rect x="22" y="214" width="276" height="12" rx="5" fill="url(#shelfLipGrad)"/>
+
+                    <!-- Rak 3 -->
+                    <rect x="28" y="290" width="264" height="58" rx="6" fill="url(#shelfBackGrad)"/>
+                    <rect x="22" y="342" width="276" height="12" rx="5" fill="url(#shelfLipGrad)"/>
+
+                    <!-- Hiasan Awan Spiral di Rak 3 -->
+                    <g transform="translate(52, 286)">
+                        <path d="M30 8 C38 8 44 13 46 19 C53 20 58 26 58 33 C58 40 53 46 46 47 C44 53 38 58 30 58 C22 58 16 53 14 47 C7 46 2 40 2 33 C2 26 7 20 14 19 C16 13 22 8 30 8 Z"
+                              fill="#cde3f2" stroke="#8cb6d1" stroke-width="2"/>
+                        <path d="M30 33 C30 30 33 28 35 30 C38 33 36 39 31 40 C24 41 20 35 21 28 C23 20 32 17 39 20 C47 24 49 34 44 42 C39 50 28 52 20 47"
+                              fill="none" stroke="#7da8c4" stroke-width="2.6" stroke-linecap="round"/>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- 6. SMISKI #2 (DEKAT TOMBOL START) -->
+            <div class="absolute bottom-2 left-4 smiski-float" style="animation-delay: 1s;">
+                <svg class="w-44 h-28 drop-shadow-[0_6px_10px_rgba(110,145,120,0.24)]" viewBox="0 0 210 125">
+                    <defs>
+                        <radialGradient id="smiskiRestHead" cx="35%" cy="28%" r="75%">
+                            <stop offset="0%" stop-color="#e5f7a6"/>
+                            <stop offset="62%" stop-color="#d2ec8d"/>
+                            <stop offset="100%" stop-color="#bddb72"/>
+                        </radialGradient>
+                        <radialGradient id="smiskiRestBody" cx="38%" cy="30%" r="78%">
+                            <stop offset="0%" stop-color="#ebf9b4"/>
+                            <stop offset="60%" stop-color="#d8f097"/>
+                            <stop offset="100%" stop-color="#c2df7b"/>
+                        </radialGradient>
+                    </defs>
+
+                    <path d="M 116 64 L 168 76 C 175 78, 177 86, 173 91 L 124 86 Z" fill="url(#smiskiRestBody)" />
+                    <path d="M 76 74 C 86 60, 106 58, 124 66 C 134 71, 142 82, 146 86 L 172 90 C 179 91, 181 99, 175 102 L 106 102 C 92 102, 82 98, 76 96 C 68 101, 56 104, 51 101 C 47 98, 46 92, 42 87 C 36 81, 36 74, 42 74 C 48 74, 54 81, 61 85 C 67 84, 72 79, 76 74 Z" fill="url(#smiskiRestBody)" />
+                    <path d="M 94 64 C 109 63, 123 68, 134 75" stroke="#c5e180" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.7" />
+                    <path d="M 136 88 L 171 91" stroke="#bdd976" stroke-width="2" fill="none" stroke-linecap="round" />
+                    <ellipse cx="57" cy="54" rx="28" ry="27" transform="rotate(-18 57 54)" fill="url(#smiskiRestHead)" />
+                    <circle cx="52" cy="64" r="2.7" fill="#466824" />
+                    <circle cx="65" cy="48" r="2.7" fill="#466824" />
+                    <path d="M 67 66 L 74 58" stroke="#3c5c1d" stroke-width="2.8" stroke-linecap="round" />
+                </svg>
+            </div>
+
+            <!-- 7. SMISKI #4 (DEKAT JAM & TANGGAL) -->
+            <div class="absolute bottom-0 right-5 smiski-float" style="animation-delay: 1.6s;">
+                <svg class="w-40 h-52 drop-shadow-[0_8px_12px_rgba(95,130,105,0.26)]" viewBox="0 0 180 235">
+                    <defs>
+                        <radialGradient id="smiskiBookHead" cx="42%" cy="25%" r="75%">
+                            <stop offset="0%" stop-color="#f7fee4"/>
+                            <stop offset="62%" stop-color="#e3f3a4"/>
+                            <stop offset="100%" stop-color="#c4d97c"/>
+                        </radialGradient>
+                        <radialGradient id="smiskiBookBody" cx="38%" cy="35%" r="78%">
+                            <stop offset="0%" stop-color="#f5fde0"/>
+                            <stop offset="60%" stop-color="#dff09d"/>
+                            <stop offset="100%" stop-color="#bfd674"/>
+                        </radialGradient>
+                        <linearGradient id="greenBookLeft" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#76a348"/>
+                            <stop offset="100%" stop-color="#5a8232"/>
+                        </linearGradient>
+                        <linearGradient id="greenBookRight" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#8bb85a"/>
+                            <stop offset="100%" stop-color="#69943e"/>
+                        </linearGradient>
+                    </defs>
+
+                    <path d="M 55 162 L 52 224 C 52 229, 86 229, 86 224 L 87 172 L 91 172 L 90 224 C 90 229, 125 229, 125 224 L 124 162 Z" fill="url(#smiskiBookBody)" />
+                    <line x1="88.5" y1="168" x2="88.5" y2="227" stroke="#b6ce6a" stroke-width="2" />
+                    <path d="M 44 128 C 44 110, 62 100, 88 100 C 114 100, 136 112, 138 134 C 140 154, 128 168, 114 168 L 62 168 C 48 168, 44 148, 44 128 Z" fill="url(#smiskiBookBody)" />
+                    <ellipse cx="89" cy="64" rx="43" ry="42" fill="url(#smiskiBookHead)" />
+                    <ellipse cx="89" cy="96" rx="26" ry="9" fill="#b7cc6c" opacity="0.45" />
+                    <path d="M 46 53 L 34 62 L 36 74 L 46 67 Z" fill="#2c2a29" />
+                    <path d="M 132 52 L 145 60 L 142 74 L 132 66 Z" fill="#2c2a29" />
+                    <rect x="38" y="62" width="42" height="24" rx="8" fill="rgba(255,255,255,0.16)" />
+                    <rect x="94" y="61" width="42" height="24" rx="8" fill="rgba(255,255,255,0.16)" />
+                    <circle cx="66" cy="73" r="3.1" fill="#3a4a24" />
+                    <circle cx="106" cy="72" r="3.1" fill="#3a4a24" />
+                    <path d="M 35 64 C 35 59, 42 58, 58 59 C 73 60, 80 62, 87 62 C 94 62, 102 59, 117 58 C 132 57, 139 59, 139 64 L 137 78 C 136 85, 128 88, 112 88 C 98 88, 93 84, 91 76 C 89 72, 85 72, 83 76 C 80 84, 74 88, 59 88 C 44 88, 37 85, 36 78 Z M 44 66 L 44 76 C 44 80, 49 82, 59 82 C 70 82, 76 79, 78 72 C 79 67, 74 65, 59 65 C 48 65, 44 65, 44 66 Z M 96 72 C 98 79, 104 82, 114 82 C 125 82, 130 80, 130 76 L 130 66 C 130 64, 125 64, 114 64 C 100 65, 95 67, 96 72 Z" fill="#2f2d2b" fill-rule="evenodd" />
+                    <path d="M 41 61 Q 60 61 78 63" stroke="#5c5955" stroke-width="1.6" fill="none" stroke-linecap="round" />
+                    <path d="M 96 63 Q 114 60 133 60" stroke="#5c5955" stroke-width="1.6" fill="none" stroke-linecap="round" />
+                    <path d="M 80 94 L 94 93" stroke="#3c4d24" stroke-width="2.4" stroke-linecap="round" />
+                    <path d="M 48 113 Q 66 106 83 118 Q 98 106 114 112 L 112 122 L 83 130 L 50 121 Z" fill="#eef7c8" />
+                    <polygon points="46,115 83,124 83,167 48,154" fill="url(#greenBookLeft)" stroke="#4d7328" stroke-width="1.2" stroke-linejoin="round" />
+                    <polygon points="116,114 83,124 83,167 115,154" fill="url(#greenBookRight)" stroke="#557d2e" stroke-width="1.2" stroke-linejoin="round" />
+                    <line x1="83" y1="124" x2="83" y2="167" stroke="#476b24" stroke-width="1.8" />
+                    <ellipse cx="55" cy="144" rx="16" ry="13" transform="rotate(-12 55 144)" fill="url(#smiskiBookHead)" />
+                    <ellipse cx="114" cy="147" rx="18" ry="14" transform="rotate(14 114 147)" fill="url(#smiskiBookHead)" />
+                </svg>
+            </div>
+        </div>
+
+
+        <!-- ==================== DESKTOP SMISKI FOLDER ICONS ==================== -->
+        
+        <!-- File 1: Hamster.exe -->
+        <div id="file-1" style="top: 18px; left: 20px;" onclick="selectFile(event, this)" ondblclick="openWindow('window-1')" class="draggable-item desktop-file-icon w-28 p-2 rounded-2xl flex flex-col items-center gap-1 z-20">
+            <div class="w-24 h-20 flex items-center justify-center pointer-events-none">
+                <svg class="w-full h-full smiski-folder-svg overflow-visible" viewBox="0 0 140 120">
+                    <defs>
+                        <radialGradient id="smiskiGlow1" cx="40%" cy="30%" r="70%">
+                            <stop offset="0%" stop-color="#f8ffdb"/>
+                            <stop offset="55%" stop-color="#e3f39d"/>
+                            <stop offset="100%" stop-color="#c3dc6d"/>
+                        </radialGradient>
+                    </defs>
+                    <path d="M12 36 Q12 26 22 26 L46 26 Q53 26 58 33 L62 37 L118 37 Q128 37 128 47 L128 96 Q128 106 118 106 L22 106 Q12 106 12 96 Z" fill="#70785a"/>
+                    <rect x="12" y="42" width="116" height="66" rx="12" fill="#aab982"/>
+                    <g transform="translate(54, 4)">
+                        <path d="M18 38 Q4 28 2 22 Q0 16 7 15 Q13 15 22 28" fill="url(#smiskiGlow1)"/>
+                        <path d="M44 38 Q58 28 60 22 Q62 16 55 15 Q49 15 40 28" fill="url(#smiskiGlow1)"/>
+                        <path d="M20 30 L42 30 L44 50 L18 50 Z" fill="url(#smiskiGlow1)"/>
+                        <ellipse cx="15" cy="52" rx="10" ry="6.5" fill="url(#smiskiGlow1)"/>
+                        <ellipse cx="47" cy="52" rx="10" ry="6.5" fill="url(#smiskiGlow1)"/>
+                        <ellipse cx="31" cy="18" rx="17" ry="18" fill="url(#smiskiGlow1)"/>
+                        <circle cx="43" cy="14" r="1.8" fill="#2c3e1e"/>
+                    </g>
+                </svg>
+            </div>
+            <span class="font-pixel text-[8px] leading-tight text-center bg-[#e9f2d4]/95 text-[#2d3a22] px-2 py-0.5 rounded-md border-2 border-[#5c6b48] shadow-[2px_2px_0px_#70785a] pointer-events-none">
+                Hamster.exe
+            </span>
+        </div>
+
+        <!-- File 2: Moongotchi -->
+        <div id="file-2" style="top: 138px; left: 20px;" onclick="selectFile(event, this)" ondblclick="openWindow('window-2')" class="draggable-item desktop-file-icon w-28 p-2 rounded-2xl flex flex-col items-center gap-1 z-20">
+            <div class="w-24 h-20 flex items-center justify-center pointer-events-none">
+                <svg class="w-full h-full smiski-folder-svg overflow-visible" viewBox="0 0 140 120">
+                    <defs>
+                        <radialGradient id="smiskiGlow2" cx="40%" cy="30%" r="70%">
+                            <stop offset="0%" stop-color="#f7fedc"/>
+                            <stop offset="60%" stop-color="#dcf09e"/>
+                            <stop offset="100%" stop-color="#bdd676"/>
+                        </radialGradient>
+                    </defs>
+                    <path d="M12 36 Q12 26 22 26 L46 26 Q53 26 58 33 L62 37 L118 37 Q128 37 128 47 L128 96 Q128 106 118 106 L22 106 Q12 106 12 96 Z" fill="#70785a"/>
+                    <rect x="12" y="42" width="116" height="66" rx="12" fill="#aab982"/>
+                    <rect x="86" y="32" width="36" height="10" rx="5" fill="#78c257" stroke="#5ea340" stroke-width="1"/>
+                    <path d="M44 38 Q56 30 74 32 L92 32 L92 41 L46 41 Q40 41 44 38 Z" fill="url(#smiskiGlow2)"/>
+                    <path d="M64 38 Q72 43 82 41" stroke="#cbe286" stroke-width="5" stroke-linecap="round" fill="none"/>
+                    <circle cx="103" cy="24" r="14.5" fill="url(#smiskiGlow2)"/>
+                    <circle cx="108" cy="21" r="1.7" fill="#2c3e1e"/>
+                    <circle cx="110" cy="29" r="1.7" fill="#2c3e1e"/>
+                    <line x1="101" y1="25" x2="103" y2="29" stroke="#2c3e1e" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <span class="font-pixel text-[8px] leading-tight text-center bg-[#e9f2d4]/95 text-[#2d3a22] px-2 py-0.5 rounded-md border-2 border-[#5c6b48] shadow-[2px_2px_0px_#70785a] pointer-events-none">
+                Moongotchi
+            </span>
+        </div>
+
+        <!-- File 3: SnapPose -->
+        <div id="file-3" style="top: 258px; left: 20px;" onclick="selectFile(event, this)" ondblclick="openWindow('window-3')" class="draggable-item desktop-file-icon w-28 p-2 rounded-2xl flex flex-col items-center gap-1 z-20">
+            <div class="w-24 h-20 flex items-center justify-center pointer-events-none">
+                <svg class="w-full h-full smiski-folder-svg overflow-visible" viewBox="0 0 140 120">
+                    <defs>
+                        <radialGradient id="smiskiGlow3" cx="40%" cy="30%" r="70%">
+                            <stop offset="0%" stop-color="#f7fedc"/>
+                            <stop offset="60%" stop-color="#dcf09e"/>
+                            <stop offset="100%" stop-color="#bdd676"/>
+                        </radialGradient>
+                    </defs>
+                    <path d="M12 36 Q12 26 22 26 L46 26 Q53 26 58 33 L62 37 L118 37 Q128 37 128 47 L128 96 Q128 106 118 106 L22 106 Q12 106 12 96 Z" fill="#70785a"/>
+                    <g transform="translate(76, 8)">
+                        <path d="M5 20 A16 16 0 0 1 37 20" fill="none" stroke="#85b865" stroke-width="3.5" stroke-linecap="round"/>
+                        <ellipse cx="21" cy="21" rx="14.5" ry="13.5" fill="url(#smiskiGlow3)"/>
+                        <rect x="2" y="15" width="5.5" height="10" rx="3" fill="#94c773"/>
+                        <rect x="34.5" y="15" width="5.5" height="10" rx="3" fill="#94c773"/>
+                        <circle cx="16" cy="20" r="1.6" fill="#2c3e1e"/>
+                        <circle cx="26" cy="19" r="1.6" fill="#2c3e1e"/>
+                        <line x1="19" y1="25" x2="23" y2="24.5" stroke="#2c3e1e" stroke-width="1.6" stroke-linecap="round"/>
+                        <ellipse cx="12" cy="31" rx="4.5" ry="6" fill="url(#smiskiGlow3)"/>
+                        <ellipse cx="30" cy="31" rx="4.5" ry="6" fill="url(#smiskiGlow3)"/>
+                    </g>
+                    <rect x="12" y="42" width="116" height="66" rx="12" fill="#aab982"/>
+                </svg>
+            </div>
+            <span class="font-pixel text-[8px] leading-tight text-center bg-[#e9f2d4]/95 text-[#2d3a22] px-2 py-0.5 rounded-md border-2 border-[#5c6b48] shadow-[2px_2px_0px_#70785a] pointer-events-none">
+                SnapPose
+            </span>
+        </div>
+
+        <!-- File 4: Student_CVs -->
+        <div id="file-4" style="top: 378px; left: 20px;" onclick="selectFile(event, this)" ondblclick="openWindow('window-4')" class="draggable-item desktop-file-icon w-28 p-2 rounded-2xl flex flex-col items-center gap-1 z-20">
+            <div class="w-24 h-20 flex items-center justify-center pointer-events-none">
+                <svg class="w-full h-full smiski-folder-svg overflow-visible" viewBox="0 0 140 120">
+                    <defs>
+                        <radialGradient id="smiskiGlow4" cx="40%" cy="30%" r="70%">
+                            <stop offset="0%" stop-color="#f7fedc"/>
+                            <stop offset="60%" stop-color="#dcf09e"/>
+                            <stop offset="100%" stop-color="#bdd676"/>
+                        </radialGradient>
+                    </defs>
+                    <path d="M12 36 Q12 26 22 26 L46 26 Q53 26 58 33 L62 37 L118 37 Q128 37 128 47 L128 96 Q128 106 118 106 L22 106 Q12 106 12 96 Z" fill="#70785a"/>
+                    <rect x="12" y="42" width="116" height="66" rx="12" fill="#aab982"/>
+                    <g transform="translate(72, -6)">
+                        <path d="M14 34 Q8 46 14 54 L26 68 Q32 72 36 66 L30 52 L38 64 Q44 68 47 62 L36 44 L34 34 Z" fill="url(#smiskiGlow4)"/>
+                        <ellipse cx="25" cy="18" rx="15.5" ry="16" fill="url(#smiskiGlow4)"/>
+                        <rect x="8" y="13" width="13" height="9" rx="2.5" fill="none" stroke="#231f20" stroke-width="2.6" transform="rotate(8 14 17)"/>
+                        <rect x="24" y="15" width="13" height="9" rx="2.5" fill="none" stroke="#231f20" stroke-width="2.6" transform="rotate(8 30 19)"/>
+                        <line x1="21" y1="18" x2="24" y2="18.5" stroke="#231f20" stroke-width="2.6"/>
+                        <circle cx="14" cy="18" r="1.5" fill="#231f20"/>
+                        <circle cx="29" cy="20" r="1.5" fill="#231f20"/>
+                        <line x1="18" y1="24" x2="22" y2="25" stroke="#231f20" stroke-width="1.5" stroke-linecap="round"/>
+                        <polygon points="32,26 52,32 45,52 25,46" fill="#9cc278" stroke="#7ea35a" stroke-width="1"/>
+                        <line x1="12" y1="44" x2="28" y2="48" stroke="#85ab61" stroke-width="3.5" stroke-linecap="round"/>
+                    </g>
+                </svg>
+            </div>
+            <span class="font-pixel text-[8px] leading-tight text-center bg-[#e9f2d4]/95 text-[#2d3a22] px-2 py-0.5 rounded-md border-2 border-[#5c6b48] shadow-[2px_2px_0px_#70785a] pointer-events-none">
+                Student_CVs
+            </span>
+        </div>
+
+        <!-- File 5: Storybook.pdf -->
+        <div id="file-5" style="top: 18px; left: 142px;" onclick="selectFile(event, this)" ondblclick="openWindow('window-5')" class="draggable-item desktop-file-icon w-28 p-2 rounded-2xl flex flex-col items-center gap-1 z-20">
+            <div class="w-24 h-20 flex items-center justify-center pointer-events-none">
+                <svg class="w-full h-full smiski-folder-svg overflow-visible" viewBox="0 0 140 120">
+                    <defs>
+                        <radialGradient id="smiskiGlow5" cx="40%" cy="30%" r="70%">
+                            <stop offset="0%" stop-color="#f7fedc"/>
+                            <stop offset="60%" stop-color="#dcf09e"/>
+                            <stop offset="100%" stop-color="#bdd676"/>
+                        </radialGradient>
+                    </defs>
+                    <path d="M12 36 Q12 26 22 26 L46 26 Q53 26 58 33 L62 37 L118 37 Q128 37 128 47 L128 96 Q128 106 118 106 L22 106 Q12 106 12 96 Z" fill="#70785a"/>
+                    <rect x="12" y="42" width="116" height="66" rx="12" fill="#aab982"/>
+                    <g transform="translate(46, 8)">
+                        <path d="M26 24 Q42 18 58 26 L72 28 Q76 32 70 35 L24 35 Z" fill="url(#smiskiGlow5)"/>
+                        <path d="M16 34 Q14 26 20 26 L24 34 Z" fill="url(#smiskiGlow5)"/>
+                        <circle cx="18" cy="18" r="14.5" transform="rotate(-32 18 18)" fill="url(#smiskiGlow5)"/>
+                        <g transform="rotate(-38 18 18)">
+                            <rect x="5" y="13" width="11" height="8" rx="2.5" fill="none" stroke="#231f20" stroke-width="2.5"/>
+                            <rect x="19" y="13" width="11" height="8" rx="2.5" fill="none" stroke="#231f20" stroke-width="2.5"/>
+                            <line x1="16" y1="17" x2="19" y2="17" stroke="#231f20" stroke-width="2.5"/>
+                            <circle cx="10.5" cy="17" r="1.4" fill="#231f20"/>
+                            <circle cx="24.5" cy="17" r="1.4" fill="#231f20"/>
+                            <path d="M15 24 Q17.5 22.5 20 24" stroke="#231f20" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <span class="font-pixel text-[8px] leading-tight text-center bg-[#e9f2d4]/95 text-[#2d3a22] px-2 py-0.5 rounded-md border-2 border-[#5c6b48] shadow-[2px_2px_0px_#70785a] pointer-events-none">
+                Storybook.pdf
+            </span>
+        </div>
+
+        <!-- File 6: Trash Bin (Biru Langit) -->
+        <div id="file-6" style="top: 138px; left: 142px;" onclick="selectFile(event, this); petAnimal(event, 'Kosong & Bersih! ✨', 'miffyPixel')" class="draggable-item desktop-file-icon w-28 p-2 rounded-2xl flex flex-col items-center gap-1.5 z-20">
+            <div class="w-16 h-16 icon-pigment-blue rounded-2xl border-3 border-pixelDark flex items-center justify-center text-3xl relative pointer-events-none">
+                🗑️
+                <span class="absolute -bottom-1.5 -right-1.5 bg-pigmentBlue border-2 border-pixelDark text-[#1c2530] text-[7px] font-pixel px-1 rounded-md shadow-[1px_1px_0px_#3a86ff]">SYS</span>
+            </div>
+            <span class="font-pixel text-[8px] leading-tight text-center bg-[#e4f2fb] text-[#1c2530] px-2 py-0.5 rounded-md border-2 border-[#335270] shadow-[2px_2px_0px_#8ecae6] pointer-events-none">
+                Trash_Bin
+            </span>
+        </div>
+
+
+        <!-- ==================== 4 PAPER-CUTOUT STOP-MOTION CHARACTERS ==================== -->
+        <div id="char-miffy-pixel" style="top: 268px; left: 155px;" onclick="petAnimal(event, 'Pyon pyon! 🐰', 'miffyPixel')" class="draggable-item z-15">
+            <div class="paper-cutout-character w-16 h-20 select-none pointer-events-none flex items-center justify-center">
+                <img id="img-miffyPixel" alt="Miffy Pixel" class="w-full h-full object-contain pointer-events-none" />
+            </div>
+        </div>
+
+        <div id="char-miffy-plush" style="bottom: 24px; right: 435px;" onclick="petAnimal(event, 'Cozy scarf~ 🧣', 'miffyPlush')" class="draggable-item z-15">
+            <div class="paper-cutout-character w-20 h-24 select-none pointer-events-none flex items-center justify-center" style="animation-delay: -0.6s;">
+                <img id="img-miffyPlush" alt="Miffy Plush" class="w-full h-full object-contain pointer-events-none" />
+            </div>
+        </div>
+
+        <div id="char-smiski-ball" style="top: 210px; right: 430px;" onclick="petAnimal(event, 'Balance! 🟢', 'smiskiBall')" class="draggable-item z-15">
+            <div class="paper-cutout-character w-24 h-28 select-none pointer-events-none flex items-center justify-center" style="animation-delay: -1.1s;">
+                <img id="img-smiskiBall" alt="Smiski Ball" class="w-full h-full object-contain pointer-events-none" />
+            </div>
+        </div>
+
+        <div id="char-smiski-barbell" style="bottom: 26px; left: 285px;" onclick="petAnimal(event, 'Stronk! 💪🌱', 'smiskiBarbell')" class="draggable-item z-15">
+            <div class="paper-cutout-character w-20 h-20 select-none pointer-events-none flex items-center justify-center" style="animation-delay: -1.7s;">
+                <img id="img-smiskiBarbell" alt="Smiski Barbell" class="w-full h-full object-contain pointer-events-none" />
+            </div>
+        </div>
+
+
+        <!-- ==================== DESKTOP WIDGETS ==================== -->
+        
+        <!-- Widget 1: Editable & Draggable Sticky Note -->
+        <div id="editable-note" style="top: 155px; left: 280px;" class="draggable-item w-64 bg-[#fff3b0] border-4 border-pixelDark p-3 rounded-xl shadow-[6px_6px_0px_#8ecae6,9px_9px_0px_#231f20] rotate-1 z-20">
+            <div class="pin-head bg-pigmentBlue absolute -top-2 left-1/2 -translate-x-1/2 pointer-events-none"></div>
+            <div class="font-pixel text-[8px] uppercase tracking-wider mb-2 border-b-2 border-pixelDark pb-1.5 flex justify-between items-center">
+                <span>📌 Sticky_Note.txt</span>
+                <div class="flex items-center gap-1">
+                    <button onclick="changeNoteColor(this, '#fff3b0')" title="Kuning" class="w-3.5 h-3.5 rounded-full bg-[#fff3b0] border border-pixelDark"></button>
+                    <button onclick="changeNoteColor(this, '#e3f39d')" title="Hijau Smiski" class="w-3.5 h-3.5 rounded-full bg-[#e3f39d] border border-pixelDark"></button>
+                    <button onclick="changeNoteColor(this, '#d0ebff')" title="Biru Langit" class="w-3.5 h-3.5 rounded-full bg-[#d0ebff] border border-pixelDark"></button>
+                    <button onclick="changeNoteColor(this, '#d8f3dc')" title="Mint" class="w-3.5 h-3.5 rounded-full bg-[#d8f3dc] border border-pixelDark"></button>
+                    <button onclick="duplicateStickyNote()" title="Tambah Sticky Note Baru" class="ml-1 bg-white hover:bg-[#e3f39d] border border-pixelDark px-1.5 rounded font-bold text-[9px]">+</button>
+                </div>
+            </div>
+            <div contenteditable="true"
+                 onfocus="handleStickyFocus(this)"
+                 onblur="handleStickyBlur(this)"
+                 data-placeholder="true"
+                 class="font-hand text-xl leading-snug outline-none min-h-[85px] bg-white/85 p-2 border border-dashed border-pixelDark/40 rounded-lg text-gray-400 italic">input text...</div>
+        </div>
+
+        <!-- Widget 2: Retro Lo-Fi Cassette Player -->
+        <div id="music-widget" style="top: 350px; left: 280px;" class="draggable-item w-64 bg-[#e3f39d] border-4 border-pixelDark p-3 rounded-2xl shadow-[6px_6px_0px_#70785a,9px_9px_0px_#231f20] -rotate-1 z-20">
+            <div class="washi-tape-smiski w-20 h-3 mx-auto -mt-5 mb-2 pointer-events-none"></div>
+            <div class="flex items-center justify-between mb-2">
+                <span class="font-pixel text-[8px] bg-white text-[#2d3a22] px-2 py-0.5 border-2 border-pixelDark rounded flex items-center gap-1">
+                    <span id="vinyl-disc">💿</span> LO-FI RADIO
+                </span>
+                <div class="flex items-end gap-1 h-5 bg-pixelDark px-2 py-1 rounded">
+                    <div class="eq-bar w-1 bg-[#e3f39d] h-2" style="animation-delay: 0s;"></div>
+                    <div class="eq-bar w-1 bg-pigmentBlue h-3" style="animation-delay: 0.15s;"></div>
+                    <div class="eq-bar w-1 bg-pigmentMint h-2" style="animation-delay: 0.3s;"></div>
+                    <div class="eq-bar w-1 bg-pigmentBlue h-4" style="animation-delay: 0.1s;"></div>
+                </div>
+            </div>
+            <div class="bg-white border-2 border-pixelDark rounded-xl p-2 flex items-center justify-between gap-1.5">
+                <div class="min-w-0 flex-1">
+                    <div id="track-title" class="font-pixel text-[8px] text-[#2d3a22] truncate">Seasons 🍂</div>
+                    <div id="track-status" class="font-hand text-sm text-gray-600 font-bold truncate">Paused • Click Play</div>
+                </div>
+                <div class="flex items-center gap-1 shrink-0">
+                    <label for="audio-file-picker" title="Pilih file seasons.mp4 dari folder komputer" class="bg-pigmentBlue hover:bg-blue-300 border-2 border-pixelDark w-8 h-9 rounded-xl flex items-center justify-center text-sm shadow-[2px_2px_0px_#3a86ff]">
+                        📂
+                    </label>
+                    <input type="file" id="audio-file-picker" accept="audio/*,video/mp4" onchange="loadCustomTrack(event)" class="hidden">
+
+                    <button id="music-toggle-btn" onclick="toggleLofiMusic()" class="bg-[#aab982] hover:bg-[#9bb06e] border-2 border-pixelDark w-9 h-9 rounded-xl flex items-center justify-center font-bold shadow-[2px_2px_0px_#70785a]">
+                        ▶️
+                    </button>
+                </div>
+            </div>
+            <div class="mt-2 flex items-center gap-2 bg-white/85 px-2 py-1 rounded-lg border border-pixelDark/30">
+                <span class="text-[10px]">🔊</span>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.85" oninput="setAudioVolume(this.value)" class="w-full h-1.5 accent-[#52b788]">
+            </div>
+        </div>
+
+        <!-- Widget 3: Doodle Pad -->
+        <div id="doodle-pad" style="bottom: 24px; left: 560px;" class="draggable-item bg-pigmentBlue/45 backdrop-blur-xs border-4 border-pixelDark p-2.5 rounded-2xl shadow-[6px_6px_0px_#3a86ff,9px_9px_0px_#231f20] rotate-1 z-20">
+            <div class="font-pixel text-[8px] uppercase tracking-wider mb-1.5 border-b-2 border-pixelDark pb-1 flex justify-between items-center bg-white/80 px-2 py-1 rounded-lg">
+                <span>🎨 Paint.exe</span>
+                <div class="flex gap-1">
+                    <button onclick="toggleBrushSize()" id="brush-size-btn" class="bg-pigmentBlue hover:bg-blue-300 border border-pixelDark px-1.5 rounded text-[7px]">S</button>
+                    <button onclick="clearCanvas()" class="bg-[#e3f39d] hover:bg-[#d5eb81] border border-pixelDark px-1.5 rounded text-[7px]">Clear</button>
+                </div>
+            </div>
+            <canvas id="sketchpad" width="225" height="110" class="border-2 border-pixelDark bg-white rounded-lg"></canvas>
+            <div class="flex gap-2 mt-1.5 items-center justify-center bg-white/80 py-1 rounded-lg border border-pixelDark/30">
+                <button onclick="setBrushColor('#231f20')" class="w-4 h-4 rounded-full bg-pixelDark border border-pixelDark"></button>
+                <button onclick="setBrushColor('#fb6f92')" class="w-4 h-4 rounded-full bg-pigmentPinkShadow border border-pixelDark"></button>
+                <button onclick="setBrushColor('#3a86ff')" class="w-4 h-4 rounded-full bg-pigmentBlueShadow border border-pixelDark"></button>
+                <button onclick="setBrushColor('#52b788')" class="w-4 h-4 rounded-full bg-pigmentMintShadow border border-pixelDark"></button>
+                <button onclick="setBrushColor('#9d4edd')" class="w-4 h-4 rounded-full bg-pigmentPurpleShadow border border-pixelDark"></button>
+                <button onclick="setBrushColor('#ffffff')" class="w-5 h-5 rounded border border-pixelDark bg-white text-[9px] flex items-center justify-center">🧼</button>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- ==================== APPLICATION WINDOWS ==================== -->
+
+    <!-- Window 1: Hamster Game -->
+    <div id="window-1" data-title="🌱 Hamster.exe" class="window-panel window-3d win-shadow-yellow hidden fixed top-8 left-12 right-12 bottom-20 rounded-2xl flex flex-col overflow-hidden z-30">
+        <div class="h-10 bg-pigmentYellow px-4 flex items-center justify-between border-b-4 border-pixelDark">
+            <div class="flex items-center gap-2">
+                <button onclick="closeWindow('window-1')" class="w-5 h-5 rounded-full bg-red-400 border-2 border-pixelDark font-bold text-[9px] flex items-center justify-center">✕</button>
+                <button onclick="toggleMaximize('window-1')" class="w-5 h-5 rounded-full bg-white border-2 border-pixelDark font-bold text-[9px] flex items-center justify-center">⛶</button>
+                <span class="font-pixel text-xs text-pixelDark ml-2">🌱 Hamster.exe</span>
+            </div>
+            <a href="game hamster brand new day.html" target="_blank" class="font-pixel text-[8px] bg-white px-2.5 py-1 border-2 border-pixelDark rounded hover:bg-yellow-100">Full Tab ↗</a>
+        </div>
+        <div class="flex-1 bg-white p-2 flex flex-col">
+            <iframe src="game hamster brand new day.html" class="w-full flex-1 border-4 border-pixelDark rounded-xl"></iframe>
+        </div>
+    </div>
+
+    <!-- Window 2: Moongotchi -->
+    <div id="window-2" data-title="🌱 Moongotchi" class="window-panel window-3d win-shadow-mint hidden fixed top-8 left-12 right-12 bottom-20 rounded-2xl flex flex-col overflow-hidden z-30">
+        <div class="h-10 bg-[#e3f39d] border-b-4 border-pixelDark px-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <button onclick="closeWindow('window-2')" class="w-5 h-5 rounded-full bg-red-400 border-2 border-pixelDark font-bold text-[9px] flex items-center justify-center">✕</button>
+                <button onclick="toggleMaximize('window-2')" class="w-5 h-5 rounded-full bg-white border-2 border-pixelDark font-bold text-[9px] flex items-center justify-center">⛶</button>
+                <span class="font-pixel text-xs text-pixelDark ml-2">🌱 Moongotchi</span>
+            </div>
+            <a href="moongotchi.html.html" target="_blank" class="font-pixel text-[8px] bg-white px-2.5 py-1 border-2 border-pixelDark rounded hover:bg-[#f4fbd8]">Full Tab ↗</a>
+        </div>
+        <div class="flex-1 bg-white p-2 flex flex-col">
+            <iframe src="moongotchi.html.html" class="w-full flex-1 border-4 border-pixelDark rounded-xl"></iframe>
+        </div>
+    </div>
+
+    <!-- Window 3: SnapPose Studio (BEARBOOTH EDITION - UPDATED) -->
+    <div id="window-3" data-title="🌱 SnapPose" class="window-panel window-3d win-shadow-blue hidden fixed top-8 left-12 right-12 bottom-20 rounded-2xl flex flex-col overflow-hidden z-30">
+        <div class="h-10 bg-pigmentBlue border-b-4 border-pixelDark px-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <button onclick="closeWindow('window-3')" class="w-5 h-5 rounded-full bg-red-400 border-2 border-pixelDark font-bold text-[9px] flex items-center justify-center">✕</button>
+                <button onclick="toggleMaximize('window-3')" class="w-5 h-5 rounded-full bg-white border-2 border-pixelDark font-bold text-[9px] flex items-center justify-center">⛶</button>
+                <span class="font-pixel text-xs text-pixelDark ml-2">🐻 Snappose Studio — Bearbooth Edition</span>
+            </div>
+            <button onclick="openSnapposeInNewTab()" class="font-pixel text-[8px] bg-white px-2.5 py-1 border-2 border-pixelDark rounded hover:bg-blue-100">Full Tab ↗</button>
+        </div>
+        <div class="flex-1 bg-white p-2 flex flex-col">
+            <iframe id="snappose-frame" allow="camera; microphone" class="w-full flex-1 border-4 border-pixelDark rounded-xl"></iframe>
+        </div>
+    </div>
+
+    <!-- Window 4: Student CV Folder -->
+    <div id="window-4" data-title="🌱 Student_CVs" class="window-panel window-3d win-shadow-mint hidden fixed top-8 left-12 right-12 bottom-20 rounded-2xl flex flex-col overflow-hidden z-30">
+        <div class="h-10 bg-pigmentMint border-b-4 border-pixelDark px-4 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+                <button onclick="closeWindow('window-4')" class="w-5 h-5 rounded-full bg-red-400 border-2 border-pixelDark font-bold text-[9px] flex items-center justify-center">✕</button>
+                <button onclick="toggleMaximize('window-4')" class="w-5 h-5 rounded-full bg-white border-2 border-pixelDark font-bold text-[9px] flex items-center justify-center">⛶</button>
+                <span class="font-pixel text-xs text-pixelDark ml-2 hidden sm:inline">🌱 C:\Users\Students\CVs</span>
+            </div>
+            <div class="flex items-center gap-1.5 font-pixel text-[9px]">
+                <button onclick="switchCV('quinee')" id="tab-quinee" class="bg-white border-2 border-pixelDark px-2.5 py-0.5 rounded font-bold shadow-[2px_2px_0px_#231f20]">💙 Quinee.html</button>
+                <button onclick="switchCV('kayleen')" id="tab-kayleen" class="bg-white/60 border-2 border-pixelDark px-2.5 py-0.5 rounded hover:bg-yellow-200">📘 Kayleen.html</button>
+                <button onclick="switchCV('verena')" id="tab-verena" class="bg-white/60 border-2 border-pixelDark px-2.5 py-0.5 rounded hover:bg-yellow-200">💖 Verena.html</button>
+                <button onclick="openCVInNewTab()" title="Buka CV Tampilan Penuh di Tab Baru" class="bg-pigmentYellow border-2 border-pixelDark px-2.5 py-0.5 rounded hover:bg-yellow-300 ml-1">Full Tab ↗</button>
+            </div>
+        </div>
+        <div class="flex-1 bg-white p-2 flex flex-col">
+            <iframe id="cv-frame" class="w-full flex-1 border-4 border-pixelDark rounded-xl bg-white"></iframe>
+        </div>
+    </div>
+
+    <!-- Window 5: Storybook PDF -->
+    <div id="window-5" data-title="🌱 Storybook.pdf" class="window-panel window-3d win-shadow-purple hidden fixed top-8 left-12 right-12 bottom-20 rounded-2xl flex flex-col overflow-hidden z-30">
+        <div class="h-10 bg-pigmentPurple border-b-4 border-pixelDark px-4 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+                <button onclick="closeWindow('window-5')" class="w-5 h-5 rounded-full bg-red-400 border-2 border-pixelDark font-bold text-[9px] flex items-center justify-center">✕</button>
+                <button onclick="toggleMaximize('window-5')" class="w-5 h-5 rounded-full bg-white border-2 border-pixelDark font-bold text-[9px] flex items-center justify-center">⛶</button>
+                <span class="font-pixel text-xs text-pixelDark ml-2 truncate">🌱 Ekspedisi Lorong Waktu Kamar Loteng.pdf</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+                <label for="pdf-file-picker" title="Muat file PDF dari komputer jika tidak muncul otomatis" class="font-pixel text-[8px] bg-[#e3f39d] px-2.5 py-1 border-2 border-pixelDark rounded hover:bg-lime-200">📂 Pilih PDF</label>
+                <input type="file" id="pdf-file-picker" accept="application/pdf" onchange="loadCustomPDF(event)" class="hidden">
+                <a id="storybook-full-link" href="Ekspedisi Lorong Waktu Kamar Loteng_compressed.pdf" target="_blank" class="font-pixel text-[8px] bg-white px-2.5 py-1 border-2 border-pixelDark rounded hover:bg-purple-100">Full Tab ↗</a>
+            </div>
+        </div>
+        <div class="flex-1 bg-white p-2 flex flex-col">
+            <iframe id="storybook-frame" src="Ekspedisi Lorong Waktu Kamar Loteng_compressed.pdf#view=FitH" type="application/pdf" class="w-full flex-1 border-4 border-pixelDark rounded-xl bg-stone-100"></iframe>
+        </div>
+    </div>
+
+
+    <!-- ==================== START MENU POPUP ==================== -->
+    <div id="start-menu" class="hidden fixed bottom-16 left-3 w-80 bg-white border-4 border-pixelDark rounded-2xl shadow-[6px_6px_0px_#70785a,10px_10px_0px_#231f20] z-[9995] overflow-hidden">
+        <div class="bg-[#e3f39d] border-b-4 border-pixelDark p-3 flex items-center gap-3">
+            <div class="w-10 h-10 shrink-0 bg-white border-2 border-pixelDark rounded-xl flex items-center justify-center text-2xl shadow-[2px_2px_0px_#70785a]">🌱</div>
+            <div class="min-w-0">
+                <div class="font-pixel text-[9px] leading-snug text-[#2d3a22]">Kelompok 2 - Kayleen, Quinella, Verena</div>
+                <div class="font-hand text-sm font-bold text-[#2d3a22]/85 mt-0.5">FSP BLACK IRL - SMA BPK PENABUR HOLIS</div>
+            </div>
+        </div>
+        <div class="p-2 flex flex-col gap-1 font-pixel text-[9px]">
+            <button onclick="openWindow('window-1'); toggleStartMenu()" class="flex items-center gap-2.5 p-2 rounded-xl hover:bg-[#e9f2d4] text-left transition">
+                <span class="text-lg">📁</span> Hamster.exe
+            </button>
+            <button onclick="openWindow('window-2'); toggleStartMenu()" class="flex items-center gap-2.5 p-2 rounded-xl hover:bg-[#e9f2d4] text-left transition">
+                <span class="text-lg">📁</span> Moongotchi Pet
+            </button>
+            <button onclick="openWindow('window-3'); toggleStartMenu()" class="flex items-center gap-2.5 p-2 rounded-xl hover:bg-[#e9f2d4] text-left transition">
+                <span class="text-lg">📁</span> SnapPose Booth
+            </button>
+            <button onclick="openWindow('window-4'); toggleStartMenu()" class="flex items-center gap-2.5 p-2 rounded-xl hover:bg-[#e9f2d4] text-left transition">
+                <span class="text-lg">📁</span> Student_CVs Folder
+            </button>
+            <button onclick="openWindow('window-5'); toggleStartMenu()" class="flex items-center gap-2.5 p-2 rounded-xl hover:bg-[#e9f2d4] text-left transition">
+                <span class="text-lg">📁</span> Storybook.pdf
+            </button>
+            <div class="border-t-2 border-dashed border-pixelDark/30 my-1"></div>
+            <div class="grid grid-cols-2 gap-1.5">
+                <button onclick="spawnStickerRain(); toggleStartMenu()" class="bg-[#aab982] hover:brightness-105 border-2 border-pixelDark py-2 rounded-xl text-center shadow-[2px_2px_0px_#70785a]">✨ Sparkles</button>
+                <button onclick="closeAllWindows(); toggleStartMenu()" class="bg-pigmentBlue hover:brightness-105 border-2 border-pixelDark py-2 rounded-xl text-center shadow-[2px_2px_0px_#3a86ff]">🧹 Close All</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==================== BOTTOM LAPTOP TASKBAR ==================== -->
+    <footer id="laptop-taskbar" class="w-full h-14 bg-white/95 backdrop-blur-xs border-t-4 border-pixelDark px-3 flex items-center justify-between z-[9990] relative shadow-[0_-4px_0_rgba(142,202,230,0.3)]">
+        <div class="flex items-center gap-2">
+            <button onclick="toggleStartMenu()" id="start-btn" class="bg-[#e3f39d] hover:bg-[#d5eb81] border-3 border-pixelDark px-3.5 py-1.5 rounded-xl font-pixel text-[10px] text-[#2d3a22] flex items-center gap-2 shadow-[3px_3px_0px_#70785a,5px_5px_0px_#231f20] transition">
+                <span class="text-base">🌱</span>
+                <span>Start</span>
+            </button>
+
+            <div class="h-7 w-0.5 bg-pixelDark/20 mx-1 hidden sm:block"></div>
+
+            <div class="hidden sm:flex items-center gap-2">
+                <button onclick="openWindow('window-1')" title="Hamster.exe" class="w-9 h-9 bg-[#aab982] border-2 border-pixelDark rounded-xl flex items-center justify-center text-lg shadow-[2px_2px_0px_#70785a]">📁</button>
+                <button onclick="openWindow('window-2')" title="Moongotchi" class="w-9 h-9 bg-[#aab982] border-2 border-pixelDark rounded-xl flex items-center justify-center text-lg shadow-[2px_2px_0px_#70785a]">📁</button>
+                <button onclick="openWindow('window-3')" title="SnapPose" class="w-9 h-9 bg-[#aab982] border-2 border-pixelDark rounded-xl flex items-center justify-center text-lg shadow-[2px_2px_0px_#70785a]">📁</button>
+                <button onclick="openWindow('window-4')" title="Student CVs" class="w-9 h-9 bg-[#aab982] border-2 border-pixelDark rounded-xl flex items-center justify-center text-lg shadow-[2px_2px_0px_#70785a]">📁</button>
+                <button onclick="openWindow('window-5')" title="Storybook" class="w-9 h-9 bg-[#aab982] border-2 border-pixelDark rounded-xl flex items-center justify-center text-lg shadow-[2px_2px_0px_#70785a]">📁</button>
+            </div>
+        </div>
+
+        <div id="taskbar-open-apps" class="flex-1 flex items-center gap-2 px-3 overflow-x-auto"></div>
+
+        <!-- KANAN: SYSTEM TRAY, JAM & FULL ENGLISH DAY NAME -->
+        <div class="flex items-center gap-2.5 bg-pigmentBlue/50 border-2 border-pixelDark px-3 py-1 rounded-xl shadow-[3px_3px_0px_#3a86ff]">
+            <div class="hidden md:flex items-center gap-1.5 text-sm">
+                <span title="Wi-Fi Connected">📶</span>
+                <span title="Battery 100% Cute Power">🔋</span>
+            </div>
+            <div class="h-6 w-0.5 bg-pixelDark/30 hidden md:block"></div>
+            <div class="text-right leading-tight">
+                <div id="taskbar-clock" class="font-pixel text-[10px] text-pixelDark">16:47:00</div>
+                <div id="taskbar-date" class="font-vt text-base font-bold text-pixelDark/85 -mt-0.5">Wednesday, Nov 18, 2026</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ==================== SCRIPT ENGINE ==================== -->
+    <script>
+        // ============================================================
+        // 0. PUSTAKA 4 KARAKTER PNG/SVG KUSTOM (MIFFY & SMISKI)
+        // ============================================================
+        const PAPER_CHARACTERS = {
+            miffyPixel: "data:image/svg+xml;utf8," + encodeURIComponent(`
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" shape-rendering="crispEdges">
+                    <path d="M6 1h3v1h-3zM15 1h3v1h-3zM5 2h1v3h-1zM9 2h1v3h-1zM14 2h1v3h-1zM18 2h1v3h-1zM4 5h1v8h-1zM10 5h1v6h-1zM13 5h1v6h-1zM19 5h1v8h-1zM11 10h2v1h-2zM3 13h1v3h-1zM20 13h1v3h-1zM2 16h1v5h-1zM21 16h1v5h-1zM3 21h1v2h-1zM20 21h1v2h-1zM4 23h2v1h-2zM18 23h2v1h-2zM6 24h3v1h-3zM15 24h3v1h-3zM9 25h6v1h-6z" fill="#1d1d1b"/>
+                    <path d="M6 2h3v11h-3zM15 2h3v11h-3zM5 5h5v18h-5zM14 5h5v18h-5zM10 11h4v13h-4zM4 13h1v8h-1zM19 13h1v8h-1zM3 16h1v5h-1zM20 16h1v5h-1zM6 23h12v1h-12zM9 24h6v1h-6z" fill="#ffffff"/>
+                    <rect x="7" y="18" width="2" height="2" fill="#1d1d1b"/>
+                    <rect x="15" y="18" width="2" height="2" fill="#1d1d1b"/>
+                    <path d="M10 20h1v1h-1zM13 20h1v1h-1zM11 21h2v1h-2zM10 22h1v1h-1zM13 22h1v1h-1z" fill="#1d1d1b"/>
+                </svg>
+            `),
+
+            smiskiBall: "data:image/svg+xml;utf8," + encodeURIComponent(`
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 165">
+                    <defs>
+                        <radialGradient id="sbBallFull" cx="35%" cy="22%" r="78%">
+                            <stop offset="0%" stop-color="#c3df92"/>
+                            <stop offset="55%" stop-color="#9dc368"/>
+                            <stop offset="100%" stop-color="#7a9e49"/>
+                        </radialGradient>
+                        <radialGradient id="sbBodyFull" cx="40%" cy="28%" r="75%">
+                            <stop offset="0%" stop-color="#f8fde4"/>
+                            <stop offset="58%" stop-color="#e5f3ae"/>
+                            <stop offset="100%" stop-color="#c4db7c"/>
+                        </radialGradient>
+                        <radialGradient id="sbHeadFull" cx="38%" cy="28%" r="72%">
+                            <stop offset="0%" stop-color="#f9fee8"/>
+                            <stop offset="62%" stop-color="#e7f5b4"/>
+                            <stop offset="100%" stop-color="#c7de80"/>
+                        </radialGradient>
+                    </defs>
+                    <circle cx="70" cy="116" r="41" fill="url(#sbBallFull)"/>
+                    <path d="M31 104 Q70 113 109 104" fill="none" stroke="#7ea34c" stroke-width="2.2"/>
+                    <path d="M29 118 Q70 128 111 118" fill="none" stroke="#7ea34c" stroke-width="2.2"/>
+                    <path d="M35 133 Q70 143 105 133" fill="none" stroke="#7ea34c" stroke-width="2.2"/>
+                    <path d="M46 146 Q70 153 94 146" fill="none" stroke="#7ea34c" stroke-width="2"/>
+                    <path d="M 53 58 C 40 57, 25 58, 15 60 C 8 61, 8 68, 16 69 C 27 70, 41 69, 49 72 L 49 85 C 39 87, 29 93, 33 101 C 37 109, 51 103, 59 94 C 65 92, 75 92, 81 94 C 89 103, 103 109, 107 101 C 111 93, 101 87, 91 85 L 91 72 C 99 69, 113 70, 124 69 C 132 68, 132 61, 125 60 C 115 58, 100 57, 87 58 Z" fill="url(#sbBodyFull)"/>
+                    <ellipse cx="70" cy="60" rx="15" ry="4" fill="#c2d87c" opacity="0.55"/>
+                    <ellipse cx="70" cy="37" rx="25" ry="24" fill="url(#sbHeadFull)"/>
+                    <circle cx="60" cy="31" r="2.6" fill="#465e29"/>
+                    <circle cx="77" cy="29" r="2.6" fill="#465e29"/>
+                    <path d="M65 39 Q70 35 74 38" stroke="#364a1e" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+                </svg>
+            `),
+
+            smiskiBarbell: "data:image/svg+xml;utf8," + encodeURIComponent(`
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 135">
+                    <defs>
+                        <radialGradient id="slBody" cx="35%" cy="25%" r="75%">
+                            <stop offset="0%" stop-color="#f6fde0"/>
+                            <stop offset="58%" stop-color="#dfef9e"/>
+                            <stop offset="100%" stop-color="#bfd66e"/>
+                        </radialGradient>
+                        <linearGradient id="slPlate" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#b1d479"/>
+                            <stop offset="100%" stop-color="#83ac4b"/>
+                        </linearGradient>
+                    </defs>
+                    <rect x="44" y="102" width="46" height="14" rx="6" fill="#b4cc65"/>
+                    <path d="M40 58 C30 68 30 88 42 98 L88 98 C96 86 94 66 84 56 Z" fill="url(#slBody)"/>
+                    <ellipse cx="70" cy="38" rx="28" ry="27" fill="url(#slBody)"/>
+                    <circle cx="60" cy="31" r="2.6" fill="#465e29"/>
+                    <circle cx="80" cy="32" r="2.6" fill="#465e29"/>
+                    <path d="M65 41 Q70 39 75 41" stroke="#364a1e" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+                    <line x1="28" y1="98" x2="108" y2="86" stroke="#85ae4d" stroke-width="7" stroke-linecap="round"/>
+                    <path d="M46 64 L48 92 C48 99 60 100 60 93 L58 66 Z" fill="url(#slBody)"/>
+                    <path d="M74 62 L76 88 C76 95 88 95 88 88 L86 60 Z" fill="url(#slBody)"/>
+                    <ellipse cx="26" cy="99" rx="11" ry="19" transform="rotate(-8 26 99)" fill="url(#slPlate)" stroke="#6c9138" stroke-width="2"/>
+                    <ellipse cx="23" cy="99" rx="5" ry="9" transform="rotate(-8 23 99)" fill="#9fc466" stroke="#6c9138" stroke-width="1.5"/>
+                    <ellipse cx="110" cy="86" rx="11" ry="19" transform="rotate(-8 110 86)" fill="url(#slPlate)" stroke="#6c9138" stroke-width="2"/>
+                    <ellipse cx="113" cy="86" rx="5" ry="9" transform="rotate(-8 113 86)" fill="#9fc466" stroke="#6c9138" stroke-width="1.5"/>
+                </svg>
+            `),
+
+            miffyPlush: "data:image/svg+xml;utf8," + encodeURIComponent(`
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 155">
+                    <defs>
+                        <radialGradient id="mpFur" cx="40%" cy="30%" r="72%">
+                            <stop offset="0%" stop-color="#ffffff"/>
+                            <stop offset="65%" stop-color="#f4f2ed"/>
+                            <stop offset="100%" stop-color="#e2dfd7"/>
+                        </radialGradient>
+                        <linearGradient id="mpScarf" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#5d6945"/>
+                            <stop offset="100%" stop-color="#3f492d"/>
+                        </linearGradient>
+                    </defs>
+                    <ellipse cx="32" cy="104" rx="13" ry="9" transform="rotate(-22 32 104)" fill="url(#mpFur)" stroke="#dcd8ce" stroke-width="1.5"/>
+                    <ellipse cx="98" cy="104" rx="13" ry="9" transform="rotate(22 98 104)" fill="url(#mpFur)" stroke="#dcd8ce" stroke-width="1.5"/>
+                    <ellipse cx="65" cy="112" rx="28" ry="26" fill="url(#mpFur)" stroke="#dcd8ce" stroke-width="1.5"/>
+                    <ellipse cx="47" cy="134" rx="13" ry="11" fill="url(#mpFur)" stroke="#dcd8ce" stroke-width="1.5"/>
+                    <ellipse cx="83" cy="134" rx="13" ry="11" fill="url(#mpFur)" stroke="#dcd8ce" stroke-width="1.5"/>
+                    <rect x="40" y="12" width="21" height="44" rx="10.5" fill="url(#mpFur)" stroke="#dcd8ce" stroke-width="1.5"/>
+                    <rect x="69" y="12" width="21" height="44" rx="10.5" fill="url(#mpFur)" stroke="#dcd8ce" stroke-width="1.5"/>
+                    <ellipse cx="65" cy="66" rx="34" ry="29" fill="url(#mpFur)" stroke="#dcd8ce" stroke-width="1.5"/>
+                    <circle cx="50" cy="69" r="3.2" fill="#231f20"/>
+                    <circle cx="80" cy="69" r="3.2" fill="#231f20"/>
+                    <path d="M61 76 L69 80 M69 76 L61 80" stroke="#231f20" stroke-width="2.4" stroke-linecap="round"/>
+                    <path d="M36 90 Q65 98 94 90 L90 103 Q65 110 40 103 Z" fill="url(#mpScarf)"/>
+                    <path d="M42 96 L32 128 L46 131 L55 101 Z" fill="url(#mpScarf)"/>
+                    <path d="M55 99 L57 132 L71 132 L68 99 Z" fill="#4b5636"/>
+                    <line x1="33" y1="128" x2="30" y2="135" stroke="#3f492d" stroke-width="2"/>
+                    <line x1="39" y1="129" x2="37" y2="136" stroke="#3f492d" stroke-width="2"/>
+                    <line x1="44" y1="130" x2="43" y2="137" stroke="#3f492d" stroke-width="2"/>
+                    <line x1="59" y1="132" x2="58" y2="139" stroke="#3f492d" stroke-width="2"/>
+                    <line x1="65" y1="132" x2="65" y2="139" stroke="#3f492d" stroke-width="2"/>
+                    <line x1="70" y1="132" x2="71" y2="139" stroke="#3f492d" stroke-width="2"/>
+                </svg>
+            `)
+        };
+
+        const PAPER_CHAR_KEYS = ['miffyPixel', 'smiskiBall', 'smiskiBarbell', 'miffyPlush'];
+
+        function getRandomPaperCharSrc() {
+            const key = PAPER_CHAR_KEYS[Math.floor(Math.random() * PAPER_CHAR_KEYS.length)];
+            return PAPER_CHARACTERS[key];
+        }
+
+        function initPaperCharacters() {
+            Object.keys(PAPER_CHARACTERS).forEach(key => {
+                const imgEl = document.getElementById('img-' + key);
+                if (imgEl) imgEl.src = PAPER_CHARACTERS[key];
+            });
+        }
+
+        // ============================================================
+        // 1. EMBEDDED SNAPPOSE STUDIO — BEARBOOTH EDITION (UPDATED!)
+        // ============================================================
+        const SNAPPOSE_HTML = `<!DOCTYPE html>
+<html lang="id" class="h-full w-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Snappose Studio — Smart Online Photobooth (Bearbooth Edition)</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"><\/script>
+
+  <!-- MediaPipe Hands untuk Deteksi Gestur Telapak Tangan -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"><\/script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"><\/script>
+
+  <!-- QRCode.js untuk Scan & Download ke HP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" crossorigin="anonymous"><\/script>
+
+  <!-- Google Fonts Estetik -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Quicksand:wght@500;600;700&display=swap');
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: 'Outfit', sans-serif;
+      background-color: #faf7f2;
+      color: #292524;
+      overflow-x: hidden;
+    }
+
+    .font-cute { font-family: 'Fredoka', cursive, sans-serif; }
+    .font-serif-editorial { font-family: 'Playfair Display', serif; }
+    .font-soft { font-family: 'Quicksand', sans-serif; }
+
+    /* Efek Filter Kamera Live */
+    .filter-none { filter: none; }
+    .filter-bw { filter: grayscale(100%) contrast(1.18) brightness(1.04); }
+    .filter-pastel { filter: brightness(1.08) contrast(0.92) saturate(1.15) sepia(0.08); }
+    .filter-vintage { filter: sepia(0.32) contrast(1.08) brightness(0.98) saturate(0.9); }
+    .filter-vivid { filter: saturate(1.35) contrast(1.08); }
+
+    /* Scrollbar Rapi */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(231, 229, 228, 0.5);
+      border-radius: 999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #a8a29e;
+      border-radius: 999px;
+    }
+
+    @keyframes flashAnim {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    .flash-active {
+      animation: flashAnim 0.4s ease-out forwards;
+    }
+
+    /* Pola Background Studio Bearbooth */
+    .bg-bear-dots {
+      background-color: #faf7f2;
+      background-image: radial-gradient(#e7e0d5 1.2px, transparent 1.2px);
+      background-size: 20px 20px;
+    }
+  </style>
+</head>
+<body class="bg-bear-dots min-h-screen flex flex-col">
+
+  <!-- Flash Layer saat Jepret -->
+  <div id="flash-layer" class="pointer-events-none fixed inset-0 z-50 bg-white opacity-0"></div>
+
+  <!-- =========================================================
+       TOP NAVBAR ALA BEARBOOTH STUDIO
+  ========================================================== -->
+  <header class="sticky top-0 z-30 bg-[#faf7f2]/90 backdrop-blur-md border-b border-stone-200 px-4 sm:px-8 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-2.5 cursor-pointer" onclick="switchView('setup')">
+      <div class="w-9 h-9 rounded-2xl bg-amber-900 text-amber-50 flex items-center justify-center text-xl shadow-sm">
+        🐻
+      </div>
+      <div>
+        <div class="flex items-center gap-1.5">
+          <span class="font-cute font-bold text-lg tracking-tight text-stone-900">Snappose</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-900 border border-amber-300 px-2 py-0.5 rounded-full">Studio</span>
+        </div>
+        <p class="text-[11px] text-stone-500 leading-none">Smart Photobooth & Custom Strip Maker</p>
+      </div>
+    </div>
+
+    <!-- Step Indicator (Setup -> Capture -> Preview) -->
+    <nav class="hidden md:flex items-center gap-2 bg-stone-100 p-1 rounded-2xl border border-stone-200 text-xs font-semibold">
+      <button id="nav-step-setup" onclick="switchView('setup')" class="px-3.5 py-1.5 rounded-xl bg-white text-stone-900 shadow-sm transition">
+        1. Pilih Frame
+      </button>
+      <span class="text-stone-400">→</span>
+      <button id="nav-step-camera" onclick="switchView('camera')" class="px-3.5 py-1.5 rounded-xl text-stone-500 hover:text-stone-900 transition">
+        2. Sesi Foto
+      </button>
+      <span class="text-stone-400">→</span>
+      <button id="nav-step-preview" onclick="switchView('preview')" class="px-3.5 py-1.5 rounded-xl text-stone-500 hover:text-stone-900 transition">
+        3. Preview & Edit
+      </button>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <button onclick="loadDemoPhotosAndPreview()" class="text-xs font-cute font-semibold bg-stone-200/80 hover:bg-stone-300 text-stone-800 px-3 py-2 rounded-xl transition">
+        ✨ Demo Preview
+      </button>
+      <button id="header-cta-btn" onclick="switchView('camera')" class="text-xs font-cute font-bold bg-stone-900 hover:bg-stone-800 text-white px-4 py-2 rounded-xl shadow-sm transition">
+        📸 Mulai Foto
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       VIEW 1: STUDIO SETUP & GALERI 10 FRAME KUSTOM
+  ========================================================== -->
+  <main id="view-setup" class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8">
+    <div class="text-center max-w-2xl mx-auto mb-8">
+      <span class="inline-block text-xs font-bold uppercase tracking-widest text-amber-800 bg-amber-100/80 border border-amber-200 px-3 py-1 rounded-full mb-2">
+        Koleksi 10 Desain Frame Eksklusif
+      </span>
+      <h1 class="font-cute text-3xl sm:text-4xl font-bold text-stone-900 mb-2">
+        Pilih Gaya Photo Strip Favoritmu
+      </h1>
+      <p class="text-sm text-stone-600">
+        Tersedia 10 frame karakter & estetik lengkap dengan deteksi gestur tangan otomatis dan 28+ rekomendasi pose. Kamu tetap bisa mengganti frame di halaman <b>Preview</b> setelah selesai berfoto!
+      </p>
+    </div>
+
+    <!-- Pengaturan Layout Cepat -->
+    <div class="bg-white border border-stone-200 rounded-3xl p-4 sm:p-5 shadow-sm mb-6 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex flex-wrap items-center gap-4">
+        <div>
+          <label class="block text-[11px] font-bold uppercase text-stone-400 mb-1">Jumlah Pose</label>
+          <div class="flex gap-1.5">
+            <button id="btn-cuts-4" onclick="setPhotoCount(4)" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-stone-900 text-white">4 Foto (4-Cut)</button>
+            <button id="btn-cuts-3" onclick="setPhotoCount(3)" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-stone-100 text-stone-600 hover:bg-stone-200">3 Foto (3-Cut)</button>
+          </div>
+        </div>
+
+        <div class="h-8 w-px bg-stone-200 hidden sm:block"></div>
+
+        <div>
+          <label class="block text-[11px] font-bold uppercase text-stone-400 mb-1">Mode Cetak Strip</label>
+          <div class="flex gap-1.5">
+            <button id="btn-strip-single" onclick="setStripMode('single')" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-stone-900 text-white">1 Strip Tunggal</button>
+            <button id="btn-strip-double" onclick="setStripMode('double')" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-stone-100 text-stone-600 hover:bg-stone-200">2 Strip Kembar (4R)</button>
+          </div>
+        </div>
+      </div>
+
+      <button onclick="switchView('camera')" class="w-full sm:w-auto font-cute text-sm font-bold bg-amber-500 hover:bg-amber-600 text-stone-950 px-6 py-3 rounded-2xl shadow-md transition flex items-center justify-center gap-2">
+        <span>Masuk ke Kamera Studio</span>
+        <span>→</span>
+      </button>
+    </div>
+
+    <!-- Grid Kartu 10 Frame Kustom -->
+    <div id="setup-frame-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+      <!-- Di-render otomatis lewat JavaScript dengan mini canvas preview -->
+    </div>
+  </main>
+
+  <!-- =========================================================
+       VIEW 2: KAMERA INTERAKTIF + 28 REKOMENDASI POSE
+  ========================================================== -->
+  <section id="view-camera" class="hidden flex-1 max-w-7xl w-full mx-auto px-4 py-4 sm:py-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+
+      <!-- Kolom Kiri (7 Kolom): Viewport Kamera & Kontrol Jepret -->
+      <div class="lg:col-span-7 flex flex-col gap-3">
+        <!-- Bar Status Kamera & Filter -->
+        <div class="bg-white border border-stone-200 rounded-2xl px-4 py-2.5 flex flex-wrap items-center justify-between gap-2 shadow-sm">
+          <div class="flex items-center gap-2">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            <span class="text-xs font-bold text-stone-800">Gestur 🖐️ Aktif</span>
+            <span class="text-[11px] text-stone-500 hidden sm:inline">• Angkat telapak tangan untuk foto otomatis</span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <select id="camera-filter-select" onchange="changeCameraFilter(this.value)" class="bg-stone-100 border border-stone-200 text-xs font-bold text-stone-800 rounded-xl px-2.5 py-1.5 focus:outline-none">
+              <option value="none">🎨 Filter: Normal</option>
+              <option value="bw">🖤 B&W Classic Film</option>
+              <option value="pastel">🌸 Soft Korean Pastel</option>
+              <option value="vintage">🎞️ Warm 90s Vintage</option>
+              <option value="vivid">✨ Vivid Pop</option>
+            </select>
+
+            <select id="timer-select" class="bg-stone-100 border border-stone-200 text-xs font-bold text-stone-800 rounded-xl px-2.5 py-1.5 focus:outline-none">
+              <option value="3" selected>⏱️ 3 Detik</option>
+              <option value="5">⏱️ 5 Detik</option>
+              <option value="10">⏱️ 10 Detik</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Kotak Layar Kamera Utama -->
+        <div class="relative w-full aspect-[4/3] bg-stone-900 rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+          <video id="webcam" playsinline autoplay muted class="w-full h-full object-cover scale-x-[-1] filter-none"></video>
+          <canvas id="ar-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-10"></canvas>
+
+          <!-- Indikator Telapak Tangan Terdeteksi -->
+          <div id="palm-indicator" class="hidden absolute top-4 left-4 z-20 bg-emerald-500/95 text-white text-xs font-cute font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 animate-bounce">
+            <span>🖐️</span>
+            <span>Tahan Tangan...</span>
+          </div>
+
+          <!-- Badge Progres Foto -->
+          <div class="absolute top-4 right-4 z-20 bg-stone-950/75 backdrop-blur-md text-white text-xs font-bold px-3.5 py-1.5 rounded-full border border-white/15">
+            Foto <span id="cam-shot-progress">0</span> / <span id="cam-shot-total">4</span>
+          </div>
+
+          <!-- Overlay Countdown Besar -->
+          <div id="countdown-overlay" class="hidden absolute inset-0 z-30 bg-black/45 backdrop-blur-[2px] flex flex-col items-center justify-center">
+            <div id="countdown-number" class="font-cute font-bold text-8xl sm:text-9xl text-white drop-shadow-lg animate-bounce">3</div>
+            <span class="mt-2 bg-white/90 text-stone-900 text-xs font-bold px-4 py-1.5 rounded-full shadow">
+              Siapkan Pose Terbaikmu! ✨
+            </span>
+          </div>
+
+          <!-- Tombol Jepret & Kontrol Bawah Kamera -->
+          <div class="absolute bottom-4 inset-x-4 z-20 flex items-center justify-between gap-2">
+            <button onclick="toggleLiveGuide()" id="btn-live-guide" class="bg-white/90 hover:bg-white text-stone-800 text-xs font-bold px-3.5 py-2.5 rounded-2xl shadow backdrop-blur-md transition">
+              🖼️ Frame Aktif: <span id="active-frame-badge-name">Hachiware Blue</span>
+            </button>
+
+            <button onclick="triggerCountdown()" id="btn-shutter" class="bg-amber-400 hover:bg-amber-300 active:scale-95 text-stone-950 font-cute font-bold text-sm px-6 py-3 rounded-2xl shadow-xl border-2 border-white transition flex items-center gap-2">
+              <span>📸 Jepret Foto</span>
+            </button>
+
+            <button onclick="resetCameraSession()" class="bg-stone-900/80 hover:bg-stone-900 text-white text-xs font-bold px-3.5 py-2.5 rounded-2xl shadow backdrop-blur-md transition">
+              🔄 Ulang
+            </button>
+          </div>
+        </div>
+
+        <!-- Thumbnail Slot Hasil Jepretan Sementara -->
+        <div class="bg-white border border-stone-200 rounded-2xl p-3 shadow-sm">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-stone-700">Slot Hasil Jepretan (Klik foto untuk Retake)</span>
+            <button id="btn-go-preview" onclick="switchView('preview')" class="hidden text-xs font-cute font-bold bg-emerald-600 hover:bg-emerald-500 text-white px-3.5 py-1.5 rounded-xl shadow transition">
+              Lanjut ke Halaman Preview →
+            </button>
+          </div>
+          <div id="captured-slots-row" class="grid grid-cols-4 gap-2.5">
+            <!-- Diisi dinamis -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Kolom Kanan (5 Kolom): 28+ Rekomendasi Pose Interaktif -->
+      <div class="lg:col-span-5 bg-white border border-stone-200 rounded-3xl p-4 sm:p-5 shadow-sm flex flex-col gap-3">
+        <div class="flex items-center justify-between">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-700 bg-amber-100 px-2.5 py-0.5 rounded-full">Pose Guide</span>
+            <h2 class="font-cute text-lg font-bold text-stone-900 mt-0.5">28 Ide Pose Photobooth</h2>
+          </div>
+          <button onclick="pickRandomPose()" class="font-cute text-xs font-bold bg-stone-900 hover:bg-stone-800 text-white px-3.5 py-2 rounded-xl shadow-sm transition flex items-center gap-1.5">
+            <span>🎲 Acak Pose</span>
+          </button>
+        </div>
+
+        <!-- Filter Kategori Pose -->
+        <div class="flex gap-1.5 overflow-x-auto custom-scrollbar pb-1 text-xs font-bold">
+          <button onclick="filterPoses('all')" class="pose-cat-pill px-3 py-1 rounded-xl bg-stone-900 text-white whitespace-nowrap" data-cat="all">Semua (28)</button>
+          <button onclick="filterPoses('solo')" class="pose-cat-pill px-3 py-1 rounded-xl bg-stone-100 text-stone-600 hover:bg-stone-200 whitespace-nowrap" data-cat="solo">Solo Cute</button>
+          <button onclick="filterPoses('idol')" class="pose-cat-pill px-3 py-1 rounded-xl bg-stone-100 text-stone-600 hover:bg-stone-200 whitespace-nowrap" data-cat="idol">K-Pop Idol</button>
+          <button onclick="filterPoses('duo')" class="pose-cat-pill px-3 py-1 rounded-xl bg-stone-100 text-stone-600 hover:bg-stone-200 whitespace-nowrap" data-cat="duo">Duo / Bestie</button>
+          <button onclick="filterPoses('cool')" class="pose-cat-pill px-3 py-1 rounded-xl bg-stone-100 text-stone-600 hover:bg-stone-200 whitespace-nowrap" data-cat="cool">Cool / Y2K</button>
+          <button onclick="filterPoses('funny')" class="pose-cat-pill px-3 py-1 rounded-xl bg-stone-100 text-stone-600 hover:bg-stone-200 whitespace-nowrap" data-cat="funny">Lucu / Wacky</button>
+        </div>
+
+        <!-- Kartu Pose Terpilih Lengkap dengan Diagram SVG -->
+        <div class="bg-[#faf7f2] border border-stone-200 rounded-2xl p-3.5 flex items-center gap-3.5">
+          <div class="w-24 h-24 flex-shrink-0 bg-white rounded-2xl border border-stone-200 flex items-center justify-center p-2 shadow-inner">
+            <svg id="active-pose-svg" viewBox="0 0 120 120" class="w-full h-full text-stone-800" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-1.5 mb-1">
+              <span id="active-pose-tag" class="text-[10px] font-bold uppercase bg-amber-200/70 text-amber-900 px-2 py-0.5 rounded-md">Solo Cute</span>
+              <span id="active-pose-num" class="text-[11px] font-mono text-stone-400">#01</span>
+            </div>
+            <h3 id="active-pose-title" class="font-cute font-bold text-base text-stone-900 leading-snug">Cheek Heart (Pipi Hati)</h3>
+            <p id="active-pose-desc" class="text-xs text-stone-600 mt-1 leading-relaxed">Tempelkan setengah bentuk hati dengan tangan di satu pipi sambil tersenyum manis.</p>
+          </div>
+        </div>
+
+        <!-- Daftar Scrollable 28 Pose -->
+        <div id="pose-list-container" class="grid grid-cols-2 gap-2 max-h-[290px] overflow-y-auto custom-scrollbar pr-1">
+          <!-- Diisi otomatis oleh JavaScript -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       VIEW 3: BEARBOOTH-STYLE PREVIEW & STUDIO CUSTOMIZER
+  ========================================================== -->
+  <section id="view-preview" class="hidden flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+
+      <!-- Kolom Kiri (6 Kolom): Kanvas Preview Strip Interaktif -->
+      <div class="lg:col-span-6 flex flex-col items-center">
+        <div class="w-full bg-white border border-stone-200 rounded-3xl p-4 sm:p-6 shadow-sm flex flex-col items-center">
+          <div class="w-full flex items-center justify-between mb-3">
+            <span class="text-xs font-bold text-stone-500">✨ Klik pada strip untuk tempel stiker!</span>
+            <div class="flex gap-1.5">
+              <button onclick="undoLastSticker()" class="text-[11px] font-bold bg-stone-100 hover:bg-stone-200 text-stone-700 px-2.5 py-1 rounded-lg transition">↩️ Undo Stiker</button>
+              <button onclick="clearAllStickers()" class="text-[11px] font-bold bg-stone-100 hover:bg-rose-100 text-rose-600 px-2.5 py-1 rounded-lg transition">🗑️ Bersihkan</button>
+            </div>
+          </div>
+
+          <!-- Container Kanvas Strip -->
+          <div class="bg-stone-100/80 p-4 rounded-2xl border border-stone-200/80 flex justify-center items-center w-full overflow-auto">
+            <canvas id="final-strip-canvas" class="max-h-[68vh] w-auto rounded-lg shadow-xl cursor-crosshair transition-transform"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kolom Kanan (6 Kolom): Panel Kontrol Ala Bearbooth Preview -->
+      <div class="lg:col-span-6 flex flex-col gap-4">
+        <div class="bg-white border border-stone-200 rounded-3xl p-5 shadow-sm">
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <h2 class="font-cute text-xl font-bold text-stone-900">Kustomisasi Photo Strip</h2>
+              <p class="text-xs text-stone-500">Pilih salah satu dari 10 desain frame detail di bawah ini</p>
+            </div>
+            <button onclick="switchView('camera')" class="text-xs font-bold text-amber-800 bg-amber-100 hover:bg-amber-200 px-3 py-1.5 rounded-xl transition">
+              📸 Foto Ulang
+            </button>
+          </div>
+
+          <!-- Pemilih 10 Frame -->
+          <label class="block text-xs font-bold text-stone-700 mb-2">1. Pilih Desain Frame (10 Tema Referensi):</label>
+          <div id="preview-frame-pills" class="grid grid-cols-2 sm:grid-cols-2 gap-2 max-h-56 overflow-y-auto custom-scrollbar pr-1 mb-4">
+            <!-- Diisi otomatis -->
+          </div>
+
+          <!-- Pilihan Layout & Filter Strip -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4 pt-3 border-t border-stone-100">
+            <div>
+              <label class="block text-xs font-bold text-stone-700 mb-1.5">2. Layout Cetak:</label>
+              <div class="grid grid-cols-2 gap-1.5">
+                <button id="prev-mode-single" onclick="setStripMode('single')" class="py-2 rounded-xl text-xs font-bold bg-stone-900 text-white">1 Strip</button>
+                <button id="prev-mode-double" onclick="setStripMode('double')" class="py-2 rounded-xl text-xs font-bold bg-stone-100 text-stone-700 hover:bg-stone-200">2 Strip Kembar</button>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-stone-700 mb-1.5">3. Tone Warna Foto:</label>
+              <select id="strip-photo-filter" onchange="renderFinalStrip()" class="w-full bg-stone-100 border border-stone-200 text-xs font-bold text-stone-800 rounded-xl px-3 py-2 focus:outline-none">
+                <option value="none">Original / Asli</option>
+                <option value="grayscale(100%) contrast(1.18)">B&W Classic Noir</option>
+                <option value="brightness(1.07) contrast(0.94) saturate(1.15)">Soft Pastel Glow</option>
+                <option value="sepia(0.28) contrast(1.06)">Warm Vintage Film</option>
+                <option value="saturate(1.3) contrast(1.08)">Vivid Pop</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Stiker Stempel Interaktif -->
+          <div class="mb-4 pt-3 border-t border-stone-100">
+            <label class="block text-xs font-bold text-stone-700 mb-1.5">4. Pilih Stiker Stempel (Lalu klik di atas strip foto):</label>
+            <div id="stamp-selector-row" class="flex flex-wrap gap-1.5">
+              <!-- Diisi otomatis -->
+            </div>
+          </div>
+
+          <!-- Teks Tanggal & Caption -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5 pt-3 border-t border-stone-100">
+            <div>
+              <label class="block text-xs font-bold text-stone-700 mb-1">5. Teks / Caption Bawah (Opsional):</label>
+              <input type="text" id="custom-caption-input" oninput="renderFinalStrip()" placeholder="Contoh: Bestie Day Out • 2026" class="w-full bg-stone-100 border border-stone-200 text-xs font-medium text-stone-900 rounded-xl px-3 py-2 focus:outline-none focus:border-stone-900">
+            </div>
+            <div class="flex flex-col justify-end">
+              <label class="flex items-center gap-2 text-xs font-bold text-stone-700 cursor-pointer bg-stone-100 px-3 py-2 rounded-xl border border-stone-200">
+                <input type="checkbox" id="toggle-date-stamp" checked onchange="renderFinalStrip()" class="rounded text-stone-900">
+                <span>Tampilkan Cap Tanggal Hari Ini</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Tombol Unduh & QR Code -->
+          <div class="flex flex-col sm:flex-row gap-2.5">
+            <button onclick="downloadFinalStrip()" class="flex-1 font-cute text-sm font-bold bg-stone-900 hover:bg-stone-800 text-white py-3.5 px-5 rounded-2xl shadow-lg transition flex items-center justify-center gap-2">
+              <span>📥 Download Strip HD (PNG)</span>
+            </button>
+            <button onclick="openQrModal()" class="font-cute text-xs font-bold bg-amber-100 hover:bg-amber-200 text-amber-950 border border-amber-300 py-3.5 px-4 rounded-2xl transition flex items-center justify-center gap-1.5">
+              <span>📱 QR HP</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODAL QR CODE UNTUK SIMPAN KE HP -->
+  <div id="qr-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white border border-stone-200 rounded-3xl p-6 max-w-xs w-full text-center shadow-2xl">
+      <h3 class="font-cute text-lg font-bold text-stone-900 mb-1">Scan ke Smartphone 📱</h3>
+      <p class="text-xs text-stone-500 mb-4">Arahkan kamera HP kamu untuk membuka studio atau mengunduh hasil strip.</p>
+      <div class="bg-stone-50 p-4 rounded-2xl border border-stone-200 inline-block mb-4">
+        <div id="qrcode-box"></div>
+      </div>
+      <button onclick="closeQrModal()" class="w-full font-cute text-xs font-bold bg-stone-900 text-white py-2.5 rounded-xl">
+        Tutup
+      </button>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       JAVASCRIPT: ENGINE 10 FRAME DETAIL, 28 POSE, & KAMERA AI
+  ========================================================== -->
+  <script>
+    const CUSTOM_FRAMES = [
+      { id: "hachiware-blue", name: "Hachiware Blue Strip", tag: "Cute Character", accent: "#6c9eb5", desc: "Biru pastel dengan pita, kilau bintang, & 4 ekspresi Hachiware" },
+      { id: "tomato-gingham", name: "Tomato Gingham Fresh", tag: "Korean Retro", accent: "#3d9970", desc: "Kotak-kotak hijau, stiker tomat segar, tape 2004 & keranjang tomat" },
+      { id: "jellyz-dessert", name: "Jellyz Sweet Dessert", tag: "Pastel Kawaii", accent: "#ec4899", desc: "Kanopi biru-toska, frame puding & kue, gummy bear & mesin gachapon" },
+      { id: "chiikawa-pink", name: "Chiikawa Pink Strip", tag: "Cute Character", accent: "#f497b6", desc: "Pink lembut dengan karakter Chiikawa, tongkat sasumata & bintang" },
+      { id: "hyeon-day", name: "It's Hyeon Day Patchwork", tag: "Scrapbook", accent: "#84a98c", desc: "Garis pink-sage dengan jahitan silang, gitar hati, rubah & manik-manik" },
+      { id: "bakery-cuties", name: "Bakery & Jellycat Cuties", tag: "Foodie Cute", accent: "#f59e0b", desc: "Karakter matahari, kopi, croissant, pretzel, kue ulang tahun & donat" },
+      { id: "smiski-forest", name: "Smiski Forest Green", tag: "Aesthetic Green", accent: "#254828", desc: "Hijau hutan pekat dengan figur Smiski glow-in-the-dark & bintang" },
+      { id: "lilly-meadow", name: "Lilly Meadow Nostalgia", tag: "Floral Vintage", accent: "#7c8c5b", desc: "Bingkai hijau zaitun dengan bunga lili pink, kupu-kupu & pita floral" },
+      { id: "purrfect-markie", name: "Purrfect Markie & Cake", tag: "Cat Scrapbook", accent: "#7dd3fc", desc: "Polkadot biru & garis pink, kucing putih berpita, poster & kue lilin" },
+      { id: "tsuyatsuya-pudding", name: "Tsuyatsuya Pudding & Jelly", tag: "J-Kawaii Pop", accent: "#86efac", desc: "Patchwork Jepang dengan ilustrasi jeli melon & puding karamel ceri" }
+    ];
+
+    const POSE_LIBRARY = [
+      { id: 1, cat: "solo", tag: "Solo Cute", title: "Cheek Heart (Pipi Hati)", desc: "Tempelkan setengah bentuk hati dengan jari di satu pipi sambil tersenyum.", svg: '<circle cx="60" cy="48" r="22"/><path d="M40 95 Q60 75 80 95"/><path d="M35 52 C28 45 38 38 42 46 C46 38 56 45 49 52 L42 58 Z" fill="#f43f5e" stroke="none"/>' },
+      { id: 2, cat: "solo", tag: "Solo Cute", title: "Double Peace V-Sign", desc: "Angkat dua jari membentuk huruf V di dekat kedua mata dengan kepala sedikit miring.", svg: '<circle cx="60" cy="52" r="20"/><path d="M32 45 L26 26 M32 45 L38 26"/><path d="M88 45 L82 26 M88 45 L94 26"/><path d="M42 98 Q60 78 78 98"/>' },
+      { id: 3, cat: "idol", tag: "K-Pop Idol", title: "Cat Ears (Telinga Kucing)", desc: "Kepalkan kedua tangan di atas kepala menyerupai telinga kucing yang menggemaskan.", svg: '<circle cx="60" cy="58" r="21"/><path d="M38 42 L44 22 L52 38"/><path d="M82 42 L76 22 L68 38"/><path d="M42 100 Q60 82 78 100"/>' },
+      { id: 4, cat: "idol", tag: "K-Pop Idol", title: "Gyaru Peace (Inverted V)", desc: "Balikkan telapak tangan ke depan dengan jari V menghadap ke bawah ala tren K-Pop.", svg: '<circle cx="60" cy="50" r="20"/><path d="M34 55 L26 74 M34 55 L42 74"/><path d="M86 55 L78 74 M86 55 L94 74"/><path d="M44 98 Q60 80 76 98"/>' },
+      { id: 5, cat: "solo", tag: "Solo Cute", title: "Flower Chin (Bunga Mekar)", desc: "Topang dagu dengan kedua telapak tangan terbuka seperti kelopak bunga mekar.", svg: '<circle cx="60" cy="46" r="21"/><path d="M38 68 Q60 82 82 68"/><path d="M38 68 L32 56 M82 68 L88 56"/><path d="M44 102 Q60 84 76 102"/>' },
+      { id: 6, cat: "idol", tag: "K-Pop Idol", title: "Finger Heart (Saranghae)", desc: "Silangkan ibu jari dan telunjuk membentuk hati mini di depan dada atau dekat pipi.", svg: '<circle cx="60" cy="48" r="21"/><path d="M42 98 Q60 78 78 98"/><path d="M78 66 L85 56 M85 66 L78 56"/><circle cx="82" cy="50" r="5" fill="#fb7185" stroke="none"/>' },
+      { id: 7, cat: "solo", tag: "Solo Cute", title: "Big Overhead Heart", desc: "Angkat kedua lengan melengkung di atas kepala membentuk simbol hati raksasa.", svg: '<circle cx="60" cy="62" r="18"/><path d="M60 32 C42 16 22 36 42 56"/><path d="M60 32 C78 16 98 36 78 56"/><path d="M42 102 Q60 86 78 102"/>' },
+      { id: 8, cat: "cool", tag: "Cool / Y2K", title: "Hand Visor / Salute", desc: "Letakkan tangan datar di pelipis seperti hormat santai dengan ekspresi wink.", svg: '<circle cx="60" cy="52" r="21"/><path d="M32 34 L62 34"/><path d="M52 50 L58 50"/><circle cx="68" cy="50" r="2" fill="currentColor"/><path d="M42 98 Q60 80 78 98"/>' },
+      { id: 9, cat: "cool", tag: "Cool / Y2K", title: "0.5x Wide Lean Forward", desc: "Condongkan wajah mendekat ke lensa kamera dengan sudut miring dinamis.", svg: '<circle cx="60" cy="54" r="27"/><path d="M34 104 Q60 86 86 104"/><circle cx="51" cy="50" r="2.5" fill="currentColor"/><circle cx="69" cy="50" r="2.5" fill="currentColor"/>' },
+      { id: 10, cat: "idol", tag: "K-Pop Idol", title: "Teddy Bear Paws", desc: "Kepalkan kedua tangan di samping pipi layaknya cakar beruang menggemaskan.", svg: '<circle cx="60" cy="50" r="20"/><circle cx="34" cy="56" r="8"/><circle cx="86" cy="56" r="8"/><path d="M44 98 Q60 80 76 98"/>' },
+      { id: 11, cat: "solo", tag: "Solo Cute", title: "Cheek Poke (Tusuk Pipi)", desc: "Tusuk pelan satu pipi dengan jari telunjuk sambil memonyongkan bibir lucu.", svg: '<circle cx="60" cy="50" r="21"/><path d="M24 54 L44 54"/><path d="M42 98 Q60 80 78 98"/>' },
+      { id: 12, cat: "cool", tag: "Cool / Y2K", title: "Chin Rest Cool Gaze", desc: "Topang dagu dengan satu tangan dan tatap kamera dengan ekspresi candid kalem.", svg: '<circle cx="60" cy="48" r="21"/><path d="M48 72 L60 72 L60 95"/><path d="M40 98 Q60 82 80 98"/>' },
+      { id: 13, cat: "idol", tag: "K-Pop Idol", title: "Bunny Ears (Telinga Kelinci)", desc: "Buat dua jari panjang berdiri tepat di belakang atau di atas kepala seperti kelinci.", svg: '<circle cx="60" cy="60" r="20"/><path d="M48 40 L44 16 L54 38"/><path d="M72 40 L76 16 L66 38"/><path d="M42 102 Q60 84 78 102"/>' },
+      { id: 14, cat: "funny", tag: "Lucu / Wacky", title: "Shocked Home Alone", desc: "Tempelkan kedua telapak tangan di pipi dengan mulut terbuka kaget dramatis!", svg: '<circle cx="60" cy="50" r="21"/><ellipse cx="60" cy="58" rx="5" ry="7"/><path d="M36 44 L36 66 M84 44 L84 66"/><path d="M42 98 Q60 80 78 98"/>' },
+      { id: 15, cat: "duo", tag: "Duo / Bestie", title: "Bestie Shared Heart", desc: "Dua orang masing-masing mengangkat satu lengan untuk membentuk satu hati besar bersama.", svg: '<circle cx="42" cy="58" r="15"/><circle cx="78" cy="58" r="15"/><path d="M42 42 C42 22 60 22 60 36 C60 22 78 22 78 42"/>' },
+      { id: 16, cat: "duo", tag: "Duo / Bestie", title: "Cheek-to-Cheek Squish", desc: "Rapatkan pipi berdua ke tengah frame sambil tersenyum lebar ke arah kamera.", svg: '<circle cx="48" cy="54" r="18"/><circle cx="72" cy="54" r="18"/><path d="M30 98 Q60 76 90 98"/>' },
+      { id: 17, cat: "duo", tag: "Duo / Bestie", title: "Back-to-Back Cool", desc: "Berdiri saling memunggungi dengan tangan bersilang dan tatapan penuh percaya diri.", svg: '<circle cx="44" cy="48" r="16"/><circle cx="76" cy="48" r="16"/><path d="M60 34 L60 98"/><path d="M28 96 L56 96 M64 96 L92 96"/>' },
+      { id: 18, cat: "duo", tag: "Duo / Bestie", title: "Totem Stack (Susun Kepala)", desc: "Satu orang di bawah dan satu lagi menumpuk dagu tepat di atas bahu/kepala teman.", svg: '<circle cx="60" cy="36" r="15"/><circle cx="60" cy="70" r="17"/><path d="M38 104 Q60 88 82 104"/>' },
+      { id: 19, cat: "duo", tag: "Duo / Bestie", title: "Prom Queen & King", desc: "Satu orang berpose elegan sementara teman di sampingnya memberi mahkota jari di atas kepala.", svg: '<circle cx="52" cy="58" r="18"/><path d="M40 34 L46 24 L52 32 L58 24 L64 34 Z"/><circle cx="84" cy="62" r="14"/>' },
+      { id: 20, cat: "cool", tag: "Cool / Y2K", title: "Finger Frame (Bingkai Jari)", desc: "Bentuk kotak persegi panjang di depan wajah menggunakan ibu jari dan telunjuk kedua tangan.", svg: '<circle cx="60" cy="54" r="18"/><rect x="34" y="32" width="52" height="44" rx="6"/><path d="M42 100 Q60 82 78 100"/>' },
+      { id: 21, cat: "solo", tag: "Solo Cute", title: "Shy Peek-a-Boo", desc: "Tutup setengah wajah bagian bawah dengan kedua tangan sehingga hanya mata yang terlihat.", svg: '<circle cx="60" cy="48" r="21"/><rect x="38" y="54" width="44" height="22" rx="8" fill="#faf7f2"/><circle cx="52" cy="45" r="2.5" fill="currentColor"/><circle cx="68" cy="45" r="2.5" fill="currentColor"/>' },
+      { id: 22, cat: "idol", tag: "K-Pop Idol", title: "Ending Fairy (Napas Idola)", desc: "Tatap kamera tajam tanpa berkedip dengan satu tangan menyentuh dada ala ending panggung musik.", svg: '<circle cx="60" cy="46" r="20"/><path d="M40 98 Q60 76 80 98"/><path d="M56 84 L66 84 L62 94 Z"/>' },
+      { id: 23, cat: "funny", tag: "Lucu / Wacky", title: "Invisible Sunglasses", desc: "Bentuk kacamata bulat di depan mata menggunakan jari telunjuk dan ibu jari.", svg: '<circle cx="60" cy="52" r="21"/><circle cx="50" cy="48" r="8"/><circle cx="70" cy="48" r="8"/><path d="M58 48 L62 48"/>' },
+      { id: 24, cat: "cool", tag: "Cool / Y2K", title: "Over-the-Shoulder Look", desc: "Hadapkan bahu ke samping lalu menoleh ke arah kamera dengan senyum tipis.", svg: '<circle cx="64" cy="48" r="20"/><path d="M36 96 L84 82"/><path d="M44 98 L44 80"/>' },
+      { id: 25, cat: "solo", tag: "Solo Cute", title: "Ribbon Bow Hands", desc: "Tempelkan kedua tangan mengepal di samping pelipis menyerupai pita besar.", svg: '<circle cx="60" cy="52" r="20"/><path d="M36 36 L24 28 L24 44 Z"/><path d="M84 36 L96 28 L96 44 Z"/>' },
+      { id: 26, cat: "funny", tag: "Lucu / Wacky", title: "Rockstar Metal Horns", desc: "Angkat jari telunjuk dan kelingking (metal sign) sambil menjulurkan lidah ceria!", svg: '<circle cx="60" cy="52" r="20"/><path d="M30 48 L26 28 M38 48 L42 28"/><path d="M56 60 Q60 68 64 60"/>' },
+      { id: 27, cat: "duo", tag: "Duo / Bestie", title: "Whisper Secret (Bisik Rahasia)", desc: "Satu orang menutup mulut berbisik ke telinga teman yang memasang ekspresi penasaran.", svg: '<circle cx="44" cy="54" r="16"/><circle cx="76" cy="54" r="16"/><path d="M54 52 L64 48"/>' },
+      { id: 28, cat: "idol", tag: "K-Pop Idol", title: "Star Pose (Pose Bintang)", desc: "Rentangkan kedua tangan terbuka lebar di samping wajah penuh energi positif!", svg: '<circle cx="60" cy="52" r="19"/><path d="M24 38 L38 52 M96 38 L82 52"/><path d="M42 98 Q60 80 78 98"/>' }
+    ];
+
+    const STAMP_EMOJIS = ["💖", "⭐", "🍒", "🎀", "🐱", "✨", "🍀", "🧸", "👑", "🍓", "🦋", "🫧"];
+
+    let selectedFrameId = "hachiware-blue";
+    let photoCount = 4;
+    let stripMode = "single";
+    let capturedPhotos = [];
+    let placedStickers = [];
+    let activeStampEmoji = "💖";
+    let showLiveGuide = true;
+
+    let currentPoseFilter = "all";
+    let activePoseObj = POSE_LIBRARY[0];
+
+    let videoEl, arCanvas, arCtx;
+    let cameraInstance = null;
+    let handsInstance = null;
+    let isCameraStarted = false;
+    let isCountingDown = false;
+    let palmStartTime = null;
+    let retakeIndex = null;
+
+    function switchView(viewName) {
+      document.getElementById('view-setup').classList.add('hidden');
+      document.getElementById('view-camera').classList.add('hidden');
+      document.getElementById('view-preview').classList.add('hidden');
+
+      document.getElementById('view-' + viewName).classList.remove('hidden');
+
+      ['setup', 'camera', 'preview'].forEach(step => {
+        const btn = document.getElementById('nav-step-' + step);
+        if (step === viewName) {
+          btn.className = "px-3.5 py-1.5 rounded-xl bg-white text-stone-900 shadow-sm font-bold transition";
+        } else {
+          btn.className = "px-3.5 py-1.5 rounded-xl text-stone-500 hover:text-stone-900 transition";
+        }
+      });
+
+      if (viewName === 'camera') {
+        updateCameraUI();
+        if (!isCameraStarted) initCameraAndHands();
+      } else if (viewName === 'preview') {
+        if (capturedPhotos.length === 0) {
+          generatePlaceholderPhotos();
+        }
+        renderPreviewFramePills();
+        renderFinalStrip();
+      }
+    }
+
+    function setPhotoCount(count) {
+      photoCount = count;
+      document.getElementById('btn-cuts-4').className = count === 4 ? "px-3 py-1.5 rounded-xl text-xs font-bold bg-stone-900 text-white" : "px-3 py-1.5 rounded-xl text-xs font-bold bg-stone-100 text-stone-600 hover:bg-stone-200";
+      document.getElementById('btn-cuts-3').className = count === 3 ? "px-3 py-1.5 rounded-xl text-xs font-bold bg-stone-900 text-white" : "px-3 py-1.5 rounded-xl text-xs font-bold bg-stone-100 text-stone-600 hover:bg-stone-200";
+      if (capturedPhotos.length > photoCount) {
+        capturedPhotos = capturedPhotos.slice(0, photoCount);
+      }
+      renderSetupGallery();
+      updateCameraUI();
+    }
+
+    function setStripMode(mode) {
+      stripMode = mode;
+      const activeCls = "px-3 py-1.5 rounded-xl text-xs font-bold bg-stone-900 text-white";
+      const inactiveCls = "px-3 py-1.5 rounded-xl text-xs font-bold bg-stone-100 text-stone-600 hover:bg-stone-200";
+
+      document.getElementById('btn-strip-single').className = mode === 'single' ? activeCls : inactiveCls;
+      document.getElementById('btn-strip-double').className = mode === 'double' ? activeCls : inactiveCls;
+
+      document.getElementById('prev-mode-single').className = mode === 'single' ? "py-2 rounded-xl text-xs font-bold bg-stone-900 text-white" : "py-2 rounded-xl text-xs font-bold bg-stone-100 text-stone-700";
+      document.getElementById('prev-mode-double').className = mode === 'double' ? "py-2 rounded-xl text-xs font-bold bg-stone-900 text-white" : "py-2 rounded-xl text-xs font-bold bg-stone-100 text-stone-700";
+
+      if (!document.getElementById('view-preview').classList.contains('hidden')) {
+        renderFinalStrip();
+      }
+    }
+
+    function renderSetupGallery() {
+      const grid = document.getElementById('setup-frame-grid');
+      grid.innerHTML = "";
+
+      CUSTOM_FRAMES.forEach(frame => {
+        const isSelected = frame.id === selectedFrameId;
+        const card = document.createElement('div');
+        card.className = 'bg-white rounded-3xl p-3 border-2 transition cursor-pointer flex flex-col justify-between shadow-sm hover:shadow-md ' + (
+          isSelected ? 'border-stone-900 ring-2 ring-amber-400' : 'border-stone-200 hover:border-stone-400'
+        );
+
+        card.onclick = () => {
+          selectedFrameId = frame.id;
+          renderSetupGallery();
+        };
+
+        card.innerHTML =
+          '<div>' +
+            '<div class="bg-stone-100 rounded-2xl p-2 mb-2.5 flex items-center justify-center h-44 overflow-hidden">' +
+              '<canvas id="thumb-' + frame.id + '" width="150" height="360" class="h-full w-auto rounded shadow-sm"></canvas>' +
+            '</div>' +
+            '<div class="flex items-center justify-between gap-1 mb-0.5">' +
+              '<span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded-md bg-stone-100 text-stone-600">' + frame.tag + '</span>' +
+              (isSelected ? '<span class="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">✓ Dipilih</span>' : '') +
+            '</div>' +
+            '<h3 class="font-cute font-bold text-sm text-stone-900 mt-1">' + frame.name + '</h3>' +
+            '<p class="text-[11px] text-stone-500 leading-snug mt-0.5">' + frame.desc + '</p>' +
+          '</div>';
+
+        grid.appendChild(card);
+
+        setTimeout(() => {
+          const c = document.getElementById('thumb-' + frame.id);
+          if (c) drawSingleStripCanvas(c.getContext('2d'), c.width, c.height, frame.id, [], "none", "", false);
+        }, 10);
+      });
+    }
+
+    async function initCameraAndHands() {
+      videoEl = document.getElementById('webcam');
+      arCanvas = document.getElementById('ar-canvas');
+      arCtx = arCanvas.getContext('2d');
+
+      try {
+        handsInstance = new Hands({
+          locateFile: (file) => 'https://cdn.jsdelivr.net/npm/@mediapipe/hands/' + file
+        });
+
+        handsInstance.setOptions({
+          maxNumHands: 2,
+          modelComplexity: 0,
+          minDetectionConfidence: 0.5,
+          minTrackingConfidence: 0.5
+        });
+
+        handsInstance.onResults(handleHandResults);
+
+        cameraInstance = new Camera(videoEl, {
+          onFrame: async () => {
+            if (videoEl.readyState >= 2) {
+              await handsInstance.send({ image: videoEl });
+            }
+          },
+          width: { ideal: 1280 },
+          height: { ideal: 720 }
+        });
+
+        await cameraInstance.start();
+        isCameraStarted = true;
+      } catch (err) {
+        console.warn("Kamera tidak tersedia atau izin ditolak:", err);
+      }
+    }
+
+    function handleHandResults(results) {
+      if (!arCanvas) return;
+      arCanvas.width = videoEl.clientWidth || 640;
+      arCanvas.height = videoEl.clientHeight || 480;
+      arCtx.clearRect(0, 0, arCanvas.width, arCanvas.height);
+
+      if (showLiveGuide) {
+        const frameObj = CUSTOM_FRAMES.find(f => f.id === selectedFrameId) || CUSTOM_FRAMES[0];
+        arCtx.strokeStyle = frameObj.accent;
+        arCtx.lineWidth = 10;
+        arCtx.strokeRect(5, 5, arCanvas.width - 10, arCanvas.height - 10);
+      }
+
+      let isPalmOpen = false;
+
+      if (results.multiHandLandmarks && results.multiHandLandmarks.length > 0) {
+        results.multiHandLandmarks.forEach(landmarks => {
+          const wrist = landmarks[0];
+          const indexTip = landmarks[8];
+          const middleTip = landmarks[12];
+          const ringTip = landmarks[16];
+
+          if (indexTip.y < wrist.y && middleTip.y < wrist.y && ringTip.y < wrist.y) {
+            isPalmOpen = true;
+            landmarks.forEach(pt => {
+              const x = arCanvas.width - (pt.x * arCanvas.width);
+              const y = pt.y * arCanvas.height;
+              arCtx.beginPath();
+              arCtx.arc(x, y, 5, 0, Math.PI * 2);
+              arCtx.fillStyle = "rgba(255, 255, 255, 0.85)";
+              arCtx.fill();
+            });
+          }
+        });
+      }
+
+      const indicator = document.getElementById('palm-indicator');
+      const canShoot = capturedPhotos.length < photoCount || retakeIndex !== null;
+
+      if (isPalmOpen && !isCountingDown && canShoot && !document.getElementById('view-camera').classList.contains('hidden')) {
+        indicator.classList.remove('hidden');
+        if (!palmStartTime) {
+          palmStartTime = Date.now();
+        } else if (Date.now() - palmStartTime > 500) {
+          palmStartTime = null;
+          indicator.classList.add('hidden');
+          triggerCountdown();
+        }
+      } else {
+        indicator.classList.add('hidden');
+        palmStartTime = null;
+      }
+    }
+
+    function changeCameraFilter(filterVal) {
+      const vid = document.getElementById('webcam');
+      vid.className = 'w-full h-full object-cover scale-x-[-1] filter-' + filterVal;
+    }
+
+    function toggleLiveGuide() {
+      showLiveGuide = !showLiveGuide;
+      const frameObj = CUSTOM_FRAMES.find(f => f.id === selectedFrameId);
+      document.getElementById('btn-live-guide').innerHTML = showLiveGuide
+        ? '🖼️ Frame Aktif: <span>' + frameObj.name + '</span>'
+        : '🖼️ Frame Guide: Off';
+    }
+
+    function triggerCountdown() {
+      if (isCountingDown) return;
+      if (capturedPhotos.length >= photoCount && retakeIndex === null) {
+        switchView('preview');
+        return;
+      }
+
+      isCountingDown = true;
+      const overlay = document.getElementById('countdown-overlay');
+      const numEl = document.getElementById('countdown-number');
+      overlay.classList.remove('hidden');
+
+      let sec = parseInt(document.getElementById('timer-select').value) || 3;
+      numEl.textContent = sec;
+
+      const interval = setInterval(() => {
+        sec--;
+        if (sec > 0) {
+          numEl.textContent = sec;
+        } else {
+          clearInterval(interval);
+          overlay.classList.add('hidden');
+          isCountingDown = false;
+          snapPhotoNow();
+        }
+      }, 1000);
+    }
+
+    function snapPhotoNow() {
+      const flash = document.getElementById('flash-layer');
+      flash.classList.add('flash-active');
+      setTimeout(() => flash.classList.remove('flash-active'), 400);
+
+      const tempCanvas = document.createElement('canvas');
+      tempCanvas.width = videoEl && videoEl.videoWidth ? videoEl.videoWidth : 800;
+      tempCanvas.height = videoEl && videoEl.videoHeight ? videoEl.videoHeight : 600;
+      const tCtx = tempCanvas.getContext('2d');
+
+      const filterMap = {
+        none: "none",
+        bw: "grayscale(100%) contrast(1.18) brightness(1.04)",
+        pastel: "brightness(1.08) contrast(0.92) saturate(1.15) sepia(0.08)",
+        vintage: "sepia(0.32) contrast(1.08) brightness(0.98) saturate(0.9)",
+        vivid: "saturate(1.35) contrast(1.08)"
+      };
+      const activeFilter = document.getElementById('camera-filter-select').value;
+      tCtx.filter = filterMap[activeFilter] || "none";
+
+      if (videoEl && videoEl.readyState >= 2) {
+        tCtx.translate(tempCanvas.width, 0);
+        tCtx.scale(-1, 1);
+        tCtx.drawImage(videoEl, 0, 0, tempCanvas.width, tempCanvas.height);
+      } else {
+        tCtx.fillStyle = "#fde68a";
+        tCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height);
+        tCtx.fillStyle = "#78350f";
+        tCtx.font = "bold 36px Fredoka, sans-serif";
+        tCtx.textAlign = "center";
+        tCtx.fillText('Pose #' + (capturedPhotos.length + 1) + ' ✨', tempCanvas.width / 2, tempCanvas.height / 2);
+      }
+
+      const dataUrl = tempCanvas.toDataURL('image/png');
+
+      if (retakeIndex !== null) {
+        capturedPhotos[retakeIndex] = dataUrl;
+        retakeIndex = null;
+      } else if (capturedPhotos.length < photoCount) {
+        capturedPhotos.push(dataUrl);
+      }
+
+      updateCameraUI();
+
+      if (capturedPhotos.length >= photoCount) {
+        setTimeout(() => switchView('preview'), 650);
+      }
+    }
+
+    function updateCameraUI() {
+      const frameObj = CUSTOM_FRAMES.find(f => f.id === selectedFrameId) || CUSTOM_FRAMES[0];
+      document.getElementById('active-frame-badge-name').textContent = frameObj.name;
+      document.getElementById('cam-shot-progress').textContent = capturedPhotos.length;
+      document.getElementById('cam-shot-total').textContent = photoCount;
+
+      const slotsRow = document.getElementById('captured-slots-row');
+      slotsRow.className = 'grid grid-cols-' + photoCount + ' gap-2.5';
+      slotsRow.innerHTML = "";
+
+      for (let i = 0; i < photoCount; i++) {
+        const slot = document.createElement('div');
+        slot.className = "aspect-[4/3] rounded-xl border-2 border-dashed border-stone-300 bg-stone-100 overflow-hidden relative flex items-center justify-center cursor-pointer group";
+
+        if (capturedPhotos[i]) {
+          slot.className = "aspect-[4/3] rounded-xl border-2 border-stone-900 bg-stone-900 overflow-hidden relative cursor-pointer group";
+          slot.innerHTML =
+            '<img src="' + capturedPhotos[i] + '" class="w-full h-full object-cover">' +
+            '<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-[11px] font-bold">' +
+              '🔄 Retake #' + (i + 1) +
+            '</div>';
+          slot.onclick = () => {
+            retakeIndex = i;
+            triggerCountdown();
+          };
+        } else {
+          slot.innerHTML = '<span class="text-xs font-bold text-stone-400">#' + (i + 1) + '</span>';
+        }
+        slotsRow.appendChild(slot);
+      }
+
+      const goPreviewBtn = document.getElementById('btn-go-preview');
+      if (capturedPhotos.length > 0) {
+        goPreviewBtn.classList.remove('hidden');
+      } else {
+        goPreviewBtn.classList.add('hidden');
+      }
+    }
+
+    function resetCameraSession() {
+      capturedPhotos = [];
+      retakeIndex = null;
+      updateCameraUI();
+    }
+
+    function renderPoseList() {
+      const container = document.getElementById('pose-list-container');
+      container.innerHTML = "";
+
+      const filtered = currentPoseFilter === "all"
+        ? POSE_LIBRARY
+        : POSE_LIBRARY.filter(p => p.cat === currentPoseFilter);
+
+      filtered.forEach(pose => {
+        const isCurrent = pose.id === activePoseObj.id;
+        const item = document.createElement('button');
+        item.className = 'text-left p-2.5 rounded-2xl border transition flex items-center gap-2.5 ' + (
+          isCurrent
+            ? 'bg-amber-50 border-amber-400 shadow-sm'
+            : 'bg-stone-50/80 border-stone-200 hover:bg-stone-100'
+        );
+
+        item.onclick = () => selectPose(pose);
+
+        item.innerHTML =
+          '<div class="w-10 h-10 rounded-xl bg-white border border-stone-200 flex-shrink-0 p-1 flex items-center justify-center">' +
+            '<svg viewBox="0 0 120 120" class="w-full h-full text-stone-800" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round">' + pose.svg + '</svg>' +
+          '</div>' +
+          '<div class="min-w-0">' +
+            '<div class="text-[10px] font-bold text-stone-400">#' + String(pose.id).padStart(2, '0') + ' • ' + pose.tag + '</div>' +
+            '<div class="font-cute font-bold text-xs text-stone-900 truncate">' + pose.title + '</div>' +
+          '</div>';
+        container.appendChild(item);
+      });
+    }
+
+    function selectPose(pose) {
+      activePoseObj = pose;
+      document.getElementById('active-pose-svg').innerHTML = pose.svg;
+      document.getElementById('active-pose-tag').textContent = pose.tag;
+      document.getElementById('active-pose-num').textContent = '#' + String(pose.id).padStart(2, '0');
+      document.getElementById('active-pose-title').textContent = pose.title;
+      document.getElementById('active-pose-desc').textContent = pose.desc;
+      renderPoseList();
+    }
+
+    function filterPoses(cat) {
+      currentPoseFilter = cat;
+      document.querySelectorAll('.pose-cat-pill').forEach(btn => {
+        btn.className = btn.dataset.cat === cat
+          ? "pose-cat-pill px-3 py-1 rounded-xl bg-stone-900 text-white whitespace-nowrap"
+          : "pose-cat-pill px-3 py-1 rounded-xl bg-stone-100 text-stone-600 hover:bg-stone-200 whitespace-nowrap";
+      });
+      renderPoseList();
+    }
+
+    function pickRandomPose() {
+      const pool = currentPoseFilter === "all"
+        ? POSE_LIBRARY
+        : POSE_LIBRARY.filter(p => p.cat === currentPoseFilter);
+      const rand = pool[Math.floor(Math.random() * pool.length)];
+      if (rand) selectPose(rand);
+    }
+
+    function drawPhotoWithCover(ctx, img, x, y, w, h, filterStr) {
+      ctx.save();
+      ctx.filter = filterStr || "none";
+      if (img && img.complete && img.naturalWidth > 0) {
+        const imgRatio = img.naturalWidth / img.naturalHeight;
+        const boxRatio = w / h;
+        let sx = 0, sy = 0, sw = img.naturalWidth, sh = img.naturalHeight;
+        if (imgRatio > boxRatio) {
+          sw = img.naturalHeight * boxRatio;
+          sx = (img.naturalWidth - sw) / 2;
+        } else {
+          sh = img.naturalWidth / boxRatio;
+          sy = (img.naturalHeight - sh) / 2;
+        }
+        ctx.drawImage(img, sx, sy, sw, sh, x, y, w, h);
+      } else {
+        ctx.fillStyle = "#18181b";
+        ctx.fillRect(x, y, w, h);
+      }
+      ctx.restore();
+    }
+
+    function applySlotClipPath(ctx, shape, x, y, w, h) {
+      ctx.beginPath();
+      if (shape === "oval") {
+        ctx.ellipse(x + w / 2, y + h / 2, w / 2, h / 2, 0, 0, Math.PI * 2);
+      } else if (shape === "pudding") {
+        ctx.moveTo(x + 12, y + h);
+        ctx.lineTo(x + 4, y + h * 0.25);
+        ctx.quadraticCurveTo(x + w * 0.2, y, x + w * 0.35, y + h * 0.14);
+        ctx.quadraticCurveTo(x + w * 0.5, y - 4, x + w * 0.65, y + h * 0.14);
+        ctx.quadraticCurveTo(x + w * 0.8, y, x + w - 4, y + h * 0.25);
+        ctx.lineTo(x + w - 12, y + h);
+        ctx.closePath();
+      } else if (shape === "dome") {
+        ctx.moveTo(x, y + h);
+        ctx.lineTo(x, y + h * 0.42);
+        ctx.quadraticCurveTo(x, y, x + w / 2, y);
+        ctx.quadraticCurveTo(x + w, y, x + w, y + h * 0.42);
+        ctx.lineTo(x + w, y + h);
+        ctx.closePath();
+      } else if (shape === "rounded") {
+        ctx.roundRect(x, y, w, h, 18);
+      } else {
+        ctx.rect(x, y, w, h);
+      }
+      ctx.clip();
+    }
+
+    function drawRibbon(ctx, cx, cy, scale, fillCol, strokeCol) {
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.scale(scale, scale);
+      ctx.fillStyle = fillCol;
+      ctx.strokeStyle = strokeCol;
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.bezierCurveTo(-28, -22, -34, 12, 0, 4);
+      ctx.bezierCurveTo(34, 12, 28, -22, 0, 0);
+      ctx.fill();
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(-4, 4); ctx.lineTo(-18, 26); ctx.lineTo(-8, 28); ctx.lineTo(0, 8);
+      ctx.moveTo(4, 4); ctx.lineTo(18, 26); ctx.lineTo(8, 28); ctx.lineTo(0, 8);
+      ctx.fill();
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(0, 2, 6, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function drawCatMascot(ctx, cx, cy, scale, earColor, mood) {
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.scale(scale, scale);
+      ctx.fillStyle = earColor;
+      ctx.strokeStyle = "#1e293b";
+      ctx.lineWidth = 2.5;
+      ctx.beginPath(); ctx.moveTo(-20, -12); ctx.lineTo(-24, -34); ctx.lineTo(-6, -22); ctx.closePath(); ctx.fill(); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(20, -12); ctx.lineTo(24, -34); ctx.lineTo(6, -22); ctx.closePath(); ctx.fill(); ctx.stroke();
+      ctx.fillStyle = "#ffffff";
+      ctx.beginPath();
+      ctx.ellipse(0, 0, 24, 20, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      if (earColor === "#6c9eb5") {
+        ctx.fillStyle = earColor;
+        ctx.beginPath();
+        ctx.moveTo(-21, -8);
+        ctx.quadraticCurveTo(-8, -22, 0, -10);
+        ctx.quadraticCurveTo(8, -22, 21, -8);
+        ctx.quadraticCurveTo(10, -20, -10, -20);
+        ctx.fill();
+      }
+      ctx.fillStyle = "#1e293b";
+      ctx.beginPath(); ctx.arc(-9, -2, 2.6, 0, Math.PI * 2); ctx.arc(9, -2, 2.6, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "#fda4af";
+      ctx.beginPath(); ctx.ellipse(-14, 3, 4, 2.5, 0, 0, Math.PI * 2); ctx.ellipse(14, 3, 4, 2.5, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.strokeStyle = "#1e293b";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      if (mood === "shout") {
+        ctx.ellipse(0, 6, 5, 7, 0, 0, Math.PI * 2);
+        ctx.fillStyle = "#fb7185";
+        ctx.fill();
+      } else {
+        ctx.arc(-3, 4, 3, 0, Math.PI);
+        ctx.arc(3, 4, 3, 0, Math.PI);
+      }
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function drawTomato(ctx, cx, cy, r) {
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.fillStyle = "#dc2626";
+      ctx.beginPath();
+      ctx.ellipse(0, 2, r, r * 0.88, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = "#166534";
+      ctx.beginPath();
+      for (let i = 0; i < 10; i++) {
+        const ang = (i * Math.PI) / 5;
+        const rad = i % 2 === 0 ? r * 0.65 : r * 0.22;
+        const px = Math.cos(ang) * rad;
+        const py = -r * 0.45 + Math.sin(ang) * rad * 0.7;
+        if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+      }
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function drawSparkle(ctx, cx, cy, size, color) {
+      ctx.save();
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy - size);
+      ctx.quadraticCurveTo(cx, cy, cx + size, cy);
+      ctx.quadraticCurveTo(cx, cy, cx, cy + size);
+      ctx.quadraticCurveTo(cx, cy, cx - size, cy);
+      ctx.quadraticCurveTo(cx, cy, cx, cy - size);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function drawSingleStripCanvas(ctx, w, h, frameId, imgList, filterStr, customCaption, showDate) {
+      const cuts = photoCount;
+      const padX = w * 0.085;
+      const slotW = w - padX * 2;
+      const topMargin = h * 0.055;
+      const bottomMargin = h * 0.145;
+      const gapY = h * 0.022;
+      const slotH = (h - topMargin - bottomMargin - gapY * (cuts - 1)) / cuts;
+
+      ctx.save();
+
+      if (frameId === "hachiware-blue") {
+        ctx.fillStyle = "#6c9eb5";
+        ctx.fillRect(0, 0, w, h);
+      } else if (frameId === "tomato-gingham") {
+        const cell = w / 11;
+        for (let gy = 0; gy < h; gy += cell) {
+          for (let gx = 0; gx < w; gx += cell) {
+            const r = Math.floor(gy / cell) % 2;
+            const c = Math.floor(gx / cell) % 2;
+            ctx.fillStyle = (r === 0 && c === 0) ? "#ffffff" : (r === 1 && c === 1) ? "#4b9e78" : "#9bd0b7";
+            ctx.fillRect(gx, gy, cell + 0.5, cell + 0.5);
+          }
+        }
+      } else if (frameId === "jellyz-dessert") {
+        ctx.fillStyle = "#fce7f3";
+        ctx.fillRect(0, 0, w, h);
+        const stripeW = w / 7;
+        for (let i = 0; i < 7; i++) {
+          ctx.fillStyle = i % 2 === 0 ? "#6366f1" : "#10b981";
+          ctx.beginPath();
+          ctx.roundRect(i * stripeW, 0, stripeW, h * 0.075, [0, 0, 14, 14]);
+          ctx.fill();
+        }
+        ctx.fillStyle = "#10b981";
+        ctx.fillRect(0, h - h * 0.045, w, h * 0.045);
+      } else if (frameId === "chiikawa-pink") {
+        ctx.fillStyle = "#f8c8d4";
+        ctx.fillRect(0, 0, w, h);
+      } else if (frameId === "hyeon-day") {
+        const sw = w / 12;
+        for (let i = 0; i < 12; i++) {
+          ctx.fillStyle = i % 2 === 0 ? "#9bb397" : "#f7d6e0";
+          ctx.fillRect(i * sw, 0, sw + 0.5, h);
+        }
+        ctx.fillStyle = "#f48fb1";
+        ctx.fillRect(0, h - bottomMargin * 0.85, w, bottomMargin * 0.85);
+        ctx.fillStyle = "#2e6f40";
+        for (let dy = h - bottomMargin * 0.72; dy < h; dy += 16) {
+          for (let dx = 12; dx < w; dx += 18) {
+            ctx.beginPath(); ctx.arc(dx, dy, 3, 0, Math.PI * 2); ctx.fill();
+          }
+        }
+      } else if (frameId === "bakery-cuties") {
+        ctx.fillStyle = "#f7f3eb";
+        ctx.fillRect(0, 0, w, h);
+        const cols = ["#fbcfe8", "#fde68a", "#bae6fd", "#bbf7d0"];
+        for (let i = 0; i < 24; i++) {
+          drawSparkle(ctx, ((i * 53) % (w - 20)) + 10, ((i * 97) % (h - 20)) + 10, 5, cols[i % 4]);
+        }
+      } else if (frameId === "smiski-forest") {
+        ctx.fillStyle = "#254828";
+        ctx.fillRect(0, 0, w, h);
+      } else if (frameId === "lilly-meadow") {
+        ctx.fillStyle = "#f7f3e8";
+        ctx.fillRect(0, 0, w, h);
+        ctx.fillStyle = "#f9e5ea";
+        ctx.fillRect(0, h - bottomMargin * 0.9, w, bottomMargin * 0.9);
+        ctx.fillStyle = "#94a378";
+        ctx.fillRect(0, h - bottomMargin * 0.95, w, 8);
+      } else if (frameId === "purrfect-markie") {
+        ctx.fillStyle = "#89cff0";
+        ctx.fillRect(0, 0, w, h);
+        ctx.fillStyle = "#ffffff";
+        for (let py = 16; py < h; py += 26) {
+          for (let px = 14; px < w; px += 26) {
+            ctx.beginPath(); ctx.arc(px + ((py / 26) % 2) * 12, py, 4, 0, Math.PI * 2); ctx.fill();
+          }
+        }
+      } else if (frameId === "tsuyatsuya-pudding") {
+        ctx.fillStyle = "#fde2e4";
+        ctx.fillRect(0, 0, w, h * 0.55);
+        ctx.fillStyle = "#d8f3dc";
+        ctx.fillRect(w * 0.45, 0, w * 0.55, h * 0.48);
+        const sw = w / 14;
+        for (let i = 0; i < 14; i++) {
+          ctx.fillStyle = i % 2 === 0 ? "#fbcfe8" : "#fff1f2";
+          ctx.fillRect(i * sw, h * 0.55, sw + 0.5, h * 0.45);
+        }
+      }
+
+      for (let i = 0; i < cuts; i++) {
+        const y = topMargin + i * (slotH + gapY);
+        let shape = "rect";
+
+        if (frameId === "tomato-gingham" && (i === 0 || i === cuts - 1)) shape = "oval";
+        else if (frameId === "jellyz-dessert" && (i === 1)) shape = "pudding";
+        else if (frameId === "jellyz-dessert" && (i === cuts - 1)) shape = "dome";
+        else if (frameId === "bakery-cuties" || frameId === "smiski-forest" || frameId === "lilly-meadow") shape = "rounded";
+        else if (frameId === "tsuyatsuya-pudding") shape = "oval";
+
+        if (frameId === "lilly-meadow") {
+          ctx.strokeStyle = "#7c8c5b";
+          ctx.lineWidth = 6;
+          ctx.beginPath();
+          ctx.roundRect(padX - 2, y - 2, slotW + 4, slotH + 4, 18);
+          ctx.stroke();
+        } else if (frameId === "jellyz-dessert") {
+          ctx.save();
+          applySlotClipPath(ctx, shape, padX - 2, y - 2, slotW + 4, slotH + 4);
+          ctx.fillStyle = "#3b82f6";
+          ctx.fillRect(padX - 4, y - 4, slotW + 8, slotH + 8);
+          ctx.restore();
+        }
+
+        ctx.save();
+        applySlotClipPath(ctx, shape, padX, y, slotW, slotH);
+        drawPhotoWithCover(ctx, imgList[i], padX, y, slotW, slotH, filterStr);
+        ctx.restore();
+      }
+
+      if (frameId === "hachiware-blue") {
+        drawRibbon(ctx, padX + 26, topMargin + 8, 0.75, "#e0f2fe", "#38bdf8");
+        drawCatMascot(ctx, w - padX - 18, topMargin + 14, 0.65, "#6c9eb5", "happy");
+        drawCatMascot(ctx, padX + 18, topMargin + slotH - 6, 0.6, "#6c9eb5", "happy");
+        drawCatMascot(ctx, w - padX - 22, topMargin + slotH * 2 + gapY - 6, 0.72, "#6c9eb5", "shout");
+        drawSparkle(ctx, padX + 24, h - bottomMargin - 28, 12, "#ffffff");
+        drawCatMascot(ctx, w - padX - 28, h - bottomMargin + 18, 0.85, "#6c9eb5", "happy");
+
+        ctx.fillStyle = "#ffffff";
+        ctx.font = '600 ' + Math.round(w * 0.085) + "px 'Quicksand', sans-serif";
+        ctx.textAlign = "left";
+        ctx.fillText("hachiware", padX, h - bottomMargin * 0.42);
+      } else if (frameId === "tomato-gingham") {
+        drawTomato(ctx, w - padX - 10, topMargin + 8, 18);
+        drawTomato(ctx, padX + 6, topMargin + slotH - 12, 16);
+        drawTomato(ctx, w - padX - 14, topMargin + slotH * 2 + gapY * 2 + 8, 18);
+        ctx.fillStyle = "#38bdf8";
+        ctx.fillRect(w * 0.52, topMargin + slotH - 6, w * 0.28, 18);
+        ctx.fillStyle = "#1e3a8a";
+        ctx.font = "bold 11px monospace";
+        ctx.textAlign = "center";
+        ctx.fillText("2004", w * 0.66, topMargin + slotH + 7);
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(padX, h - bottomMargin * 0.72, slotW, bottomMargin * 0.48);
+        ctx.fillStyle = "#1e3a8a";
+        ctx.font = '900 ' + Math.round(w * 0.085) + "px 'Outfit', sans-serif";
+        ctx.textAlign = "left";
+        ctx.fillText("I", padX + 14, h - bottomMargin * 0.38);
+        drawTomato(ctx, w * 0.43, h - bottomMargin * 0.48, 13);
+        ctx.textAlign = "right";
+        ctx.fillText("YOU", w - padX - 12, h - bottomMargin * 0.38);
+      } else if (frameId === "jellyz-dessert") {
+        ctx.fillStyle = "#ffffff";
+        ctx.strokeStyle = "#3b82f6";
+        ctx.lineWidth = 2.5;
+        ctx.beginPath(); ctx.roundRect(w * 0.28, 10, w * 0.44, 24, 12); ctx.fill(); ctx.stroke();
+        ctx.fillStyle = "#3b82f6";
+        ctx.font = "bold 14px 'Fredoka', sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText("jellyz", w / 2, 27);
+
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(padX + 10, topMargin + slotH - 4, 54, 18);
+        ctx.strokeRect(padX + 10, topMargin + slotH - 4, 54, 18);
+        ctx.fillStyle = "#1e3a8a";
+        ctx.font = "bold 11px monospace";
+        ctx.fillText("21.28", padX + 37, topMargin + slotH + 9);
+
+        ctx.fillStyle = "#dc2626";
+        ctx.beginPath(); ctx.arc(w - padX - 28, topMargin + slotH + 8, 14, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "#34d399";
+        ctx.beginPath(); ctx.roundRect(w - padX - 18, topMargin + slotH * 1.6, 16, 22, 6); ctx.fill();
+
+        ctx.fillStyle = "#3b82f6";
+        ctx.font = "bold 11px 'Fredoka', sans-serif";
+        ctx.fillText("June tastes sweeter", w / 2, topMargin + slotH * 2 + gapY * 1.4);
+      } else if (frameId === "chiikawa-pink") {
+        drawCatMascot(ctx, w - padX - 16, topMargin + 12, 0.65, "#f8c8d4", "happy");
+        drawCatMascot(ctx, padX + 16, topMargin + slotH - 4, 0.62, "#f8c8d4", "happy");
+        drawCatMascot(ctx, w - padX - 20, topMargin + slotH * 2 + gapY, 0.72, "#f8c8d4", "happy");
+        drawSparkle(ctx, padX + 20, h - bottomMargin - 24, 11, "#ffffff");
+        drawCatMascot(ctx, w - padX - 26, h - bottomMargin + 18, 0.85, "#f8c8d4", "happy");
+
+        ctx.fillStyle = "#ffffff";
+        ctx.font = '700 ' + Math.round(w * 0.088) + "px 'Fredoka', sans-serif";
+        ctx.textAlign = "left";
+        ctx.fillText("chiikawa", padX, h - bottomMargin * 0.42);
+      } else if (frameId === "hyeon-day") {
+        ctx.fillStyle = "#fbcfe8";
+        ctx.fillRect(padX + 8, topMargin - 8, slotW - 16, 18);
+        ctx.fillStyle = "#9d174d";
+        ctx.font = "bold 11px 'Fredoka', sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText("It's Hyeon Day", w / 2, topMargin + 5);
+
+        ctx.fillStyle = "#57534e";
+        ctx.font = "bold 11px monospace";
+        for (let xy = topMargin + 20; xy < h - bottomMargin; xy += 22) {
+          ctx.fillText("x", padX * 0.5, xy);
+          ctx.fillText("x", w - padX * 0.5, xy);
+        }
+
+        ctx.fillStyle = "#be123c";
+        ctx.beginPath(); ctx.arc(padX + 8, topMargin + slotH * 0.85, 14, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "#78350f";
+        ctx.fillRect(w * 0.34, h - bottomMargin * 0.65, w * 0.32, bottomMargin * 0.45);
+        ctx.fillStyle = "#93c5fd";
+        ctx.fillRect(w * 0.34, h - bottomMargin * 0.65, w * 0.32, 8);
+      } else if (frameId === "bakery-cuties") {
+        ctx.fillStyle = "#fde047";
+        ctx.beginPath(); ctx.arc(padX + 18, topMargin + 4, 22, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "#1c1917";
+        ctx.beginPath(); ctx.arc(padX + 13, topMargin + 2, 2, 0, Math.PI * 2); ctx.arc(padX + 23, topMargin + 2, 2, 0, Math.PI * 2); ctx.fill();
+
+        drawTomato(ctx, w - padX - 10, topMargin + slotH + 10, 11);
+        ctx.fillStyle = "#d97706";
+        ctx.beginPath(); ctx.arc(padX + 20, h - bottomMargin * 0.48, 18, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "#f472b6";
+        ctx.beginPath(); ctx.arc(w - padX - 20, h - bottomMargin * 0.48, 18, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "#f7f3eb";
+        ctx.beginPath(); ctx.arc(w - padX - 20, h - bottomMargin * 0.48, 6, 0, Math.PI * 2); ctx.fill();
+      } else if (frameId === "smiski-forest") {
+        ctx.fillStyle = "#d9f99d";
+        ctx.beginPath(); ctx.ellipse(w * 0.36, topMargin - 4, 18, 15, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "#1a2e05";
+        ctx.beginPath(); ctx.arc(w * 0.33, topMargin - 4, 2, 0, Math.PI * 2); ctx.arc(w * 0.39, topMargin - 4, 2, 0, Math.PI * 2); ctx.fill();
+
+        ctx.fillStyle = "#ecfccb";
+        ctx.beginPath(); ctx.roundRect(w - padX - 36, h - bottomMargin - 18, 30, 56, 15); ctx.fill();
+        ctx.fillStyle = "#1a2e05";
+        ctx.beginPath(); ctx.arc(w - padX - 25, h - bottomMargin - 4, 2, 0, Math.PI * 2); ctx.arc(w - padX - 17, h - bottomMargin - 4, 2, 0, Math.PI * 2); ctx.fill();
+
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "bold 13px 'Playfair Display', serif";
+        ctx.textAlign = "left";
+        ctx.fillText("you are a", padX + 4, h - bottomMargin * 0.52);
+        ctx.fillText("cutie !", padX + 12, h - bottomMargin * 0.32);
+      } else if (frameId === "lilly-meadow") {
+        const drawLily = (lx, ly) => {
+          ctx.save();
+          ctx.translate(lx, ly);
+          ctx.fillStyle = "#f9a8d4";
+          for (let p = 0; p < 5; p++) {
+            ctx.rotate((Math.PI * 2) / 5);
+            ctx.beginPath(); ctx.ellipse(0, -12, 6, 13, 0, 0, Math.PI * 2); ctx.fill();
+          }
+          ctx.fillStyle = "#be185d";
+          ctx.beginPath(); ctx.arc(0, 0, 3.5, 0, Math.PI * 2); ctx.fill();
+          ctx.restore();
+        };
+        drawLily(padX + 10, topMargin + slotH);
+        drawLily(w - padX - 16, h - bottomMargin - 8);
+
+        ctx.fillStyle = "#f472b6";
+        ctx.beginPath(); ctx.ellipse(w / 2, h - bottomMargin * 0.45, w * 0.28, 16, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "bold 10px 'Playfair Display', serif";
+        ctx.textAlign = "center";
+        ctx.fillText("the joy of being", w / 2, h - bottomMargin * 0.42);
+      } else if (frameId === "purrfect-markie") {
+        ctx.fillStyle = "#ffffff";
+        ctx.strokeStyle = "#0284c7";
+        ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.roundRect(padX + 4, topMargin - 10, slotW * 0.65, 26, 8); ctx.fill(); ctx.stroke();
+        ctx.fillStyle = "#0d9488";
+        ctx.font = "bold 12px 'Fredoka', sans-serif";
+        ctx.textAlign = "left";
+        ctx.fillText("Purrfect Markie", padX + 10, topMargin + 7);
+
+        drawCatMascot(ctx, w - padX - 24, topMargin + slotH * 2 + gapY, 0.68, "#ffffff", "happy");
+        ctx.fillStyle = "#78350f";
+        ctx.beginPath(); ctx.arc(padX + 14, topMargin + slotH + 14, 9, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "bold 9px sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText("1", padX + 14, topMargin + slotH + 17);
+      } else if (frameId === "tsuyatsuya-pudding") {
+        ctx.fillStyle = "#fef08a";
+        ctx.fillRect(padX, 10, slotW, 20);
+        ctx.fillStyle = "#92400e";
+        ctx.font = "bold 11px sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText("🍒 つやつやプリン 🍒", w / 2, 24);
+
+        ctx.fillStyle = "#fffbeb";
+        ctx.beginPath(); ctx.arc(w / 2, topMargin + 2, 16, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "#ea580c";
+        ctx.beginPath(); ctx.arc(w / 2, topMargin - 12, 10, 0, Math.PI * 2); ctx.fill();
+
+        drawSparkle(ctx, padX + 8, h - bottomMargin * 0.55, 14, "#f472b6");
+        drawSparkle(ctx, w - padX - 8, h - bottomMargin * 0.55, 14, "#38bdf8");
+      }
+
+      const isDarkBg = frameId === "smiski-forest" || frameId === "hachiware-blue" || frameId === "chiikawa-pink";
+      ctx.fillStyle = isDarkBg ? "rgba(255,255,255,0.9)" : "#44403c";
+      ctx.textAlign = "center";
+
+      if (customCaption) {
+        ctx.font = '700 ' + Math.round(w * 0.042) + "px 'Outfit', sans-serif";
+        ctx.fillText(customCaption, w / 2, h - 24);
+      }
+
+      if (showDate) {
+        const dateStr = new Date().toLocaleDateString('id-ID', { day: '2-digit', month: 'short', year: 'numeric' }).toUpperCase();
+        ctx.font = '600 ' + Math.round(w * 0.033) + "px monospace";
+        ctx.fillText(dateStr, w / 2, h - 10);
+      }
+
+      ctx.restore();
+    }
+
+    async function renderFinalStrip() {
+      const canvas = document.getElementById('final-strip-canvas');
+      const ctx = canvas.getContext('2d');
+
+      const singleW = 340;
+      const singleH = photoCount === 4 ? 960 : 760;
+      const gapBetweenStrips = 18;
+
+      canvas.width = stripMode === "double" ? (singleW * 2 + gapBetweenStrips) : singleW;
+      canvas.height = singleH;
+
+      const loadedImgs = await Promise.all(
+        capturedPhotos.slice(0, photoCount).map(src => new Promise(resolve => {
+          const img = new Image();
+          img.onload = () => resolve(img);
+          img.onerror = () => resolve(null);
+          img.src = src;
+        }))
+      );
+
+      const filterStr = document.getElementById('strip-photo-filter').value;
+      const captionVal = document.getElementById('custom-caption-input').value.trim();
+      const showDate = document.getElementById('toggle-date-stamp').checked;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      drawSingleStripCanvas(ctx, singleW, singleH, selectedFrameId, loadedImgs, filterStr, captionVal, showDate);
+
+      if (stripMode === "double") {
+        ctx.save();
+        ctx.translate(singleW + gapBetweenStrips, 0);
+        drawSingleStripCanvas(ctx, singleW, singleH, selectedFrameId, loadedImgs, filterStr, captionVal, showDate);
+        ctx.restore();
+      }
+
+      placedStickers.forEach(st => {
+        ctx.font = "34px sans-serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(st.emoji, st.xRatio * canvas.width, st.yRatio * canvas.height);
+      });
+    }
+
+    function renderPreviewFramePills() {
+      const box = document.getElementById('preview-frame-pills');
+      box.innerHTML = "";
+
+      CUSTOM_FRAMES.forEach(frame => {
+        const active = frame.id === selectedFrameId;
+        const btn = document.createElement('button');
+        btn.className = 'flex items-center gap-2.5 p-2.5 rounded-2xl border text-left transition ' + (
+          active
+            ? 'bg-stone-900 text-white border-stone-900 shadow-sm'
+            : 'bg-stone-50 hover:bg-stone-100 text-stone-800 border-stone-200'
+        );
+
+        btn.onclick = () => {
+          selectedFrameId = frame.id;
+          renderPreviewFramePills();
+          renderFinalStrip();
+        };
+
+        btn.innerHTML =
+          '<span class="w-4 h-4 rounded-full flex-shrink-0 border border-white/40" style="background:' + frame.accent + '"></span>' +
+          '<div class="min-w-0">' +
+            '<div class="font-cute font-bold text-xs truncate">' + frame.name + '</div>' +
+            '<div class="text-[10px] opacity-75 truncate">' + frame.tag + '</div>' +
+          '</div>';
+        box.appendChild(btn);
+      });
+    }
+
+    function renderStampSelector() {
+      const row = document.getElementById('stamp-selector-row');
+      row.innerHTML = "";
+
+      STAMP_EMOJIS.forEach(em => {
+        const btn = document.createElement('button');
+        const active = em === activeStampEmoji;
+        btn.className = 'w-9 h-9 rounded-xl border text-lg flex items-center justify-center transition ' + (
+          active ? 'bg-amber-200 border-amber-500 scale-110 shadow-sm' : 'bg-stone-100 border-stone-200 hover:bg-stone-200'
+        );
+        btn.textContent = em;
+        btn.onclick = () => {
+          activeStampEmoji = em;
+          renderStampSelector();
+        };
+        row.appendChild(btn);
+      });
+    }
+
+    function undoLastSticker() {
+      placedStickers.pop();
+      renderFinalStrip();
+    }
+
+    function clearAllStickers() {
+      placedStickers = [];
+      renderFinalStrip();
+    }
+
+    function downloadFinalStrip() {
+      const canvas = document.getElementById('final-strip-canvas');
+      const link = document.createElement('a');
+      link.download = 'Snappose-' + selectedFrameId + '-' + Date.now() + '.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+
+    function openQrModal() {
+      const modal = document.getElementById('qr-modal');
+      const box = document.getElementById('qrcode-box');
+      box.innerHTML = "";
+      new QRCode(box, {
+        text: window.location.href,
+        width: 150,
+        height: 150,
+        colorDark: "#1c1917",
+        colorLight: "#ffffff"
+      });
+      modal.classList.remove('hidden');
+    }
+
+    function closeQrModal() {
+      document.getElementById('qr-modal').classList.add('hidden');
+    }
+
+    function generatePlaceholderPhotos() {
+      const colors = ["#fde68a", "#fbcfe8", "#bae6fd", "#bbf7d0"];
+      const emojis = ["✌️😄", "🫶🥰", "🐱✨", "😎📸"];
+      capturedPhotos = [];
+
+      for (let i = 0; i < photoCount; i++) {
+        const c = document.createElement('canvas');
+        c.width = 640;
+        c.height = 480;
+        const ctx = c.getContext('2d');
+        ctx.fillStyle = colors[i % colors.length];
+        ctx.fillRect(0, 0, c.width, c.height);
+        ctx.font = "110px sans-serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(emojis[i % emojis.length], c.width / 2, c.height / 2 - 15);
+        ctx.fillStyle = "#44403c";
+        ctx.font = "bold 24px Fredoka, sans-serif";
+        ctx.fillText('Contoh Pose #' + (i + 1), c.width / 2, c.height / 2 + 85);
+        capturedPhotos.push(c.toDataURL('image/png'));
+      }
+    }
+
+    function loadDemoPhotosAndPreview() {
+      generatePlaceholderPhotos();
+      switchView('preview');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderSetupGallery();
+      renderPoseList();
+      renderStampSelector();
+
+      const finalCanvas = document.getElementById('final-strip-canvas');
+      finalCanvas.addEventListener('click', (e) => {
+        const rect = finalCanvas.getBoundingClientRect();
+        const xRatio = (e.clientX - rect.left) / rect.width;
+        const yRatio = (e.clientY - rect.top) / rect.height;
+        placedStickers.push({ emoji: activeStampEmoji, xRatio, yRatio });
+        renderFinalStrip();
+      });
+    });
+  <\/script>
+</body>
+</html>`;
+
+        // DATABASE CV LENGKAP (QUINEE, KAYLEEN, VERENA)
+        const CV_DATABASE = {
+            quinee: `<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CV — Quinella Jolie Abadi</title>
+  <meta name="color-scheme" content="light" />
+  <style>
+    :root{
+      --bg-pink: #ffeef0;
+      --bg-beige: #fff6ea;
+      --bg-cream: #fffdf8;
+      --bg-taupe: #efe6df;
+      --card: #ffffff;
+      --text-blue: #4b9edb;
+      --muted-blue: #6ea9d6;
+      --accent: #4b9edb;
+      --shadow: 0 8px 28px rgba(15,23,42,0.08);
+      --radius: 14px;
+      font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    html,body{
+      min-height:100%;
+      margin:0;
+      background-color: var(--bg-cream);
+      background-image:
+        linear-gradient(90deg, rgba(239,230,223,0.6) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255,238,240,0.6) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,238,240,0.25) 20px, transparent 20px),
+        linear-gradient(0deg, rgba(255,246,234,0.25) 20px, transparent 20px);
+      background-size: 40px 40px, 40px 40px, 160px 160px, 160px 160px;
+      color: var(--text-blue);
+    }
+
+    .container{
+      max-width: 980px;
+      margin: 28px auto;
+      padding: 20px;
+    }
+
+    .card{
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 0;
+    }
+
+    .sidebar{
+      padding: 28px;
+      background: linear-gradient(180deg, rgba(75,158,219,0.06), rgba(75,158,219,0.02));
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .profile{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      width:100%;
+    }
+
+    .avatar{
+      width:84px;
+      height:84px;
+      border-radius:12px;
+      background: linear-gradient(135deg,#cfeffd,#ffffff);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:var(--accent);
+      font-size:20px;
+      box-shadow: 0 6px 14px rgba(75,158,219,0.12);
+      flex-shrink:0;
+    }
+
+    .fullname{
+      font-size:18px;
+      font-weight:700;
+      color:var(--text-blue);
+      line-height:1.15;
+    }
+
+    .role{
+      font-size:13px;
+      color:var(--muted-blue);
+      margin-top:4px;
+    }
+
+    .block{
+      width:100%;
+      padding-top:8px;
+      border-top:1px dashed rgba(15,23,42,0.08);
+    }
+
+    .block h4{
+      margin:8px 0 8px;
+      font-size:14px;
+      color:var(--text-blue);
+    }
+
+    .muted{
+      color:var(--muted-blue);
+      font-size:14px;
+      margin:6px 0;
+    }
+
+    .skill-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:6px;
+    }
+
+    .skill{
+      background: rgba(75,158,219,0.12);
+      color: var(--accent);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+    }
+
+    .main{
+      padding: 28px;
+    }
+
+    .main p{
+      text-align: justify;
+    }
+
+    .header-main{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:16px;
+      margin-bottom:6px;
+    }
+
+    h2{
+      margin:0;
+      font-size:20px;
+      color:var(--text-blue);
+    }
+
+    .section{
+      margin-top:18px;
+    }
+
+    .section h3{
+      margin:0 0 10px 0;
+      font-size:16px;
+      color:var(--text-blue);
+    }
+
+    .edu-item, .exp-item{
+      padding:12px;
+      border-radius:10px;
+      background: linear-gradient(180deg, rgba(75,158,219,0.05), transparent);
+      border-left:4px solid var(--accent);
+      margin-bottom:12px;
+      color:var(--text-blue);
+    }
+
+    .small-muted{
+      color:var(--muted-blue);
+      font-size:13px;
+      line-height: 1.5;
+    }
+
+    .score{
+      font-weight:700;
+      color:var(--accent);
+      margin-left:8px;
+    }
+
+    .print-note{
+      margin-top:20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display:inline-block;
+      padding:10px 18px;
+      border-radius:8px;
+      background:#4b9edb;
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      font-size: 13px;
+      border: none;
+      cursor: pointer;
+      transition:0.2s;
+    }
+
+    .btn:hover {
+      background:#357abd;
+    }
+
+    @media (max-width:880px){
+      .card{ grid-template-columns: 1fr; }
+      .container{ padding:14px; margin:14px; }
+      .sidebar{ padding:18px; }
+      .main{ padding:18px; }
+    }
+
+    @media print{
+      html,body{ background: white; color: black; }
+      .card{ box-shadow:none; border-radius:0; }
+      .container{ margin:0; padding:0; }
+      .print-note{ display:none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card" role="document" aria-label="Curriculum Vitae Quinella Jolie Abadi">
+      <aside class="sidebar" aria-labelledby="profile-heading">
+        <div class="profile" id="profile-heading">
+          <div class="avatar" aria-hidden="true">QJ</div>
+          <div>
+            <div class="fullname">Quinella Jolie Abadi</div>
+            <div class="role">Student - SMA BPK PENABUR HOLIS</div>
+          </div>
+        </div>
+
+        <div class="block" aria-labelledby="contact-heading">
+          <h4 id="contact-heading">Contact</h4>
+          <div class="muted">Phone: <strong style="color:var(--text-blue)">087750933377</strong></div>
+          <div class="muted">Email: <strong style="color:var(--text-blue)">quinee214@gmail.com</strong></div>
+          <div class="muted">Address: <strong style="color:var(--text-blue)">Taman Kopo Indah III, Bandung</strong></div>
+        </div>
+
+        <div class="block" aria-labelledby="skills-heading">
+          <h4 id="skills-heading">Skills</h4>
+          <div class="skill-list">
+            <span class="skill">Creativity</span>
+            <span class="skill">Teamwork</span>
+            <span class="skill">Problem Solving</span>
+            <span class="skill">Communication</span>
+            <span class="skill">Adaptability</span>
+            <span class="skill">Multilingual</span>
+          </div>
+        </div>
+
+        <div class="block" aria-labelledby="lang-heading">
+          <h4 id="lang-heading">Languages</h4>
+          <div class="muted">Indonesian — Native</div>
+          <div class="muted">English — Intermediate</div>
+          <div class="muted">Mandarin — HSK 3 & HSK 4</div>
+        </div>
+
+        <div class="block" aria-labelledby="hobby-heading">
+          <h4 id="hobby-heading">Hobbies</h4>
+          <div class="muted">Drawing; Cooking; Swimming; Traveling</div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <div class="header-main">
+          <div>
+            <h2>About Me</h2>
+            <div class="small-muted" style="margin-top:8px;">
+              A motivated high school student with an interest in creative activities, drawing, and learning languages. Creative, responsible, and adaptable; enjoys working in teams and solving problems.
+            </div>
+          </div>
+        </div>
+
+        <section class="section" aria-labelledby="education-heading">
+          <h3 id="education-heading">Education</h3>
+
+          <div class="edu-item" role="article">
+            <strong>2025–Present</strong> — BPK PENABUR HOLIS High School
+          </div>
+
+          <div class="edu-item" role="article">
+            <strong>2022–2025</strong> — BPK PENABUR HOLIS Middle School
+            <div class="small-muted">Average Score: <span class="score">89.5</span></div>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="experience-heading">
+          <h3 id="experience-heading">Experience & Competitions</h3>
+
+          <div class="exp-item" role="article">
+            <strong>OSN Competition - Social Studies</strong> — 2024 (Middle School)
+            <div class="small-muted">Participated in the Social Studies competition; received a certificate of participation.</div>
+          </div>
+
+          <div class="exp-item" role="article">
+            <strong>Drawing Competition</strong> — 2022 (Middle School)
+            <div class="small-muted">Participated in a drawing competition; received a certificate of participation.</div>
+          </div>
+        </section>
+
+        <div class="print-note">
+          <button onclick="window.print()" class="btn">🖨️ Print / Save PDF</button>
+          <a href="https://wa.me/?text=Lihat%20CV%20Quinella%20Jolie%20Abadi" target="_blank" class="btn">Share via WhatsApp</a>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>`,
+
+            kayleen: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kayleen Tiffany Wijaya - CV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f8fb;
+      margin: 0;
+      padding: 20px 0;
+      color: #333;
+    }
+    .container {
+      width: 85%;
+      max-width: 920px;
+      margin: 16px auto;
+      background: #fff;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.15);
+      border-radius: 8px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid #0073e6;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+    .header img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.25);
+      background: #e6f0fa;
+    }
+    .header h1 {
+      margin: 0;
+      color: #0073e6;
+    }
+    .header h3 {
+      margin: 5px 0 0;
+      color: #555;
+    }
+    .section {
+      margin: 25px 0;
+    }
+    h2 {
+      color: #0073e6;
+      border-bottom: 2px solid #0073e6;
+      padding-bottom: 5px;
+    }
+    h3 {
+      color: #005bb5;
+      margin-bottom: 8px;
+    }
+    ul {
+      list-style-type: square;
+      margin-left: 20px;
+      line-height: 1.6;
+    }
+    .contact p {
+      margin: 6px 0;
+    }
+    strong {
+      color: #0073e6;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="kayleen-photo.png" alt="Kayleen Tiffany Wijaya" onerror="this.style.display='none'">
+      <div>
+        <h1>Kayleen Tiffany Wijaya</h1>
+        <h3>Senior Highschool Student in SMA BPK PENABUR HOLIS</h3>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>About Me</h2>
+      <p style="line-height:1.6;">
+        Results-driven grade 11th student at BPK PENABUR HOLIS high school, driven by a lifelong fascination with analytical puzzles and the pursuit of justice through technical precision. My interest in science stems from a deep-seated need for accuracy; I find immense satisfaction in solving complex equations and conducting meticulous laboratory experiments where “zero-error” results are the standard. I am a dedicated hard-worker who thrives under pressure and chases every project until completion.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Contact Me</h2>
+      <div class="contact">
+        <p>📧 1414540.kayleen.tiffany@penabur.sch.id</p>
+        <p>📞 +62-821-1793-2689</p>
+        <p>📍 Taman Holis Indah 1 Blok E3 no. 15, Bandung, Indonesia</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div>
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Analytical Problem Solving</li>
+            <li>Scientific Accuracy</li>
+            <li>Strategic Planning</li>
+            <li>Leadership & Teamwork</li>
+            <li>High Adaptability</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Hard Skills</h3>
+          <ul>
+            <li>Laboratory Practicals</li>
+            <li>Mathematical Modeling</li>
+            <li>Video & Photo Editing</li>
+            <li>Layout (PPT/Posters)</li>
+            <li>Data Entry & Analysis</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Languages</h2>
+      <ul>
+        <li>Mandarin (HSK 3) — 67%</li>
+        <li>English (TOEFL iBT 72 / CEFR C1) — 85%</li>
+        <li>Indonesian (Native) — 100%</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>OSIS Hebron SMP (2023–2024)</strong> — Entrepreneurship & Business</li>
+        <li><strong>Community Outreach Volunteer (2024–2025)</strong> — Donation Drives</li>
+        <li><strong>Maestro Radio Main Team (2025–2026)</strong> — Media & Podcasts</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>BPK Penabur Holis Primary School (2015–2021)</strong> — Bilingual Program</li>
+        <li><strong>BPK Penabur Holis Junior High School (2022–2024)</strong> — Grade 7–9</li>
+        <li><strong>BPK Penabur Holis High School (2025–2027)</strong> — Grade 10–12</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>`,
+
+            verena: `<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Verena Agatha — CV</title>
+  <style>
+    :root{
+      --accent:#ff5b8a;
+      --text:#222;
+      --muted:#555;
+      --card-bg:rgba(255,255,255,0.94);
+      --maxw:900px;
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    html,body{
+      min-height:100%;
+      margin:0;
+      padding: 12px 0;
+      background:
+        linear-gradient(180deg, rgba(255,214,230,0.85), rgba(255,238,246,0.85)),
+        url('plaid_pastel.png') center/cover no-repeat fixed;
+      -webkit-font-smoothing:antialiased;
+      color:var(--text);
+    }
+
+    .wrap{
+      max-width:var(--maxw);
+      margin:20px auto;
+      padding:24px;
+      background:var(--card-bg);
+      border-radius:var(--radius);
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      display:grid;
+      grid-template-columns: 1fr 280px;
+      gap:18px;
+      align-items:start;
+    }
+
+    header{
+      grid-column:1 / -1;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      padding-bottom:12px;
+      border-bottom:2px solid rgba(255,91,138,0.18);
+    }
+    .name{font-size:22px; color:var(--accent); font-weight:800; margin:0;}
+    .role{font-size:13px; color:var(--muted); margin-top:4px; font-weight:700;}
+    .contact{font-size:13px; color:var(--muted); text-align:right;}
+    .contact div{line-height:1.4;}
+
+    main{padding-top:4px;}
+    .card{background:transparent; padding:8px 6px; border-radius:8px; margin-bottom:12px;}
+    h3{margin:0 0 8px 0; color:var(--accent); font-size:15px;}
+    p{margin:0; font-size:13.5px; line-height:1.45; color:var(--text);}
+
+    .tags{display:flex;flex-wrap:wrap;gap:8px;}
+    .tag{background:rgba(255,91,138,0.12); color:var(--accent); padding:6px 10px; border-radius:999px; font-weight:700; font-size:12px;}
+
+    .work{font-size:13.5px; margin-bottom:12px;}
+    .meta{font-weight:700; font-size:13.5px;}
+    .period{font-size:12px; color:var(--muted); margin-bottom:6px;}
+    ul{margin:6px 0 0 18px; padding:0; font-size:13px; line-height:1.4;}
+    li{margin-bottom:4px;}
+
+    aside{padding-left:6px;}
+    .small{font-size:13px; color:var(--muted); margin-bottom: 6px;}
+
+    .decor{height:6px; background:linear-gradient(90deg, rgba(255,91,138,0.18), rgba(255,180,210,0.12)); border-radius:6px; margin:12px 0;}
+
+    @media (max-width:880px){
+      .wrap{grid-template-columns:1fr;padding:16px;margin:12px;}
+      .contact{text-align:left;}
+      aside{order:3;}
+    }
+    @media print{
+      body{background:white;}
+      .wrap{box-shadow:none;background:white;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" role="document" aria-label="CV Verena Agatha">
+    <header>
+      <div>
+        <h1 class="name">VERENA AGATHA</h1>
+        <div class="role">Senior Highschool Student</div>
+      </div>
+      <div class="contact" aria-label="Kontak">
+        <div><strong>Email</strong> verena.agatha410@gmail.com</div>
+        <div><strong>Tel</strong> +62-822-1853-8332</div>
+        <div class="small">THI blok 1 H3-12</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="card" aria-labelledby="profile">
+        <h3 id="profile">Profile</h3>
+        <p><strong>I am a motivated and responsible student with a strong interest in science, healthcare, and personal development.</strong></p>
+        <p style="margin-top:8px;"><strong>Eager to broaden my experience, contribute positively to a team, and cultivate a strong academic foundation in preparation for future university studies.</strong></p>
+        <div class="decor" aria-hidden="true"></div>
+      </section>
+
+      <section class="card" aria-labelledby="experience">
+        <h3 id="experience">Experience</h3>
+        <div class="work">
+          <div class="meta">OSIS HEBRON — Member sekbid 3 & 2</div>
+          <div class="period">2022 — 2024</div>
+          <ul>
+            <li>Contributed ideas during meetings and participated in group decision-making.</li>
+            <li>Developed leadership, communication, teamwork, and organizational skills.</li>
+          </ul>
+        </div>
+        <div class="work">
+          <div class="meta">Mentari English Olympiad</div>
+          <div class="period">2024 — 2025</div>
+        </div>
+        <div class="work">
+          <div class="meta">Drawing Competition</div>
+          <div class="period">2019 — 2020</div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="education">
+        <h3 id="education">Education</h3>
+        <div class="work">
+          <div class="meta">SMAK Holis</div>
+          <div class="period">2025 — present</div>
+        </div>
+        <div class="work">
+          <div class="meta">SMP Penabur Holis</div>
+          <div class="period">2022 — 2025</div>
+        </div>
+      </section>
+    </main>
+
+    <aside>
+      <div class="card" aria-labelledby="skills">
+        <h3 id="skills">Skills</h3>
+        <div class="tags" role="list">
+          <span class="tag">Canva & Presentation</span>
+          <span class="tag">Creativity</span>
+          <span class="tag">Medical Documentation</span>
+          <span class="tag">Communication</span>
+          <span class="tag">Teamwork</span>
+          <span class="tag">Critical Thinking</span>
+        </div>
+      </div>
+
+      <div class="card" aria-labelledby="lang">
+        <h3 id="lang">Languages</h3>
+        <div class="small"><strong>English</strong> — C2 (advanced)</div>
+        <div class="small"><strong>Indonesia</strong> — Native</div>
+      </div>
+    </aside>
+  </div>
+</body>
+</html>`
+        };
+
+        let activeCVKey = 'quinee';
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initPaperCharacters();
+            switchCV('quinee');
+            const snapposeFrame = document.getElementById('snappose-frame');
+            if (snapposeFrame) snapposeFrame.srcdoc = SNAPPOSE_HTML;
+
+            updateTaskbarClock();
+            setInterval(updateTaskbarClock, 1000);
+            initAllDraggables();
+        });
+
+        function openSnapposeInNewTab() {
+            const blob = new Blob([SNAPPOSE_HTML], { type: 'text/html' });
+            window.open(URL.createObjectURL(blob), '_blank');
+        }
+
+        function loadCustomPDF(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const pdfURL = URL.createObjectURL(file);
+            const storyFrame = document.getElementById('storybook-frame');
+            const fullLink = document.getElementById('storybook-full-link');
+            if (storyFrame) storyFrame.src = pdfURL + '#view=FitH';
+            if (fullLink) fullLink.href = pdfURL;
+        }
+
+        function updateTaskbarClock() {
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('en-GB', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            const dateStr = now.toLocaleDateString('en-US', {
+                weekday: 'long',
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric'
+            });
+            document.getElementById('taskbar-clock').textContent = timeStr;
+            document.getElementById('taskbar-date').textContent = dateStr;
+        }
+
+        function triggerRingCursorBriefly(ms = 420) {
+            document.body.classList.add('cursor-ring-wait');
+            setTimeout(() => document.body.classList.remove('cursor-ring-wait'), ms);
+        }
+
+        // ============================================================
+        // 2. SMOOTH CURSOR TRAIL MENGGUNAKAN 4 KARAKTER MIFFY & SMISKI
+        // ============================================================
+        let lastTrailTime = 0;
+        document.addEventListener('mousemove', (e) => {
+            const now = Date.now();
+            if (now - lastTrailTime > 125) {
+                lastTrailTime = now;
+                const trailImg = document.createElement('img');
+                trailImg.className = 'cursor-trail object-contain';
+                trailImg.src = getRandomPaperCharSrc();
+                trailImg.style.left = `${e.clientX + 18}px`;
+                trailImg.style.top = `${e.clientY + 18}px`;
+                document.body.appendChild(trailImg);
+                setTimeout(() => trailImg.remove(), 850);
+            }
+        });
+
+        function selectFile(e, el) {
+            e.stopPropagation();
+            document.querySelectorAll('.desktop-file-icon').forEach(f => f.classList.remove('selected'));
+            el.classList.add('selected');
+        }
+
+        function toggleStartMenu() {
+            document.getElementById('start-menu').classList.toggle('hidden');
+        }
+
+        // ============================================================
+        // 3. PARTICLE SPAWNER (KLIK DESKTOP, PET REACTION & SPARKLE RAIN)
+        // ============================================================
+        function spawnPaperSticker(x, y, charKey = null, sizePx = 44) {
+            const img = document.createElement('img');
+            img.src = charKey && PAPER_CHARACTERS[charKey] ? PAPER_CHARACTERS[charKey] : getRandomPaperCharSrc();
+            img.className = 'floating-particle paper-sticker-badge object-contain';
+            img.style.width = `${sizePx}px`;
+            img.style.height = `${sizePx}px`;
+            img.style.left = `${x}px`;
+            img.style.top = `${y}px`;
+            document.body.appendChild(img);
+            setTimeout(() => img.remove(), 1500);
+        }
+
+        function spawnTextBubble(x, y, text) {
+            const el = document.createElement('div');
+            el.className = 'floating-particle font-pixel text-[10px] bg-white border-2 border-pixelDark px-2 py-1 rounded-full shadow-[2px_2px_0px_#8ecae6]';
+            el.textContent = text;
+            el.style.left = `${x}px`;
+            el.style.top = `${y}px`;
+            document.body.appendChild(el);
+            setTimeout(() => el.remove(), 1500);
+        }
+
+        function petAnimal(e, speech, charKey = null) {
+            e.stopPropagation();
+            spawnTextBubble(e.clientX - 24, e.clientY - 46, speech);
+            spawnPaperSticker(e.clientX + 14, e.clientY - 36, charKey, 38);
+        }
+
+        function handleWorkspaceClick(e) {
+            document.querySelectorAll('.desktop-file-icon').forEach(f => f.classList.remove('selected'));
+            document.getElementById('start-menu').classList.add('hidden');
+
+            if (e.target.id === 'desktop-workspace') {
+                spawnPaperSticker(e.clientX - 20, e.clientY - 20, null, 42);
+            }
+        }
+
+        function spawnStickerRain() {
+            for (let i = 0; i < 16; i++) {
+                setTimeout(() => {
+                    const rx = Math.random() * (window.innerWidth - 80) + 30;
+                    const ry = Math.random() * (window.innerHeight - 160) + 40;
+                    const key = PAPER_CHAR_KEYS[i % PAPER_CHAR_KEYS.length];
+                    spawnPaperSticker(rx, ry, key, 48);
+                }, i * 110);
+            }
+        }
+
+        // ============================================================
+        // 4. LAGU "SEASONS" LO-FI RADIO PLAYER ENGINE
+        // ============================================================
+        const seasonsAudio = document.getElementById('seasons-audio');
+        let isPlayingMusic = false;
+
+        function setMusicUIState(playing, customStatusText = null) {
+            const btn = document.getElementById('music-toggle-btn');
+            const status = document.getElementById('track-status');
+            const bars = document.querySelectorAll('.eq-bar');
+            const disc = document.getElementById('vinyl-disc');
+
+            isPlayingMusic = playing;
+            if (playing) {
+                btn.textContent = '⏸️';
+                status.textContent = customStatusText || 'Playing • Seasons';
+                bars.forEach(b => b.classList.add('playing'));
+                disc.classList.add('disc-spinning');
+            } else {
+                btn.textContent = '▶️';
+                status.textContent = customStatusText || 'Paused • Click Play';
+                bars.forEach(b => b.classList.remove('playing'));
+                disc.classList.remove('disc-spinning');
+            }
+        }
+
+        function toggleLofiMusic() {
+            if (!isPlayingMusic) {
+                triggerRingCursorBriefly(350);
+                seasonsAudio.play().then(() => {
+                    setMusicUIState(true, 'Playing • Seasons 🍂');
+                }).catch((err) => {
+                    console.warn('File seasons.mp4 tidak ditemukan otomatis, buka pemilih file:', err);
+                    setMusicUIState(false, 'Klik 📂 pilih seasons.mp4');
+                    document.getElementById('audio-file-picker').click();
+                });
+            } else {
+                seasonsAudio.pause();
+                setMusicUIState(false, 'Paused • Click Play');
+            }
+        }
+
+        function loadCustomTrack(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const fileURL = URL.createObjectURL(file);
+            seasonsAudio.src = fileURL;
+            const cleanName = file.name.replace(/\.[^/.]+$/, "");
+            document.getElementById('track-title').textContent = cleanName + ' 🎶';
+            seasonsAudio.play().then(() => {
+                setMusicUIState(true, 'Playing • ' + cleanName);
+            });
+        }
+
+        function setAudioVolume(val) {
+            seasonsAudio.volume = parseFloat(val);
+        }
+
+        // ============================================================
+        // 5. STICKY NOTE PLACEHOLDER ("input text..."), COLOR & DUPLICATE
+        // ============================================================
+        let noteCounter = 1;
+
+        function handleStickyFocus(el) {
+            if (el.getAttribute('data-placeholder') === 'true' || el.textContent.trim() === 'input text...') {
+                el.textContent = '';
+                el.removeAttribute('data-placeholder');
+                el.classList.remove('text-gray-400', 'italic');
+                el.classList.add('text-pixelDark');
+            }
+        }
+
+        function handleStickyBlur(el) {
+            if (el.textContent.trim() === '') {
+                el.textContent = 'input text...';
+                el.setAttribute('data-placeholder', 'true');
+                el.classList.remove('text-pixelDark');
+                el.classList.add('text-gray-400', 'italic');
+            }
+        }
+
+        function changeNoteColor(btnEl, hexColor) {
+            const noteCard = btnEl.closest('.draggable-item');
+            if (noteCard) {
+                noteCard.style.backgroundColor = hexColor;
+            }
+        }
+
+        function duplicateStickyNote() {
+            noteCounter++;
+            const original = document.getElementById('editable-note');
+            const clone = original.cloneNode(true);
+            clone.id = 'editable-note-' + noteCounter;
+            clone.style.top = (170 + (noteCounter % 5) * 28) + 'px';
+            clone.style.left = (295 + (noteCounter % 5) * 28) + 'px';
+            clone.style.transform = `rotate(${(noteCounter % 2 === 0 ? -2 : 2)}deg)`;
+
+            const textArea = clone.querySelector('[contenteditable="true"]');
+            if (textArea) {
+                textArea.textContent = 'input text...';
+                textArea.setAttribute('data-placeholder', 'true');
+                textArea.classList.remove('text-pixelDark');
+                textArea.classList.add('text-gray-400', 'italic');
+            }
+
+            document.getElementById('desktop-workspace').appendChild(clone);
+            makeElementDraggable(clone);
+        }
+
+        // ============================================================
+        // 6. WINDOW MANAGEMENT & TASKBAR SYNC
+        // ============================================================
+        let highestZ = 50;
+
+        function openWindow(id) {
+            triggerRingCursorBriefly(450);
+            const target = document.getElementById(id);
+            if (!target) return;
+            target.classList.remove('hidden');
+            highestZ++;
+            target.style.zIndex = highestZ;
+            updateTaskbar();
+        }
+
+        function closeWindow(id) {
+            const target = document.getElementById(id);
+            if (target) target.classList.add('hidden');
+            updateTaskbar();
+        }
+
+        function closeAllWindows() {
+            document.querySelectorAll('.window-panel').forEach(w => w.classList.add('hidden'));
+            updateTaskbar();
+        }
+
+        function toggleMaximize(id) {
+            const target = document.getElementById(id);
+            if (!target) return;
+            target.classList.toggle('maximized');
+            highestZ++;
+            target.style.zIndex = highestZ;
+        }
+
+        function updateTaskbar() {
+            const container = document.getElementById('taskbar-open-apps');
+            container.innerHTML = '';
+
+            document.querySelectorAll('.window-panel').forEach(win => {
+                if (!win.classList.contains('hidden')) {
+                    const title = win.getAttribute('data-title') || 'App';
+                    const btn = document.createElement('button');
+                    btn.className = 'bg-[#e9f2d4] hover:bg-[#dce9be] border-2 border-pixelDark px-3 py-1 rounded-xl font-pixel text-[8px] text-[#2d3a22] whitespace-nowrap shadow-[2px_2px_0px_#70785a] flex items-center gap-1.5';
+                    btn.textContent = title;
+                    btn.onclick = () => {
+                        highestZ++;
+                        win.style.zIndex = highestZ;
+                    };
+                    container.appendChild(btn);
+                }
+            });
+        }
+
+        document.querySelectorAll('.window-panel').forEach(win => {
+            win.addEventListener('mousedown', () => {
+                highestZ++;
+                win.style.zIndex = highestZ;
+            });
+        });
+
+        // ============================================================
+        // 7. CV FOLDER SWITCHER & FULL TAB VIEWER
+        // ============================================================
+        function switchCV(studentKey) {
+            triggerRingCursorBriefly(350);
+            activeCVKey = studentKey;
+            const frame = document.getElementById('cv-frame');
+            const tabQuinee = document.getElementById('tab-quinee');
+            const tabKayleen = document.getElementById('tab-kayleen');
+            const tabVerena = document.getElementById('tab-verena');
+
+            const inactiveStyle = 'bg-white/60 border-2 border-pixelDark px-2.5 py-0.5 rounded hover:bg-yellow-200';
+            const activeStyle = 'bg-white border-2 border-pixelDark px-2.5 py-0.5 rounded font-bold shadow-[2px_2px_0px_#231f20]';
+
+            tabQuinee.className = inactiveStyle;
+            tabKayleen.className = inactiveStyle;
+            tabVerena.className = inactiveStyle;
+
+            if (studentKey === 'quinee') {
+                tabQuinee.className = activeStyle;
+                frame.srcdoc = CV_DATABASE.quinee;
+            } else if (studentKey === 'kayleen') {
+                tabKayleen.className = activeStyle;
+                frame.srcdoc = CV_DATABASE.kayleen;
+            } else if (studentKey === 'verena') {
+                tabVerena.className = activeStyle;
+                frame.srcdoc = CV_DATABASE.verena;
+            }
+        }
+
+        function openCVInNewTab() {
+            const htmlContent = CV_DATABASE[activeCVKey] || CV_DATABASE.quinee;
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            window.open(url, '_blank');
+        }
+
+        // ============================================================
+        // 8. PIXEL SKETCHPAD ENGINE
+        // ============================================================
+        const canvas = document.getElementById('sketchpad');
+        const ctx = canvas.getContext('2d');
+        let painting = false;
+        let brushColor = '#231f20';
+        let brushSize = 3;
+
+        function setBrushColor(c) { brushColor = c; }
+
+        function toggleBrushSize() {
+            const btn = document.getElementById('brush-size-btn');
+            if (brushSize === 3) { brushSize = 7; btn.textContent = 'M'; }
+            else if (brushSize === 7) { brushSize = 14; btn.textContent = 'L'; }
+            else { brushSize = 3; btn.textContent = 'S'; }
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        function getMousePos(e) {
+            const rect = canvas.getBoundingClientRect();
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            return { x: clientX - rect.left, y: clientY - rect.top };
+        }
+
+        function startPosition(e) {
+            e.stopPropagation();
+            painting = true;
+            draw(e);
+        }
+
+        function finishedPosition() {
+            painting = false;
+            ctx.beginPath();
+        }
+
+        function draw(e) {
+            if (!painting) return;
+            e.preventDefault();
+            const pos = getMousePos(e);
+            ctx.lineWidth = brushSize;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = brushColor;
+            ctx.lineTo(pos.x, pos.y);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(pos.x, pos.y);
+        }
+
+        canvas.addEventListener('mousedown', startPosition);
+        canvas.addEventListener('mouseup', finishedPosition);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('touchstart', startPosition, { passive: false });
+        canvas.addEventListener('touchend', finishedPosition);
+        canvas.addEventListener('touchmove', draw, { passive: false });
+
+        // ============================================================
+        // 9. DRAG ENGINE DENGAN THRESHOLD (KLIK BIASA TIDAK GESER ICON!)
+        // ============================================================
+        let highestWidgetZ = 25;
+
+        function makeElementDraggable(el) {
+            let isPointerDown = false;
+            let hasDragged = false;
+            let startX = 0, startY = 0;
+            let initialLeft = 0, initialTop = 0;
+            const DRAG_THRESHOLD = 6;
+
+            el.addEventListener('pointerdown', (e) => {
+                if (e.target.closest('button') ||
+                    e.target.closest('input') ||
+                    e.target.closest('label') ||
+                    e.target.tagName === 'CANVAS' ||
+                    e.target.getAttribute('contenteditable') === 'true') {
+                    return;
+                }
+
+                isPointerDown = true;
+                hasDragged = false;
+
+                startX = e.clientX;
+                startY = e.clientY;
+
+                const parentRect = el.offsetParent.getBoundingClientRect();
+                const elRect = el.getBoundingClientRect();
+
+                initialLeft = elRect.left - parentRect.left;
+                initialTop = elRect.top - parentRect.top;
+
+                el.setPointerCapture(e.pointerId);
+            });
+
+            el.addEventListener('pointermove', (e) => {
+                if (!isPointerDown) return;
+
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+
+                if (!hasDragged) {
+                    if (Math.hypot(dx, dy) < DRAG_THRESHOLD) return;
+                    hasDragged = true;
+                    highestWidgetZ++;
+                    el.style.zIndex = highestWidgetZ;
+                    el.style.right = 'auto';
+                    el.style.bottom = 'auto';
+                    el.style.left = initialLeft + 'px';
+                    el.style.top = initialTop + 'px';
+                    el.classList.add('is-dragging');
+                }
+
+                const parentRect = el.offsetParent.getBoundingClientRect();
+                let nextLeft = initialLeft + dx;
+                let nextTop = initialTop + dy;
+
+                const maxLeft = parentRect.width - el.offsetWidth;
+                const maxTop = parentRect.height - el.offsetHeight;
+                nextLeft = Math.max(0, Math.min(nextLeft, maxLeft));
+                nextTop = Math.max(0, Math.min(nextTop, maxTop));
+
+                el.style.left = nextLeft + 'px';
+                el.style.top = nextTop + 'px';
+            });
+
+            const finishPointer = (e) => {
+                if (!isPointerDown) return;
+                isPointerDown = false;
+                el.classList.remove('is-dragging');
+                if (el.hasPointerCapture(e.pointerId)) {
+                    el.releasePointerCapture(e.pointerId);
+                }
+            };
+
+            el.addEventListener('pointerup', finishPointer);
+            el.addEventListener('pointercancel', finishPointer);
+        }
+
+        function initAllDraggables() {
+            document.querySelectorAll('.draggable-item').forEach(makeElementDraggable);
+        }
+    </script>
+</body>
+</html>
